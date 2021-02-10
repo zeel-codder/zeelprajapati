@@ -16,9 +16,9 @@ HTML,CSS,JS,Reactjs -- fruntend of app (till febuary)
 # Firebase for hostion(may be)
 
 # Goal
---navabar =
---img s
---one page add
+--navabar
+--img show
+--one page app
 --codewithharray like text
---daynemic tecnology think 
+--daynemic technology think 
 
