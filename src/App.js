@@ -1,24 +1,17 @@
-import logo from './logo.svg';
+import logo from './img/1.jpg';
+import Navbar from './Halpper/navabar';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <header>
+      <h2>
+        Zeel Prajapati's Personal Web site
+      </h2>
+    </header>
+    <Navbar />
+    </>
   );
 }
 
