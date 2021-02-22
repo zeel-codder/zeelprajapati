@@ -1,7 +1,8 @@
 
 :root{
-  --transition:1s all;
+  --transition:0.8s all;
   --bgcolor:#003542;
+  --hadderbg:rgb(0, 255, 242);
   --color:white;
   --font:'Brandon Text','Helvetica Neue','Helvetica','Arial','Sans-serif';
   --font_size:17px;
@@ -13,12 +14,29 @@
   font-family:var(--font);
 }
 
-h2{
-  margin-top: 2px;
-  text-align: center;
+
+/* styling form hadder tage */
+
+header{
+  /* padding-top: 20px; */
+  height: 70px;
+  background-color: var(--hadderbg);
+  display: flex;
+  align-items: center;
+}
+.logo{
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-left: 10px;
+}
+
+.logo-text{
+  font-size: large;
+  padding: 10px;
 }
 .navabar-ul{
-  margin-top: 1.2em;
   display: flex;
   list-style: none;
   padding: 15px;
@@ -39,5 +57,81 @@ h2{
   color: var(--hoverc);
 }
 
+/* End of hedder */
 
+/* Imgshow */
 
+.imgshow_div{
+  position: relative;
+  height: 30rem;
+  display: flex;
+  overflow: hidden;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.imgshow{
+  transition: var(--transition);
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+
+.activeclass{
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.preclass{
+  transform: translateX(-100%);
+}
+
+.nextclass{
+  transform: translateX(100%);
+}
+
+.left,.right{
+  position: absolute;
+  width: 40px;
+  background-color: turquoise;
+  padding: 2px;
+}
+.right{
+  right: 0;
+}
+.left:hover,.right:hover{
+  background-color: var(--bgcolor);
+  cursor: pointer;
+}
+
+.pointdiv{
+  width: fit-content;
+  width: 100%;
+  height: 100px;
+  bottom :0;
+  /* left: 50%; */
+  margin: 0 auto;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.point{
+ 
+  border: 2px solid white;
+  background-color: black;
+  margin: 2px;
+  width: 20px;
+  border-radius: 50%;
+  height: 20px;
+  transition: var(--transition);
+}
+.active{
+  border: 2px solid;
+  background-color: rgb(0, 255, 242);
+  /* background-color: white; */
+ 
+}
+/* End imgshoe */
