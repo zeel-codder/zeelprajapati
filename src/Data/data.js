@@ -1,9 +1,12 @@
-const navdata=[
+
+
+
+const Navdata=[
 
     {
         id:1,
         title:"Introduction",
-        link:"#",
+        link:"#"
     },
     {
         id:2,
@@ -29,4 +32,4 @@ const navdata=[
 ]
 
 
-export default navdata;
+export default Navdata;

@@ -1,6 +1,7 @@
 
 :root{
-  --transition:0.4s all;
+  --transition:0.8s all;
+  --transition1:.5s all;
   --bgcolor:#003542;
   --hadderbg:rgb(0, 255, 242);
   --color:white;
@@ -51,10 +52,25 @@ header{
   font-family:var(--font);
   transition: var(--transition);
   font-size: var(--font_size);
+  /* transform: scale(12); */
+  /* transform: scale(2, 0.5); */
 }
 
 .navabar-ul li a:hover{
   color: var(--hoverc);
+}
+
+#ht{
+  display: inline-block;
+  transition: var(--transition2);
+  transition-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+#ht:hover{
+  cursor: pointer;
+  color: rgb(240, 13, 229);
+  font-weight: bold;
+  transform:scale(1.5);
+  border-radius: 100px;
 }
 
 /* End of hedder */
@@ -64,6 +80,7 @@ header{
 .imgshow_div{
   position: relative;
   height: 30rem;
+  width: 75%;
   display: flex;
   overflow: hidden;
   margin: 0 auto;
@@ -135,3 +152,31 @@ header{
  
 }
 /* End imgshoe */
+
+
+/* main container*/
+
+.container{
+  display:flex;
+  flex-direction: column;
+  padding: 10px 10px;
+  width: 75%;
+  margin: 10px auto;
+}
+
+.container h1{
+  color:blue;
+  padding: 10px 0px;
+}
+
+.container p{
+  font-family:var(--font);
+}
+
+.container-img{
+  display: block;
+  width: 346px;
+  height: 50%;
+  margin: 10px auto;
+}
+/* End Container */
