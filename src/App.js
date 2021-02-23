@@ -1,6 +1,7 @@
 import react,{useEffect} from 'react'
 import Navbar from './Halpper/navabar';
 import Introduction from './Halpper/introduction';
+import Education from './Halpper/education';
 import './App.css';
 import logo from './img/logo.jpg'
 import ImgeShow from './Halpper/imgshow';
@@ -37,6 +38,7 @@ function App() {
       <ImgeShow imgdic={imgdic}></ImgeShow>
       <section className="container">
       <Introduction logo={logo}/>
+      <Education logo={logo}/>
       </section>
         
     </>

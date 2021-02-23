@@ -179,4 +179,25 @@ header{
   height: 50%;
   margin: 10px auto;
 }
+
+.container table{
+  border: 2px solid black;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: var(--bgcolor);
+}
+.container table th, .container table tr{
+  border: 1px solid wheat;
+  padding: 5px;
+  
+  background-color: var(--bgcolor);
+  text-align: center;
+  font-size: 10px;
+  color: wheat;
+
+}
+
+.container table thead th{
+  background-color: rgb(1, 108, 230);
+}
 /* End Container */
