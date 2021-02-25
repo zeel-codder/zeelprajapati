@@ -5,7 +5,7 @@ import Education from './Halpper/education';
 import './App.css';
 import logo from './img/logo.jpg'
 import ImgeShow from './Halpper/imgshow';
-import imgdic from './Data/Imgedata'
+import mainimg from './img/2.jpg'
 
 
 
@@ -35,7 +35,7 @@ function App() {
       </span>
     </header>
     <Navbar />
-      <ImgeShow imgdic={imgdic}></ImgeShow>
+      <img className="main-img" src={mainimg}></img>
       <section className="container">
       <Introduction logo={logo}/>
       <Education logo={logo}/>

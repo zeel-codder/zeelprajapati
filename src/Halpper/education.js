@@ -1,13 +1,16 @@
-
+import logo from "../img/education.svg"
 
 const Education =(p)=>{
 
   
     return (
-    <div className="text-container">
+        <>
     <h1>Education</h1>  
+    <div className="education-box">
+        <img className="container-img" src={logo}></img>
+
+    <div className="text-container">
     <p className="para"> 
-   
     I did my 10th in Ankit vidyalaya, kalol, Gujarat in Gujarat Board. Then I finished my 12th in KTKM High School in Science branch. And presently , I am pursuing Computer science B-Tech in Nirma university.
     </p> 
     <table>
@@ -64,6 +67,8 @@ const Education =(p)=>{
     </table>
 
     </div>
+    </div>
+        </>
     )
     }
    export default Education;
