@@ -5,6 +5,7 @@ import Introduction from './Halpper/introduction';
 import Education from './Halpper/education';
 import Technology from './Halpper/tecnologes'
 import Projects from './Halpper/projects'
+import Footer from './Halpper/Footer'
 import logo from './img/logo.jpg'
 import ImgeShow from './Halpper/imgshow';
 import mainimg from './img/2.jpg'
@@ -34,12 +35,8 @@ function App() {
       <Technology timg={timg} />
       <Projects pimg={pimg}  data={projectdata}/>
       </section>
-        
+      <Footer></Footer>
     </>
-
-
-
-    
   );
 }
 
