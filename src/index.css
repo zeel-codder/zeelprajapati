@@ -3,7 +3,7 @@
   --transition:0.8s all;
   --transition1:.5s all;
   --bgcolor:#003542;
-  --hadderbg:rgb(0, 255, 242);
+  --hadderbg:#6C63FF;
   --color:white;
   --font:'Helvetica Neue','Helvetica','Arial','Sans-serif';
   --font_size:17px;
@@ -77,17 +77,19 @@ header{
   color: var(--hoverc);
 }
 
-#ht{
+#head{
   display: inline-block;
   transition: var(--transition2);
   transition-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-#ht:hover{
+
+
+#head:hover{
+  color: var(--hoverc);
   cursor: pointer;
-  color: rgb(240, 13, 229);
+  font-size: 20px;
   font-weight: bold;
-  transform:scale(1.5);
-  border-radius: 100px;
+
 }
 
 /* End of hedder */
@@ -214,7 +216,7 @@ header{
   padding: 10px;
   text-align: center;
   font-size: 12px;
-  background-color:#10b1e4;
+  background-color:var(--hadderbg);
 
 }
 
@@ -229,7 +231,7 @@ header{
   cursor: pointer;
 }
 
-.box,.education-box{
+.box,.revese-box{
 
   display: flex;
   align-items: center;
@@ -238,7 +240,7 @@ header{
 
 }
 
-.education-box{
+.revese-box{
   flex-direction: row-reverse;
 }
 
@@ -253,11 +255,59 @@ header{
 /* End Container */
 
 
+/* technology */
+
+.list-container{
+  display: block;
+  width: 100%;
+}
+.technology-ul,.project-ul{
+  margin: 5px auto;
+  list-style: none;
+  font-weight: bold;
+}
+.technology-ul li,.project-ul li{
+  padding: 8px;
+  background-color: var(--hadderbg);
+  border-bottom:2px solid;
+  color: white;
+}
+.technology-ul li:hover,.project-ul li:hover,.project-ul li a:hover{
+  color: var(--hoverc);
+  cursor:pointer;
+}
+
+.project-ul li{
+  border: none;
+  list-style: none;
+}
+.project-ul li a{
+  color: white;
+  padding: 10px;
+}
+.project-ul li p{
+  padding: 7px;
+}
+/* End Tecnology */
+
+
 @media only screen and (max-width: 900px) {
-  .box,.education-box{
+  .box,.revse-box{
     flex-wrap: wrap;
   }
   .navabar-ul li a{
     font-size: 13px;
+  }
+  .box,.revese-box{
+    width: 100%;
+    margin: 0 auto;
+    flex-direction: column;
+  }
+  .navabar-ul{
+    display: none;
+  }
+  .container-img{
+    width: 308px;
+    height: 203px;
   }
 }

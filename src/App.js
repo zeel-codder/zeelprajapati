@@ -1,44 +1,38 @@
 import react,{useEffect} from 'react'
+import './App.css';
 import Navbar from './Halpper/navabar';
 import Introduction from './Halpper/introduction';
 import Education from './Halpper/education';
-import './App.css';
+import Technology from './Halpper/tecnologes'
+import Projects from './Halpper/projects'
 import logo from './img/logo.jpg'
 import ImgeShow from './Halpper/imgshow';
 import mainimg from './img/2.jpg'
+import timg from './img/tchnology.jpg'
+import pimg from './img/project.jpg'
+
+import projectdata from './Data/projects'
 
 
 
 function App() {
 
-  const headdermaker=()=>{
-    let data="Zeel_Prajapati's_Personal_Web_Site"
-    // let data="Z"
-    let ans=document.querySelector("#head");
-    for(let i=0;i<data.length;i++){
-      let new_span=document.createElement("span")
-      new_span.id="ht" 
-      new_span.innerHTML=data[i]
-      if(ans!==null){
-        ans.appendChild(new_span)
-      }
-    }
-  }
-
-  useEffect(headdermaker,[])
 
   return (
     <>
     <header>
       <img className="logo" src={logo}></img>
       <span className="logo-text" id="head">
+      Zeel Prajapati's Personal Web Site
       </span>
     </header>
     <Navbar />
       <img className="main-img" src={mainimg}></img>
       <section className="container">
-      <Introduction logo={logo}/>
-      <Education logo={logo}/>
+      <Introduction/>
+      <Education/>
+      <Technology timg={timg} />
+      <Projects pimg={pimg}  data={projectdata}/>
       </section>
         
     </>

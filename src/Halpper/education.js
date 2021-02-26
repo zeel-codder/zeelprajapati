@@ -6,7 +6,7 @@ const Education =(p)=>{
     return (
         <>
     <h1>Education</h1>  
-    <div className="education-box">
+    <div className="revese-box">
         <img className="container-img" src={logo}></img>
 
     <div className="text-container">
