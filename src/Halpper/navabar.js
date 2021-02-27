@@ -25,9 +25,13 @@ function Navabar(){
                 const {id,title,link}=data
                 return (
 
+                    <li key={id}>
                     <Link to={data.link}>
-                 <li key={id}><a href={link}>{title}</a></li>
+                    
+                        {title}
+                    
                 </Link>
+                    </li>
                     )
             })
         }
