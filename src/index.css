@@ -2,13 +2,14 @@
 :root{
   --transition:.8s all;
   --transition1:.5s all;
-  --bgcolor:#6C63FF;
-  --hadderbg:#6C63FF;
+  --bgcolor:#021750;;
+  --hadderbg:#021750;
   --color:white;
   --font:'Helvetica Neue','Helvetica','Arial','Sans-serif';
   --font_size:17px;
   --hoverc:rgb(55, 197, 216);
   --text-size:14px;
+  --font-size-400pxafter:13px;
 }
 
 *{
@@ -26,6 +27,7 @@ header{
   background-color: var(--hoverc);
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .logo{
@@ -33,6 +35,7 @@ header{
   height: 40px;
   object-fit: cover;
   border-radius: 20px;
+  box-shadow: 3px 8px 10px 0px var(--bgcolor);
   margin-left: 10px;
 }
 
@@ -90,11 +93,10 @@ header{
 
 
 #head:hover{
-  color: var(--hoverc);
+  color: var(--bgcolor);
   cursor: pointer;
   font-size: 20px;
   font-weight: bold;
-
 }
 
 /* End of hedder */
@@ -192,13 +194,16 @@ header{
   flex-direction: column;
   padding: 10px 10px;
   width: 75%;
+  align-items: center;
+  justify-content: center;
   margin: 10px auto;
 }
 
 .container h1{
   padding: 10px 0px;
   display: inline;
-  margin: 0 auto;
+  /* margin: 0 auto; */
+  align-self: flex-start;
 }
 
 .container p{
@@ -209,7 +214,7 @@ header{
   display: block;
   width: 346px;
   height: 235px;
-  margin: 10px 10px;
+  margin: 10px auto;
 }
 
 .container table{
@@ -227,6 +232,7 @@ header{
 .container table thead th{
   background-color: var(--hoverc);
   border-bottom:3px solid;
+  color: black;
 }
 
 
@@ -239,8 +245,8 @@ header{
 
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  margin: 10px 20px;
+  margin: 20px 0px;
+  /* justify-content: space-around; */
 
 }
 
@@ -253,7 +259,7 @@ header{
   padding :10px;
 }
 .para{
-  padding: 3px;
+  /* padding: 3px; */
   text-align: justify;
 }
 /* End Container */
@@ -269,9 +275,11 @@ header{
   margin: 5px auto;
   list-style: none;
   font-weight: bold;
+  width:700px;
 }
 .technology-ul li,.project-ul li{
   padding: 8px;
+  transition: var(--transition);
   background-color: var(--hadderbg);
   border-bottom:2px solid;
   color: white;
@@ -281,17 +289,29 @@ header{
   color: var(--hoverc);
   cursor:pointer;
 }
-
 .project-ul li{
-  border: none;
+  /* border: none; */
   list-style: none;
 }
 .project-ul li a{
   color: white;
   padding: 10px;
 }
-.project-ul li p{
+.project-ul li p,.technology-ul li{
   padding: 7px;
+}
+
+.not-show{
+  display: none;
+}
+.show{
+  transition: var(--transition);
+  display: block;
+}
+.show li{
+  text-decoration: none;
+  border: none;
+
 }
 /* End Tecnology */
 
@@ -322,14 +342,26 @@ header{
 }
 
 
+.rotetor{
+  /* position: absolute; */
+  border: none;
+  transition: var(--transition);
+  transform: rotate(90deg);
+}
 
-@media only screen and (max-width: 900px) {
-  .box,.revse-box{
+
+
+@media only screen and (max-width: 1200px) {
+  .box,.revese-box{
     flex-wrap: wrap;
+    /* border: 2px solid; */
+    align-items: flex-start;
+  }
+  .text-container{
+    padding: 0px;
   }
   .box,.revese-box{
     width: 100%;
-    margin: 0 auto;
     flex-direction: column;
   }
   .navabar-ul{
@@ -352,10 +384,6 @@ header{
   .icon svg{
     transform: scale(2);
   }
-  .rotetor{
-    /* position: absolute; */
-    transform: rotate(90deg);
-  }
   .icon:hover{
     cursor: pointer;
     color: var(--hoverc);
@@ -372,15 +400,61 @@ header{
   .navabar-ul li{
     font-size: 15px;
   }
+  .text-container{
+    width: 100%;
+  }
+  .para{
+    font-size: var(--text-size);
+  }
   .navabar-ico-flex{
     display: flex;
     flex-direction: row;
   }
+  .technology-ul,.project-ul{
+    width: 100%;
+    display: inline;
+  }
+  .container table th, .container table tr{
+    font-size: 8px;
+    padding: 6px;
+    font-weight: bold;
+  }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 420px) {
+  .footer-ul{
+    display: none;
+  }
+  .icon svg{
+    transform: scale(1.4);
+  }
+  .container-img{
+    width: 250px;
+    height: 150px;
+  }
+
+}
+@media only screen and (max-width: 300px) {
   .footer-ul{
     display: none;
   }
 
+  .container-img{
+    width: 200px;
+    height: 155px;
+  }
+  .container table th, .container table tr {
+    font-size: 6px;
+  }
+  .para{
+    font-size: vat(--font-size-400pxafter);
+  }
+  
+  .technology-ul li, .project-ul li{
+    font-size: var(--font-size-400pxafter);
+  }
+  .logo-text,.footer-para{
+    font-size: var(--font-size-400pxafter);
+  }
 }
+  

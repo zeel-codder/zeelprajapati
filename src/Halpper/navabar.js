@@ -1,4 +1,6 @@
 import react from 'react'
+// import {Link} from 'react-dom
+import { Link } from 'react-router-dom';
 import Navadata from '../Data/data'
 import { AiOutlineFacebook , AiFillGithub ,AiFillLinkedin ,AiFillTwitterCircle } from 'react-icons/ai';
 import { FaBeer } from 'react-icons/fa';
@@ -21,15 +23,20 @@ function Navabar(){
         {
             Navadata.map((data)=>{
                 const {id,title,link}=data
-                return <li key={id}><a href={link}>{title}</a></li>
+                return (
+
+                    <Link to={data.link}>
+                 <li key={id}><a href={link}>{title}</a></li>
+                </Link>
+                    )
             })
         }
     </ul>
     <ul className="navabar-ul icons">
-        <li><a href="#"><AiOutlineFacebook /></a></li>
-        <li><a href="#"><AiFillGithub /></a></li>
-        <li><a href="#"><AiFillLinkedin /></a></li>
-        <li><a href="#"><AiFillTwitterCircle /></a></li>
+        <li><a href="https://www.facebook.com/zeel.prajapati.397/"><AiOutlineFacebook /></a></li>
+        <li><a href="https://github.com/zeel-codder"><AiFillGithub /></a></li>
+        <li><a href="https://www.linkedin.com/in/zeel-prajapati-4832971a3/"><AiFillLinkedin /></a></li>
+        <li><a href="https://twitter.com/ZeelPrajapati15"><AiFillTwitterCircle /></a></li>
     </ul>
     </div>
 
