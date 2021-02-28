@@ -374,7 +374,8 @@ header{
   color: white;
   width: 300px;
   font-size: var(--font_size);
-  background-color: #0975d2;
+  /* background-color: #0975d2; */
+  background-color: transparent;
   border-bottom:2px solid white ;
 }
 .form-input:focus,.form div :hover{
