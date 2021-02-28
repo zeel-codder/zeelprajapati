@@ -303,14 +303,9 @@ header{
 }
 
 .not-show{
-  /* display: none; */
-
+  display: none;
   /* opacity: 0; */
 }
-/* .jj{
-  overflow: hidden;
-  transition: var(--transition);
-} */
 .show{
   transition: var(--transition);
   display: block;
@@ -343,12 +338,9 @@ header{
 .footer-ul li svg{
   color: white;
 }
-.footer-ul li svg:hover, .footer p:hover,.container table th:hover{
+.footer-ul li svg:hover, .footer p:hover,.container table th:hover,.container table tr:hov{
   color: var(--hoverc);
   cursor: pointer;
-}
-.container table thead th:hover{
-  color: white;
 }
 
 
