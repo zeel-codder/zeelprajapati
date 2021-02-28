@@ -362,7 +362,7 @@ header{
   border-bottom: 2px solid white;
   border-top: 2px solid white;
   height:100vh;
-  background-color: rgb(28 110 121);;
+  /* background-color: rgb(28 110 121);; */
   /* overflow: scroll; */
   color: white;
   justify-content: center;
@@ -380,7 +380,7 @@ header{
   font-size: var(--font_size);
   background-color: transparent;
 }
-.form div input{
+.form div input,.form div textarea{
   border-bottom:2px solid white;
 
 }
