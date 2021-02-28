@@ -379,7 +379,10 @@ header{
   width: 300px;
   font-size: var(--font_size);
   background-color: transparent;
+}
+.form div input{
   border-bottom:2px solid white;
+
 }
 .form-input:focus,.form div :hover{
   border-bottom-color: var(--hoverc);
