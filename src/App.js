@@ -11,7 +11,7 @@ import Footer from './Halpper/Footer'
 import Contect from './Halpper/contect'
 import logo from './img/logo.jpg'
 import ImgeShow from './Halpper/imgshow';
-import mainimg from './img/2.jpg'
+import mainimg from './img/4.jpg'
 import timg from './img/tchnology.svg'
 import pimg from './img/project.svg'
 
@@ -34,7 +34,7 @@ function App() {
     </header>
     <Navbar />
       <Route exact path="/">
-      <img className="main-img" src={mainimg}></img>
+      <img src={mainimg} className="main-img"></img>
       <section className="container">
       <Introduction/>
       <Education/>

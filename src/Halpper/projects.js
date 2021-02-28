@@ -25,6 +25,7 @@ const Projects=(props)=>{
             
         <img className="container-img" src={pimg}></img>
         <div className="text-container">
+       
         <ul className="project-ul"> 
            {
                data.map((d,index)=>{
@@ -35,7 +36,7 @@ const Projects=(props)=>{
                        class2="rotetor"
                    }
                 
-                   return (<li key={d.id} onClick={()=>changeIndex(index)}>
+                   return (<li key={d.id}  onClick={()=>changeIndex(index)}>
                    <p className="text">
                    <IoIosArrowDroprightCircle className={class2}></IoIosArrowDroprightCircle>  &nbsp;{d.title} , {d.technology}
                    </p>
