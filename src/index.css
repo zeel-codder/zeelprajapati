@@ -432,14 +432,10 @@ outline: 0;
 .loadding{
   display: flex;
   background-color: transparent;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top:0;
-  bottom: 0;
-  z-index: 1;
-  align-items: center;
+  /* z-index: 1; */
   justify-content: center;
+  background-color:#345cca;
+
 }
 .loadding svg{
   /* transform: scale(2); */
@@ -457,7 +453,8 @@ outline: 0;
   }
 }
 .blur{
-  opacity: .5;
+  /* opacity: .5;
+  z-index: -1; */
   pointer-events: none;
 }
 @media only screen and (max-width: 1200px) {

@@ -14,14 +14,15 @@ export default ()=>{
     
     const mailme=(e)=>{
         e.preventDefault();
-        console.log(e.target);
+        document.documentElement.scrollTop=0
+        document.querySelector("#root").classList.add("blur")
         init("user_T7VYY639xcXhhBCzLUUCo");
         setLoadding(true)
         emailjs.sendForm('service_50van2j', 'template_ar6zjgw', e.target)
       .then((result) => {
           console.log(result.text);
-        //   setLoa
           alert("Send🙏🙏")
+          document.querySelector("#root").classList.remove("blur")
           setLoadding(false)
         }, (error) => {
             console.log(error.text);
@@ -36,7 +37,7 @@ export default ()=>{
              loadding ? <Loadding /> :null
          }
    
-                <form className={`form ${loadding?"blur":null}`} onSubmit={(e)=>{mailme(e)}}>                
+                <form className="form" onSubmit={(e)=>{mailme(e)}}>                
             <div>
             <label for="name"><BsFillPersonFill />Name</label>
             <input className="form-input" type="text" name="name" placeholder="Enter Name" required></input>
