@@ -21,7 +21,6 @@ import projectdata from './Data/projects'
 
 function App() {
 
-
   return (
     <Router>
       {/* <Switch> */}
