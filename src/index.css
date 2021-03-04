@@ -1,6 +1,6 @@
 
 :root{
-  --transition:.8s all;
+  --transition:.5s all;
   --transition1:.5s all;
   --bgcolor:#021750;;
   --hadderbg:#021750;
@@ -15,6 +15,7 @@
 *{
   margin: 0;
   font-family:var(--font);
+  /* color: white; */
 }
 
 /* styling form hadder tage */
@@ -44,7 +45,7 @@ header{
   padding: 10px;
 }
 
-.navbar{
+.navbar,.navbar-item{
   display: flex;
   top: 0;
   position: sticky;
@@ -52,7 +53,10 @@ header{
   justify-content:space-between;
   background-color: var(--bgcolor);
   flex-wrap: wrap;
-  transition: var(--transition);
+  width: 100%;
+  /* flex-direction: column; */
+  transition:height 0.3s;
+  /* z-index:2; */
 }
 .icon{
   display: none;
@@ -64,14 +68,17 @@ header{
 }
 .navabar-ul{
   display: flex;
-  list-style: none;
-  position: sticky;
-  top:0px;
-  padding: 15px;
-  justify-content: start;
-  transition: var(--transition);
-  align-items: center;
-  /* flex-wrap: wrap; */
+    list-style: none;
+    top: 0px;
+    padding: 15px;
+    justify-content: space-between;
+    /* transition: var(--transition); */
+    align-items: center;
+    /* flex-wrap: wrap; */
+    width: 100%;
+}
+.navabar-ul div{
+  display: flex;
 }
 .navabar-ul li a{
   text-decoration: none;
@@ -311,6 +318,10 @@ header{
   display: block;
   /* opacity: 1; */
 }
+.icons{
+  display: flex;
+  margin-top: 10px;
+}
 .show li{
   text-decoration: none;
   border: none;
@@ -470,9 +481,11 @@ outline: 0;
     width: 100%;
     flex-direction: column;
   }
-  .navabar-ul{
-    display: none;
+  .navabar{
+    flex-direction: column;
+    align-items: flex-start;
   }
+  
   .container-img{
     width: 308px;
     height: 203px;
@@ -490,31 +503,33 @@ outline: 0;
   .icon svg{
     transform: scale(2);
   }
+  
   .icon:hover{
     cursor: pointer;
     color: var(--hoverc);
   }
-  .navabar-flex{
+  .navbar-item{
     flex-direction: column;
     align-items: flex-start;
-  }
-  .navabar-ul-flex{
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
+    height: 0; 
+    overflow: hidden;
   }
   .navabar-ul li{
     font-size: 15px;
+  }
+  .navabar-ul{
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .icons{
+    flex-direction: row;
+    /* align-self: flex-end; */
   }
   .text-container{
     width: 100%;
   }
   .para{
     font-size: var(--text-size);
-  }
-  .navabar-ico-flex{
-    display: flex;
-    flex-direction: row;
   }
   .technology-ul,.project-ul{
     width: 100%;
