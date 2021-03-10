@@ -1,7 +1,7 @@
 import react from 'react'
 // import {Link} from 'react-dom
 import { Link } from 'react-router-dom';
-import Navadata from '../Data/data'
+import Navadata from '../../Data/data'
 import { AiOutlineFacebook , AiFillGithub ,AiFillLinkedin ,AiFillTwitterCircle } from 'react-icons/ai';
 import { FaBeer } from 'react-icons/fa';
 import { VscListFlat } from 'react-icons/vsc'

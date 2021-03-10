@@ -1,4 +1,4 @@
-import logo from "../img/education.svg"
+import logo from "../../img/education.svg"
 
 const Education =(p)=>{
 

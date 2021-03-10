@@ -1,4 +1,4 @@
-import log from "../img/introimg.svg"
+import log from "../../img/introimg.svg"
 
 const Introduction =(p)=>{
 
