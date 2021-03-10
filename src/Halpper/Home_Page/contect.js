@@ -6,9 +6,11 @@ import {AiTwotoneMail,AiTwotoneFileText} from 'react-icons/ai'
 import {BsFillPersonFill} from 'react-icons/bs'
 import {MdSubject} from 'react-icons/md'
 import {useState} from 'react'
-import Loadding from './Loadding'
-
+// import Loadding from './Loadding'
+import { useGlobalContext } from './context';
 export default ()=>{
+
+    const {Loadding}=useGlobalContext();
 
     const [loadding,setLoadding]=useState(false);
     

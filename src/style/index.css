@@ -1,4 +1,7 @@
 
+/* ================================
+this main root variables
+================================ */
 :root{
   --transition:.5s all;
   --transition1:.5s all;
@@ -22,28 +25,67 @@
 body{
   transition: var(--transition);
 }
-header{
-  /* padding-top: 20px; */
-  height: 70px;
-  background-color: var(--hoverc);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
+
+/* =============================
+List:
+1.Hedder
+2.navbar
+3.imgshow
+4.main container
+5.footer
+6.loaddding
+7.media
+============================= */
+
+/* =============================
+1.Hedder
+============================= */
+header{
+  height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* box-shadow: 0px 0px 20px 2px var(--hoverc);
+    border: 2px solid var(--hoverc); */
+    /* width: fit-content; */
+    padding: 10px;
+    
+    background: #0034ff;
+}
 .logo{
   width: 40px;
   height: 40px;
   object-fit: cover;
   border-radius: 20px;
-  box-shadow: 3px 8px 10px 0px var(--bgcolor);
   margin-left: 10px;
 }
 
 .logo-text{
+  color:black;
   font-size: large;
   padding: 10px;
+
 }
+
+#head{
+  display: inline-block;
+  transition: var(--transition2);
+  transition-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+#head:hover{
+  color: var(--hoverc);
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+/* =============================
+
+2.navbar
+
+============================= */
 
 .navbar,.navbar-item{
   display: flex;
@@ -56,7 +98,6 @@ header{
   width: 100%;
   /* flex-direction: column; */
   transition:height 0.3s;
-  /* z-index:2; */
 }
 .icon{
   display: none;
@@ -92,31 +133,21 @@ header{
   color: var(--hoverc);
 }
 
-#head{
-  display: inline-block;
-  transition: var(--transition2);
-  transition-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1);
-}
+
+/* =============================
+
+3.ImgShow
+
+============================= */
 
 
-#head:hover{
-  color: var(--bgcolor);
-  cursor: pointer;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-/* End of hedder */
-
-/* main img */
 .main-img{
   width: 100%;
   object-fit: cover;
+  /* clip-path: circle(60%); */
   height: 100vh;
+  z-index: -1;
 }
-/* end main */
-
-/* Imgshow */
 
 .imgshow_div{
   position: relative;
@@ -192,10 +223,13 @@ header{
   /* background-color: white; */
  
 }
-/* End imgshoe */
 
 
-/* main container*/
+/* =============================
+
+4.main-container
+
+============================= */
 
 .container{
   display:flex;
@@ -270,7 +304,6 @@ header{
   /* padding: 3px; */
   text-align: justify;
 }
-/* End Container */
 
 
 /* technology */
@@ -336,6 +369,7 @@ header{
   color: white;
   justify-content: center;
   padding: 10px;
+  align-items: center;
 }
 
 .footer-ul{

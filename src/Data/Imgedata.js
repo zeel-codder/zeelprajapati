@@ -1,7 +1,7 @@
-import logo1 from '../img/1.jpg'
-import logo2 from '../img/2.jpg'
-import logo3 from '../img/3.jpg'
-import logo4 from '../img/4.jpg'
+import logo1 from '../img/home/1.jpg'
+import logo2 from '../img/home/2.jpg'
+import logo3 from '../img/home/3.jpg'
+import logo4 from '../img/home/4.jpg'
 
 const imgdata=[
 

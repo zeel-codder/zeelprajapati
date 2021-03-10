@@ -1,8 +1,6 @@
-import log from "../../img/introimg.svg"
+import log from "../../img/home/introimg.svg"
 
 const Introduction =(p)=>{
-
-  
  return (
      <>
  <h1>Introduction</h1>  

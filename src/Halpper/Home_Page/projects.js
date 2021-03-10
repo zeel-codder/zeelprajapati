@@ -1,9 +1,10 @@
 import {IoIosArrowDroprightCircle} from 'react-icons/io'
 import {FaRegHandPointRight} from 'react-icons/fa'
 import {useState} from 'react'
+import { useGlobalContext } from './context';
 
-const Projects=(props)=>{
-    const {pimg,data}=props
+const Projects=()=>{
+    const {pimg,projectdata}=useGlobalContext()
     const [arr,setarr]=useState([])
 
     const changeIndex=(index)=>{
@@ -28,7 +29,7 @@ const Projects=(props)=>{
        
         <ul className="project-ul"> 
            {
-               data.map((d,index)=>{
+               projectdata.map((d,index)=>{
                    let class1="not-show"
                    let class2=""
                    if(arr.includes(index)){

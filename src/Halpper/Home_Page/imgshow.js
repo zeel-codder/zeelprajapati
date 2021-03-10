@@ -1,11 +1,11 @@
 import react,{useState} from 'react'
 import {useEffect} from 'react'
-
+import { useGlobalContext } from './context';
 
 
 const ImgeShow=(props)=>{
 
-    const {imgdic}=props
+    const {imgdic}=useGlobalContext()
 
     const [index,setindex]=useState(0)
 

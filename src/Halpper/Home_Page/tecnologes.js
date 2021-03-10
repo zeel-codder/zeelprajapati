@@ -1,7 +1,8 @@
 import {IoMdListBox} from 'react-icons/io'
+import { useGlobalContext } from './context';
 
-const Technology=(pops)=>{
-    const {timg}=pops
+const Technology=()=>{
+    const {timg}=useGlobalContext()
     return (
     <>
     <h1>Technology</h1>

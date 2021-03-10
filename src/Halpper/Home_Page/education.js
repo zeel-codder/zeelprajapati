@@ -1,13 +1,15 @@
-import logo from "../../img/education.svg"
-
+// import logo from "../../img/home/education.svg"
+import { useGlobalContext } from './context';
 const Education =(p)=>{
+
+    const {logo_edu}=useGlobalContext()
 
   
     return (
         <>
     <h1>Education</h1>  
     <div className="revese-box">
-        <img className="container-img" src={logo}></img>
+        <img className="container-img" src={logo_edu}></img>
 
     <div className="text-container">
     <p className="para"> 
