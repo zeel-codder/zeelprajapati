@@ -3,8 +3,8 @@ import log from "../../img/home/introimg.svg"
 const Introduction =(p)=>{
  return (
      <>
- <h1>Introduction</h1>  
  <div className="box">
+ <h1>Introduction</h1>  
  <img className="container-img" src={log}>
  </img>
  <div className="text-container">

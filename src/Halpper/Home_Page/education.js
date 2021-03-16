@@ -7,8 +7,8 @@ const Education =(p)=>{
   
     return (
         <>
-    <h1>Education</h1>  
     <div className="revese-box">
+    <h1>Education</h1>  
         <img className="container-img" src={logo_edu}></img>
 
     <div className="text-container">
@@ -60,7 +60,7 @@ const Education =(p)=>{
             -
             </th>
             <th>
-            2017
+            2023
             </th>
             <th>
             Ahmedabad, Gujarat

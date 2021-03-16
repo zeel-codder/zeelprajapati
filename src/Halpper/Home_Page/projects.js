@@ -8,7 +8,7 @@ const Projects=()=>{
     const [arr,setarr]=useState([])
 
     const changeIndex=(index)=>{
-        console.log(index)
+        // console.log(index)
         let new_arr=arr
         if(new_arr.includes(index)){
             new_arr=new_arr.filter((index1)=>index1!=index);
@@ -18,11 +18,11 @@ const Projects=()=>{
         console.log([...new_arr])
         setarr([...new_arr]);
     }
-    console.log('rendee')
+    // console.log('rendee')
     return(
         <>
-        <h1>Projects</h1>
         <div className="revese-box">
+        <h1>Projects</h1>
             
         <img className="container-img" src={pimg}></img>
         <div className="text-container">

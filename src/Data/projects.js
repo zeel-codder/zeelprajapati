@@ -4,15 +4,15 @@ const project_data=[
        title:'My Introduction',
        technology:'React js',
        subtitle:'This projects is build on react js.',
-       codelink:'#',
-       link:'#',
+       codelink:'https://github.com/zeel-codder/My_Introduction',
+       link:'https://zeelprajapati.netlify.app/',
        
    },
    {
        id:2,
-       title:'Corona Update',
+       title:'SPI Caculator',
        technology:'Python',
-       subtitle:'This projects is build on Python. It about to Genrate the notification about how many corona case present in diff diff india state.',
+       subtitle:'This projects is build on Python flask. For calculation spi of niram university student on the basic of there Grade',
        codelink:'#',
        link:'#',
        

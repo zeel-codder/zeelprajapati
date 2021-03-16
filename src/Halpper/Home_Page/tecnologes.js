@@ -5,8 +5,8 @@ const Technology=()=>{
     const {timg}=useGlobalContext()
     return (
     <>
-    <h1>Technology</h1>
     <div className="box">
+    <h1>Technology</h1>
         <img className="container-img" src={timg}></img>
     <div className="list-container">
     <ul className="technology-ul">

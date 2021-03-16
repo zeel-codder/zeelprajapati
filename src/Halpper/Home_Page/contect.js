@@ -12,7 +12,7 @@ export default ()=>{
 
     const {Loadding}=useGlobalContext();
 
-    const [loadding,setLoadding]=useState(false);
+    const [loadding,setLoadding]=useState(true);
     
     const mailme=(e)=>{
         e.preventDefault();

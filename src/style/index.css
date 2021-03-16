@@ -89,8 +89,8 @@ header{
 
 .navbar,.navbar-item{
   display: flex;
-  top: 0;
-  position: sticky;
+  /* top: 0; */
+  /* position: sticky; */
   align-items: center;
   justify-content:space-between;
   background-color: var(--bgcolor);
@@ -232,12 +232,15 @@ header{
 ============================= */
 
 .container{
-  display:flex;
-  flex-direction: column;
+  display:grid;
+  grid-template-columns: repeat(2,50%);
+  /* grid-auto-columns: minmax(1000px); */
   padding: 10px 10px;
-  width: 75%;
+  width: 80%;
   align-items: center;
   justify-content: center;
+  grid-column-gap: .9rem;
+  grid-row-gap: 2rem;
   margin: 10px auto;
 }
 
@@ -249,12 +252,19 @@ header{
 }
 
 .container p{
-  font-family:var(--font);
+  /* line-height: 1.5rem;
+  font-family:var(--font); */
+  line-height: 1.5rem;
+    font-family: var(--font);
+    /* border-bottom: 1px solid #F1F1F1; */
+    width: 90%;
+    margin: 0 auto;
+  /* border-bottom: 1px solid #F1F1F1; */
 }
 
 .container-img{
   display: block;
-  width: 346px;
+  /* width: ; */
   height: 235px;
   margin: 10px auto;
 }
@@ -288,13 +298,24 @@ header{
   display: flex;
   align-items: center;
   margin: 20px 0px;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* border:  2px solid; */
+  height: 100%;
+  box-shadow: 0 0 10px black;
   /* justify-content: space-around; */
-
+  
+}
+.box:hover,.revese-box:hover{
+  cursor:move;
+  transform: scale(1.02);
+  box-shadow: 0 0 20px black;
+}
+.box > h1 ,.revese-box >h1{
+  line-height: 2rem;
+  margin-left: 10px;
 }
 
-.revese-box{
-  flex-direction: row-reverse;
-}
 
 .text-container{
   display: block;
@@ -310,13 +331,15 @@ header{
 
 .list-container{
   display: block;
-  width: 100%;
+  width: fit-content;
+  width: 50%;
 }
 .technology-ul,.project-ul{
-  margin: 5px auto;
-  list-style: none;
-  font-weight: bold;
-  width:700px;
+  margin: 5px auto; 
+    list-style: none;
+    font-weight: bold;
+    display: inline;
+    width: 90%;
 }
 .technology-ul li,.project-ul li{
   padding: 8px;
@@ -508,6 +531,9 @@ outline: 0;
     /* border: 2px solid; */
     align-items: flex-start;
   }
+  .container{
+    grid-template-columns: 80%;
+  }
   .text-container{
     padding: 0px;
   }
@@ -563,6 +589,7 @@ outline: 0;
     width: 100%;
   }
   .para{
+    /* line-height: 1.4rem; */
     font-size: var(--text-size);
   }
   .technology-ul,.project-ul{
