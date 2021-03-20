@@ -25,8 +25,9 @@ const Projects=()=>{
         <h1>Projects</h1>
             
         <img className="container-img" src={pimg}></img>
-        <div className="text-container">
-       
+        {/* <div className="text-container"> */}
+        <div className="list-container">
+
         <ul className="project-ul"> 
            {
                projectdata.map((d,index)=>{
@@ -35,9 +36,9 @@ const Projects=()=>{
                    if(arr.includes(index)){
                        class1="show"
                        class2="rotetor"
-                   }
-                
-                   return (<li key={d.id}  onClick={()=>changeIndex(index)}>
+                    }
+                    
+                    return (<li key={d.id}  onClick={()=>changeIndex(index)}>
                    <p className="text">
                    <IoIosArrowDroprightCircle className={class2}></IoIosArrowDroprightCircle>  &nbsp;{d.title} , {d.technology}
                    </p>
@@ -53,6 +54,8 @@ const Projects=()=>{
             }
         </ul>
         </div>
+            {/* </div> */}
+            {/* </div> */}
         </div>
         </>
     )

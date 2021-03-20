@@ -10,6 +10,11 @@ const Navdata=[
         title:"Contect Me",
         link:"/contect",
     },
+    {
+        id:3,
+        title:"Blog",
+        link:"/blog",
+    },
 
 ]
 

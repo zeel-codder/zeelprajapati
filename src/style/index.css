@@ -24,6 +24,7 @@ this main root variables
 /* styling form hadder tage */
 body{
   transition: var(--transition);
+  overflow-x: hidden;
 }
 
 
@@ -331,8 +332,9 @@ header{
 
 .list-container{
   display: block;
-  width: fit-content;
-  width: 50%;
+  /* width: fit-content; */
+  width: 80%;
+  margin:0 auto;
 }
 .technology-ul,.project-ul{
   margin: 5px auto; 
@@ -525,14 +527,56 @@ outline: 0;
   z-index: -1; */
   pointer-events: none;
 }
+
+
+/* ==============================
+stating logo
+============================== */
+
+.thor_logo{
+  position: absolute;
+transform: rotate(45deg);
+width: 400px;
+height: 400px;
+background: transparent;
+top: 100%;
+left: 10%;
+transition: all 1s;
+transform-origin: center;
+opacity: 0;
+animation: thor_move 2s ease-out 0s 1;
+}
+
+@keyframes thor_move{
+  0%{
+    top:100%;
+    opacity: 1;
+    left:-50%;
+  }100%{
+    /* opacity: 0; */
+    top:-50%;
+
+    left: 100%;
+  }
+
+}
+
+
+/* =========================================
+For Mobile
+========================================= */
 @media only screen and (max-width: 1200px) {
+  .thor_logo{
+    animation: none;
+  }
+  
   .box,.revese-box{
     flex-wrap: wrap;
     /* border: 2px solid; */
     align-items: flex-start;
   }
   .container{
-    grid-template-columns: 80%;
+    grid-template-columns: 90%;
   }
   .text-container{
     padding: 0px;

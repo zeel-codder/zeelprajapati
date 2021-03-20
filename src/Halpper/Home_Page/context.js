@@ -19,6 +19,9 @@ import logo_intro from "../../img/home/introimg.svg"
 import Loadding from './Loadding'
 import Navadata from '../../Data/data'
 import imgdic from '../../Data/Imgedata'
+import thor_logo from '../../img/home/start_logo.png'
+import Blog from '../Blog'
+import BlogData from '../../Data/Blog_data'
 
 // import projectdata from '../../Data/projects'
 
@@ -46,6 +49,7 @@ const AppProvider = ({
         Contect,
         ImgeShow,
         Loadding,
+        Blog,
         imgdic,
         logo,
         mainimg,
@@ -56,6 +60,8 @@ const AppProvider = ({
         logo_intro,
         Navadata,
         projectdata,
+        thor_logo,
+        BlogData,
 
       }
     } >

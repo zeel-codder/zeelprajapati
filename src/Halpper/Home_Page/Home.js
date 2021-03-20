@@ -24,20 +24,22 @@ import { useGlobalContext } from './context';
 
 function App() {
 
-  const {logo,Navbar,Introduction,Education,Technology,Projects,Contect,Footer,mainimg}=useGlobalContext();
+  const {logo,Navbar,Introduction,Education,Technology,Projects,Contect,Footer,mainimg,thor_logo,Blog}=useGlobalContext();
   // console.log(useGlobalContext())
 
   return (
     <Router>
+    <Navbar />
+      <Route exact path="/">
     <header>
       <img src={logo} className="logo"></img>
       <span className="logo-text" id="head">
+      
       Zeel Prajapati's Personal Web Site
       </span>
     </header>
-    <Navbar />
-      <Route exact path="/">
       <img src={mainimg} className="main-img"></img>
+      <img src={thor_logo} class="thor_logo"></img>
       <section className="container">
       <Introduction/>
       <Education/>
@@ -47,6 +49,9 @@ function App() {
       </Route>
       <Route exact path="/contect">
       <Contect />
+      </Route>
+      <Route exact path="/blog">
+      <Blog></Blog>
       </Route>
       <Footer></Footer>
       {/* </Switch> */}
