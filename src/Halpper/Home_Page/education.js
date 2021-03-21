@@ -7,7 +7,7 @@ const Education =(p)=>{
   
     return (
         <>
-    <div className="revese-box">
+    <div className="box">
     <h1>Education</h1>  
         <img className="container-img" src={logo_edu}></img>
 
@@ -23,7 +23,11 @@ const Education =(p)=>{
             <th>Compilation data</th>
             <th>Location</th>
         </thead>
+        <tbody>
+            
 
+
+            
         <tr>
             <th>
             Ankit vidyalaya
@@ -66,6 +70,7 @@ const Education =(p)=>{
             Ahmedabad, Gujarat
             </th>
         </tr>
+        </tbody>
     </table>
 
     </div>

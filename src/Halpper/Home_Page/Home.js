@@ -18,6 +18,7 @@ import {Route,Switch,BrowserRouter as Router} from 'react-router-dom'
 // import pimg from '../../img/home/project.svg'
 
 import { useGlobalContext } from './context';
+import { useEffect } from 'react';
 // import projectdata from '../../Data/projects'
 
 
@@ -26,6 +27,28 @@ function App() {
 
   const {logo,Navbar,Introduction,Education,Technology,Projects,Contect,Footer,mainimg,thor_logo,Blog}=useGlobalContext();
   // console.log(useGlobalContext())
+
+
+  // ================================
+  // Page Css Animation
+  // ================================
+  function ScrollAnimtion(e){
+    const arr=document.querySelectorAll(".box")
+    const WindowsBottom=window.scrollY+window.innerHeight;
+    arr.forEach((box)=>{
+      const Box=box.offsetTop+box.offsetHeight/6;
+      if(Box<WindowsBottom){
+        box.classList.add("box-show")
+      }else{
+        box.classList.remove("box-show")
+
+      }
+    })
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll",ScrollAnimtion)
+  }, [])
 
   return (
     <Router>

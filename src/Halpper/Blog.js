@@ -13,13 +13,13 @@ const Blog=()=>{
             {
              dic["Blog"].map((arr)=>{
                 if(arr[0]==="title"){
-                    return <h1>{arr[1]}</h1>
+                    return <h1 >{arr[1]}</h1>
                 }else if(arr[0]==="text"){
                     return <div className="para">
                         {arr[1]}
                     </div>
                 }
-                return <img src={arr[1]} className="img"></img>
+                return <img className="img"></img>
                 
 
              })

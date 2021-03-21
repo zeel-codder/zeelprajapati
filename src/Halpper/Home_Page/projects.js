@@ -21,7 +21,7 @@ const Projects=()=>{
     // console.log('rendee')
     return(
         <>
-        <div className="revese-box">
+        <div className="box">
         <h1>Projects</h1>
             
         <img className="container-img" src={pimg}></img>

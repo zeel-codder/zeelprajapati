@@ -38,7 +38,7 @@ function Navabar(){
     return (
         <div className="navbar">
                 <div className={`icon`} onClick={NavabarDisplay}> <VscListFlat></VscListFlat></div>
-         <div class="navbar-item" ref={linksContainerRef}>
+         <div className="navbar-item" ref={linksContainerRef}>
 
     <ul className="navabar-ul" ref={linksRef}>
         <div>
@@ -47,18 +47,15 @@ function Navabar(){
             Navadata.map((data)=>{
                 const {id,title,link}=data
                 return (
-                    
                     <li key={id}>
                     <Link to={data.link}>
-                    
                         {title}
-                    
-                </Link>
+                    </Link>
                     </li>
                     )
                 })
             }
-            </div>
+        </div>
     <li className="icons"  ref={linksRefs}>
         <li><a href="https://www.facebook.com/zeel.prajapati.397/"><AiOutlineFacebook /></a></li>
         <li><a href="https://github.com/zeel-codder"><AiFillGithub /></a></li>

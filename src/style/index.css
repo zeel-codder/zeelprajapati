@@ -19,11 +19,11 @@ this main root variables
   margin: 0;
   font-family:var(--font);
   /* color: white; */
+  transition: var(--transition);
 }
 
 /* styling form hadder tage */
 body{
-  transition: var(--transition);
   overflow-x: hidden;
 }
 
@@ -72,13 +72,26 @@ header{
 #head{
   display: inline-block;
   transition: var(--transition2);
-  transition-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-#head:hover{
   color: var(--hoverc);
   cursor: pointer;
   font-size: 20px;
   font-weight: bold;
+}
+
+
+/* =================================
+top_go
+================================= */
+
+.Goto_top{
+  position: fixed;
+  background: red;
+  bottom: 13px;
+  right: 16px;
+  transform: rotate(
+45deg
+) scale(2.5);
+  border-radius: 62px;
 }
 
 
@@ -294,9 +307,10 @@ header{
   cursor: pointer;
 }
 
-.box,.revese-box{
+.box{
 
   display: flex;
+  opacity: 0;
   align-items: center;
   margin: 20px 0px;
   flex-direction: column;
@@ -304,10 +318,14 @@ header{
   /* border:  2px solid; */
   height: 100%;
   box-shadow: 0 0 10px black;
+  transition: all .5s;
   /* justify-content: space-around; */
   
 }
-.box:hover,.revese-box:hover{
+.box-show{
+  opacity: 1;
+}
+.box:hover{
   cursor:move;
   transform: scale(1.02);
   box-shadow: 0 0 20px black;
@@ -566,6 +584,10 @@ animation: thor_move 2s ease-out 0s 1;
 For Mobile
 ========================================= */
 @media only screen and (max-width: 1200px) {
+
+  .Goto_top{
+    transform: rotate(45deg) scale(1.5);
+  }
   .thor_logo{
     animation: none;
     display: none;
@@ -578,6 +600,7 @@ For Mobile
   }
   .container{
     grid-template-columns: 90%;
+    width: 90%;
   }
   .text-container{
     padding: 0px;
