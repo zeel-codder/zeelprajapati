@@ -34,7 +34,6 @@ function App() {
     <header>
       <img src={logo} className="logo"></img>
       <span className="logo-text" id="head">
-      
       Zeel Prajapati's Personal Web Site
       </span>
     </header>

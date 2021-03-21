@@ -568,6 +568,7 @@ For Mobile
 @media only screen and (max-width: 1200px) {
   .thor_logo{
     animation: none;
+    display: none;
   }
   
   .box,.revese-box{
@@ -674,6 +675,9 @@ For Mobile
   }
   .main-img{
     height: 60vh;
+  }
+  .navabar-ul li a{
+    font-size: 1rem;
   }
 }
 
