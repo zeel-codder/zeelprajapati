@@ -1,79 +1,117 @@
+/* eslint-disable jsx-a11y/alt-text */
 // *************************************
 // Home.js for Main page or wecan say for zeel prajapati profile
 // ***************************************
 
 
-import {Route,Switch,BrowserRouter as Router} from 'react-router-dom'
-// import Navbar from './navabar';
-// import Introduction from './introduction';
-// import Education from './education';
-// import Technology from './tecnologes'
-// import Projects from './projects'
-// import Footer from './Footer'
-// import Contect from './contect'
-// // import logo from '../../img/home/logo.jpg'
-// import ImgeShow from './imgshow';
-// import mainimg from '../../img/home/4.jpg'
-// import timg from '../../img/home/tchnology.svg'
-// import pimg from '../../img/home/project.svg'
-
+import { Route, Switch, BrowserRouter as Router } from 'react-router-dom'
 import { useGlobalContext } from './context';
 import { useEffect } from 'react';
-// import projectdata from '../../Data/projects'
-
+import { useState } from 'react';
 
 
 function App() {
 
-  const {logo,Navbar,Introduction,Education,Technology,Projects,Contect,Footer,mainimg,thor_logo,Blog}=useGlobalContext();
+  const { logo, Navbar, Introduction, Education, Technology, Projects, Contect, Footer, mainimg, thor_logo, Blog } = useGlobalContext();
+
+  const [HeightArr, setHeighArr] = useState([]);
   // console.log(useGlobalContext())
 
 
   // ================================
   // Page Css Animation
   // ================================
-  function ScrollAnimtion(e){
-    const arr=document.querySelectorAll(".box")
-    const WindowsBottom=window.scrollY+window.innerHeight;
-    arr.forEach((box)=>{
-      const Box=box.offsetTop+box.offsetHeight/6;
-      if(Box<WindowsBottom){
+  function ScrollAnimtion(e) {
+    const arr = document.querySelectorAll(".box")
+    const WindowsBottom = window.scrollY + window.innerHeight;
+    arr.forEach((box) => {
+      const Box = box.offsetTop + box.offsetHeight / 6;
+      if (Box < WindowsBottom) {
         box.classList.add("box-show")
-      }else{
+      } else {
         box.classList.remove("box-show")
 
       }
     })
   }
 
+  function AddLine() {
+
+    let height = document.querySelector(".main1").offsetHeight/2;
+    let HeightArr = []
+    for (let i = 0; i < 15; i++) {
+      HeightArr.push(Math.random() * (height)+height);
+    }
+    setHeighArr(HeightArr);
+    console.log(HeightArr);
+
+  }
+
   useEffect(() => {
-    window.addEventListener("scroll",ScrollAnimtion)
+    window.addEventListener("scroll", ScrollAnimtion)
+    AddLine();
   }, [])
+
+  // console.log(HeightArr);
 
   return (
     <Router>
-    <Navbar />
+      <Navbar />
       <Route exact path="/">
-    <header>
-      <img src={logo} className="logo"></img>
-      <span className="logo-text" id="head">
-      Zeel Prajapati's Personal Web Site
-      </span>
-    </header>
-      <img src={mainimg} className="main-img"></img>
-      <img src={thor_logo} class="thor_logo"></img>
-      <section className="container">
-      <Introduction/>
-      <Education/>
-      <Technology/>
-      <Projects/>
-      </section>
+        <div className="main1">
+          <div className="text">
+            <img src={logo} className="logo"></img>
+            <span className="logo-text" id="head">
+              Zeel Prajapati's Personal Web Site
+            </span>
+          </div>
+          {
+            HeightArr.map((data, index) => {
+              // console.log(data);
+              return (
+              <div className="line_div" onMouseEnter={(e) => {
+                let target = e.target.childNodes;
+                if(target.length!==0){
+                  target=target[0];
+                }else{
+                  target=e.target;
+                }
+                let height = document.querySelector(".main1").offsetHeight;
+                target.style.height = `${height}px`;
+              }} onMouseLeave={(e) => {
+
+                let target = e.target.childNodes;
+                if(target.length!==0){
+                  target=target[0];
+                }else{
+                  target=e.target;
+                }
+                const divs = document.querySelectorAll(".line");
+                let data=Array.from(divs).indexOf(target);
+                target.style.height = `${HeightArr[data]}px`;
+                // console.log(HeightArr[data]);
+                // console.log(e);
+                // console.log("out");
+              }}>
+               <div  className="line" data={index} style={{ height: `${data}px` }}>
+               </div>
+              </div>
+              )
+            })
+          }
+        </div>
+        <section className="container">
+          <Introduction />
+          <Education />
+          <Technology />
+          <Projects />
+        </section>
       </Route>
       <Route exact path="/contect">
-      <Contect />
+        <Contect />
       </Route>
       <Route exact path="/blog">
-      <Blog></Blog>
+        <Blog></Blog>
       </Route>
       <Footer></Footer>
       {/* </Switch> */}

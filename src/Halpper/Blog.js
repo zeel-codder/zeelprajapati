@@ -19,9 +19,9 @@ const Blog=()=>{
                         {arr[1]}
                     </div>
                 }
-                return <img className="img"></img>
-                
-
+                // eslint-disable-next-line jsx-a11y/alt-text
+                return <img  src={arr[1]} className="img" />
+            
              })
             }
         </article>
