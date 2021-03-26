@@ -1,5 +1,5 @@
 import {IoMdListBox} from 'react-icons/io'
-import { useGlobalContext } from './context';
+import { useGlobalContext } from '../context';
 
 const Technology=()=>{
     const {timg}=useGlobalContext()

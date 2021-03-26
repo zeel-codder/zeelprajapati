@@ -8,15 +8,6 @@ const project_data=[
        link:'https://zeelprajapati.netlify.app/',
        
    },
-   {
-       id:2,
-       title:'SPI Caculator',
-       technology:'Python',
-       subtitle:'This projects is build on Python flask. For calculation spi of niram university student on the basic of there Grade',
-       codelink:'#',
-       link:'#',
-       
-   },
 
 ]
 

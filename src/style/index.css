@@ -8,7 +8,7 @@ this main root variables
   --bgcolor:#021750;;
   --hadderbg:#021750;
   --color:white;
-  --font:'Helvetica Neue','Helvetica','Arial','Sans-serif';
+  --font: Arial, Helvetica, sans-serif;
   --font_size:17px;
   --hoverc:rgb(55, 197, 216);
   --text-size:14px;
@@ -19,6 +19,7 @@ this main root variables
   margin: 0;
   font-family:var(--font);
   /* color: white; */
+  /* font-family: */
   transition: var(--transition);
 }
 
@@ -50,7 +51,7 @@ List:
   margin-left: 10px;
 }
 
-.text{
+.text1{
   position: absolute;
     top: 50%;
     left: 50%;
@@ -85,7 +86,7 @@ List:
 }
 .main1  .line{
   background: blue;
-  transition: all 1s;
+  transition: all .5s;
 }
 
 .line:hover{
@@ -100,6 +101,7 @@ List:
   transform: rotate(
 45deg
 ) scale(2.5);
+  cursor: pointer;
   border-radius: 62px;
 }
 
@@ -478,6 +480,11 @@ List:
   border-bottom:2px solid white;
 
 }
+.form div textarea{
+  margin: 10px;
+    width: 261px;
+    height: 50px;
+}
 .form-input:focus,.form div :hover{
   border-bottom-color: var(--hoverc);
   color: var(--hoverc);
@@ -591,11 +598,16 @@ For Mobile
 @media only screen and (max-width: 1200px) {
   .main1{
     background-color: blue;
+    height: 50vh;
   }
   .line_div{
     border: none;
   }
-  .text{
+
+  .text1{
+    flex-direction: column;
+    top:25%;
+    font-weight: bold;
     width: 100%;
   }
   .logo-text{

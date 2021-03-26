@@ -1,6 +1,6 @@
 import react,{useState} from 'react'
 import {useEffect} from 'react'
-import { useGlobalContext } from './context';
+import { useGlobalContext } from '../context';
 
 
 const ImgeShow=(props)=>{

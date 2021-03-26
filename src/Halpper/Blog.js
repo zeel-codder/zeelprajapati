@@ -1,4 +1,4 @@
-import {useGlobalContext} from './Home_Page/context'
+import {useGlobalContext} from './context'
 
 
 

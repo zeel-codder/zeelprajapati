@@ -1,5 +1,5 @@
 // import logo from "../../img/home/education.svg"
-import { useGlobalContext } from './context';
+import { useGlobalContext } from '../context';
 const Education =(p)=>{
 
     const {logo_edu}=useGlobalContext()

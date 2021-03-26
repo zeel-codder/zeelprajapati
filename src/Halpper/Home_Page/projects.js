@@ -1,7 +1,7 @@
 import {IoIosArrowDroprightCircle} from 'react-icons/io'
 import {FaRegHandPointRight} from 'react-icons/fa'
 import {useState} from 'react'
-import { useGlobalContext } from './context';
+import { useGlobalContext } from '../context';
 
 const Projects=()=>{
     const {pimg,projectdata}=useGlobalContext()

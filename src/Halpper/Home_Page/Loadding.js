@@ -1,5 +1,6 @@
 import {AiOutlineLoading3Quarters} from 'react-icons/ai'
-export default ()=>{
+
+const Loadding= ()=>{
     return(
         <>
         <div class="loadding">
@@ -9,3 +10,5 @@ export default ()=>{
         </>
     )
 }
+
+export default Loadding;
