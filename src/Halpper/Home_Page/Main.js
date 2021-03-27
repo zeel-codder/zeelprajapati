@@ -24,12 +24,11 @@ function App() {
     const arr = document.querySelectorAll(".box")
     const WindowsBottom = window.scrollY + window.innerHeight;
     arr.forEach((box) => {
-      const Box = box.offsetTop + box.offsetHeight / 6;
+      const Box = box.offsetTop + box.offsetHeight / 7;
       if (Box < WindowsBottom) {
         box.classList.add("box-show")
       } else {
         box.classList.remove("box-show")
-
       }
     })
   }
@@ -50,6 +49,14 @@ function App() {
   useEffect(() => {
     window.addEventListener("scroll", ScrollAnimtion)
     AddLine();
+    setInterval(()=>{
+
+      let height = document.querySelector(".main1").offsetHeight;
+      let list=document.querySelectorAll('.line');
+      list.forEach((data)=>{
+        data.style.height = `${height}px`;
+      })
+    },5000)
   }, [])
 
   // console.log(HeightArr);
