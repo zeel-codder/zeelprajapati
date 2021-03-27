@@ -456,6 +456,7 @@ List:
   flex-direction: column;
   align-items: center;
   align-self: flex-start;
+  padding: 4rem 0;
   font-size: vat(--font_size);
   background-color: var(--bgcolor);
   border-bottom: 2px solid white;
@@ -602,6 +603,9 @@ For Mobile
   }
   .line_div{
     border: none;
+  }
+  .form{
+    padding: 1rem 0;
   }
 
   .text1{
