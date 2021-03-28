@@ -11,7 +11,7 @@ const Prisumh=(props)=>{
   }, [])
 
   const { code, plugins, language } = props
-  console.log(code);
+  // console.log(code);
     return (
       <>
 

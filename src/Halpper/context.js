@@ -13,21 +13,20 @@ import ImgeShow from './Home_Page/imgshow';
 import mainimg from '../img/home/4.jpg'
 import timg from '../img/home/tchnology.svg'
 import pimg from '../img/home/project.svg'
-import projectdata from '../Data/projects'
+import projectdata from '../Data/Home/projects'
 import logo_edu from "../img/home/education.svg"
 import logo_intro from "../img/home/introimg.svg"
 import Loadding from './Home_Page/Loadding'
-import Navadata from '../Data/data'
-import imgdic from '../Data/Imgedata'
+import Navadata from '../Data/Home/data'
+import imgdic from '../Data/Home/Imgedata'
 import thor_logo from '../img/home/start_logo.png'
-import Blog from './Blog'
-import BlogData from '../Data/Blog_data'
+import Blog from './Blog/Blog'
+// import BlogData from '../Data/Home/Blog_data'
 import Main from './Home_Page/Main'
 
 // import projectdata from '../../Data/projects'
 
 import React, {
-  useState,
   useContext
 } from 'react';
 
@@ -63,7 +62,7 @@ const AppProvider = ({
         Navadata,
         projectdata,
         thor_logo,
-        BlogData,
+
 
       }
     } >
