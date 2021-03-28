@@ -1,6 +1,7 @@
 import react,{useEffect} from 'react'
 import './style/App.css';
 import './style/Bolg.css';
+import './style/prism.css'
 import { BiLeftTopArrowCircle } from 'react-icons/bi'
 import HOME from './Halpper/Home'
 
