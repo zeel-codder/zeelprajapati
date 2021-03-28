@@ -20,7 +20,7 @@ this main root variables
   font-family:var(--font);
   /* color: white; */
   /* font-family: */
-  transition: var(--transition);
+  /* transition: var(--transition); */
 }
 
 /* styling form hadder tage */

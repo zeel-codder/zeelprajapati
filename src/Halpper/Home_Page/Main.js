@@ -51,7 +51,11 @@ function App() {
     AddLine();
     setInterval(()=>{
 
-      let height = document.querySelector(".main1").offsetHeight;
+      let height = document.querySelector(".main1")
+      if(height!=null){
+        height=height.offsetHeight;
+      }
+      // offsetHeight;
       let list=document.querySelectorAll('.line');
       list.forEach((data)=>{
         data.style.height = `${height}px`;

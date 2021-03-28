@@ -1,3 +1,4 @@
+ 
 
 :root{
     --transition:.5s all;
@@ -5,9 +6,9 @@
     --bgcolor:#021750;;
     --hadderbg:#021750;
     --color:white;
-    --font:'Lato','sans-serif';
+    --font:Arial, Helvetica, sans-serif;
     --font_size:1.3rem;
-    --hoverc:rgb(55, 197, 216);
+    --hoverc:rgb(55, 197);
     --text-size:14px;
     --font-size-400pxafter:13px;
   }

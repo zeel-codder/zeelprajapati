@@ -9,7 +9,7 @@ import Projects from './Home_Page/projects'
 import Footer from './Home_Page/Footer'
 import Contect from './contect'
 import logo from '../img/home/logo.jpg'
-import ImgeShow from './/Home_Page/imgshow';
+import ImgeShow from './Home_Page/imgshow';
 import mainimg from '../img/home/4.jpg'
 import timg from '../img/home/tchnology.svg'
 import pimg from '../img/home/project.svg'
