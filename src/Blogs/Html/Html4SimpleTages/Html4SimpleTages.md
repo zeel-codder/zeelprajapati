@@ -1,20 +1,22 @@
 # Demo
 
-Hi i Am zeel prajapati
+Hi i Am zeel prajapat
 
-~~i am web devloper~~
+
+| col1 | col2 | col3 |
+| - | - | - |
+|   |   |   |
+|   |   |   |
+
+*i am web devloper*
 
 [home](/)
 
-![MyFase](/static/media/logo.6d10fc6c.jpg)
+![MyFase](../../Blogs/Html/Html4impleTages/1.jpg)
 
-
-😄****
+Html
 
 ```html
-
-
-
 <!DOCTYPE html>
     <html lang="en">
   
@@ -62,10 +64,6 @@ Hi i Am zeel prajapati
         </footer>
     </body>
     </html
-
-
-
-
 ```
 
 **Thank you**

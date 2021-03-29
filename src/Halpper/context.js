@@ -23,6 +23,10 @@ import thor_logo from '../img/home/start_logo.png'
 import Blog from './Blog/Blog'
 // import BlogData from '../Data/Home/Blog_data'
 import Main from './Home_Page/Main'
+import BlogInfo from '../Data/BlogData/BlogInfo'
+import BlogMainImg from '../img/home/1.jpg'
+import BlogShort from './Blog/BlogShort'
+import BlogPage from './Blog/BlogPage'
 
 // import projectdata from '../../Data/projects'
 
@@ -51,6 +55,8 @@ const AppProvider = ({
         Loadding,
         Blog,
         Main,
+        BlogShort,
+        BlogPage,
         imgdic,
         logo,
         mainimg,
@@ -62,6 +68,8 @@ const AppProvider = ({
         Navadata,
         projectdata,
         thor_logo,
+        BlogInfo,
+        BlogMainImg,
 
 
       }
