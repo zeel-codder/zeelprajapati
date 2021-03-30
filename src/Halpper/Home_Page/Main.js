@@ -42,7 +42,7 @@ function App() {
       HeightArr.push(Math.random() * (height)+height);
     }
     setHeighArr(HeightArr);
-    console.log(HeightArr);
+    // console.log(HeightArr);
 
   }
 

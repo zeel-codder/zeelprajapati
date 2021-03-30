@@ -3,7 +3,9 @@ import {useEffect,useState} from "react"
 import {useParams} from 'react-router-dom';
 import Prism from "prismjs";
 import Reactmarkdown from 'react-markdown';
-import marked from 'marked';
+
+import Tem from '../../Blogs/Html/Html4SimpleTages/index'
+// import marked from 'marked';
 // import  from '';
 // import from 
 // import file1 from '../../Blogs/Html/Html4SimpleTages/Html4SimpleTages.md';
@@ -25,7 +27,7 @@ const Blog=()=>{
     useEffect(() => {
         Prism.highlightAll()
     
-        console.log(file)
+        // console.log(file)
         // const file=require(__dirname+"/"+link);
          
         if(!file){
@@ -53,8 +55,10 @@ const Blog=()=>{
         {/* <article className="blog-container" dangerouslySetInnerHTML={{__html: data}}>
 
         </article> */}
+        {/* <Tem></Tem> */}
         <Reactmarkdown className="blog-container"
    source={data}
+   
 />
       
   

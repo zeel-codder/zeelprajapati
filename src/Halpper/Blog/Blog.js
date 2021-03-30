@@ -26,7 +26,7 @@ const Blog=()=>{
           <marquee className="alert" behavior="scroll" direction="right">This page is still in production</marquee>
           <h1>Zeel Prajapati's Blog</h1>
 
-          <img className="img" src={BlogMainImg}></img>
+          <img className="img" src={BlogMainImg} alt="blog img"></img>
           <p className="para">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde vitae enim dolor aut reprehenderit rerum. Inventore eaque iste ab ut in placeat quasi et voluptates. Exercitationem voluptate repellat similique? Libero.lo Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, est quae repellendus vel placeat odio voluptatum itaque quia sequi ipsa eius quod? Perferendis veniam deserunt fugit earum at consequuntur voluptatum!
           </p>

@@ -26,16 +26,16 @@ const BlogShort = (props) => {
         data.map((BlogInformation)=>{
             const {id,title,img,url}=BlogInformation;
             return (
-                <a href={url} className="blog-a">
-
+                
                 
                 <div className="BlogInformation" key={id}>
                     <h2>{title}</h2>
+                    <a href={url} className="blog-a">
                     <img src={img}  alt='BlogShort Img'/> 
                     <button className="btn" style={{color:'black'}}>Read more
                     </button>
-                </div>
                     </a>
+                </div>
 
             )
         })

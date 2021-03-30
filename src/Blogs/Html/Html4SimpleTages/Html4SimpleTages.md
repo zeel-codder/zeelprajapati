@@ -1,15 +1,12 @@
 
-# Demo
-
-Hi i Am zeel prajapat
+# 4 Basic And Important Tags For Beginner In Web Development
 
 
-
-*i am web devloper*
 
 [home](/)
 
-![MyFase](./1.jpg)
+![MyFase](/static/media/1.a26088f9.jpg)
+![MyFase](/static/media/first.96b1116b.jpeg)
 
 Html
 
