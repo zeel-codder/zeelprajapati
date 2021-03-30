@@ -1,9 +1,12 @@
 import {useGlobalContext} from '../context'
 import {useEffect,useState} from "react"
 import {useParams} from 'react-router-dom';
-import Prism from "prismjs"
+import Prism from "prismjs";
+import Reactmarkdown from 'react-markdown';
 import marked from 'marked';
-import file1 from '../../Blogs/Html/Html4SimpleTages/Html4SimpleTages.md';
+// import  from '';
+// import from 
+// import file1 from '../../Blogs/Html/Html4SimpleTages/Html4SimpleTages.md';
 
 // import file from '../../Blogs/Html/Html4SimpleTages/Html4SimpleTages.md';
 
@@ -11,8 +14,9 @@ const Blog=()=>{
   
 
     
-    const {BlogInfo}=useGlobalContext();
-    const {blogname}  = useParams();
+  const {blogname}  = useParams();
+  const file=useGlobalContext()[blogname];
+
     const [data,setdata]=useState("");
     
     // console.log(BlogData)
@@ -20,26 +24,43 @@ const Blog=()=>{
 
     useEffect(() => {
         Prism.highlightAll()
-        let Blog=BlogInfo.find((data1)=>(data1.data).find(value=>value.name===blogname));
-        Blog=Blog.data.find(value=>value.name===blogname);
-        let file=Blog.link;
-        fetch(file1)
+    
+        console.log(file)
+        // const file=require(__dirname+"/"+link);
+         
+        if(!file){
+          setdata('<h1 class="alert">404 Not Found</h1>')
+          return;
+        }
+        fetch(file)
         .then(response => {
+          
           return response.text()
         })
         .then(text => {
           setdata(
-            marked(`${text}`).trim()
+            text
             )
         })
         // setdata(Blog);
         // console.log()
         // setdata([])
         // console.log(slug)
-      }, [data])
+      }, [data, file])
 
     return (
-        <article className="blog-container" dangerouslySetInnerHTML={{__html: data}}></article>
+      <>
+        {/* <article className="blog-container" dangerouslySetInnerHTML={{__html: data}}>
+
+        </article> */}
+        <Reactmarkdown className="blog-container"
+   source={data}
+/>
+      
+  
+       
+      
+      </>
       
     )
 }

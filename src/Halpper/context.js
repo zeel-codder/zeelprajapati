@@ -30,6 +30,20 @@ import BlogPage from './Blog/BlogPage'
 
 // import projectdata from '../../Data/projects'
 
+
+
+// ===============================
+
+// All Blog Page Md files Imports
+
+// ===============================
+
+
+import Html4SimpleTages from '../Blogs/Html/Html4SimpleTages/Html4SimpleTages.md'
+import demo from '../Blogs/Html/demo/demo.md'
+
+// ===================================
+
 import React, {
   useContext
 } from 'react';
@@ -44,6 +58,8 @@ const AppProvider = ({
   return ( <
     AppContext.Provider value = {
       {
+
+        //this is react componts
         Navbar,
         Introduction,
         Education,
@@ -57,6 +73,8 @@ const AppProvider = ({
         Main,
         BlogShort,
         BlogPage,
+
+        //defult img and video..
         imgdic,
         logo,
         mainimg,
@@ -70,6 +88,11 @@ const AppProvider = ({
         thor_logo,
         BlogInfo,
         BlogMainImg,
+
+        //this is blog fils imports
+
+        Html4SimpleTages,
+        demo,
 
 
       }

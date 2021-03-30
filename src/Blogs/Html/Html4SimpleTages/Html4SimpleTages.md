@@ -1,18 +1,15 @@
+
 # Demo
 
 Hi i Am zeel prajapat
 
 
-| col1 | col2 | col3 |
-| - | - | - |
-|   |   |   |
-|   |   |   |
 
 *i am web devloper*
 
 [home](/)
 
-![MyFase](../../Blogs/Html/Html4impleTages/1.jpg)
+![MyFase](./1.jpg)
 
 Html
 
@@ -63,7 +60,7 @@ Html
             </ul>
         </footer>
     </body>
-    </html
+    </html>
 ```
 
-**Thank you**
+**Thank you** 

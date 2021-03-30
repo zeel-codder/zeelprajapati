@@ -12,6 +12,9 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-icons": "^4.2.0",
+    "react-markdown": "^5.0.3",
+    "react-marked": "^0.3.1",
+    "react-marked-markdown": "^1.4.6",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.2",
     "web-vitals": "^1.1.0"
@@ -42,6 +45,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.13.13",
-    "babel-plugin-prismjs": "^2.0.1"
+    "babel-plugin-prismjs": "^2.0.1",
+    "raw-loader": "^4.0.2"
   }
 }
