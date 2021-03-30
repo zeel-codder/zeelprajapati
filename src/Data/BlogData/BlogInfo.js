@@ -1,5 +1,4 @@
 
-
 const BlogData=[
     {
         topic:'html',
@@ -7,11 +6,44 @@ const BlogData=[
         [
             {
                 id:1,
+                name:'Html4SimpleTages',
                 title:'4 Basic And Important Tags for Beginner in web development',
                 link:'../../Blogs/Html/Html4SimpleTages/Html4SimpleTages.md',
                 img:'https://images.unsplash.com/photo-1585076641399-5c06d1b3365f?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8aHRtbHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
                 url:'/Blog/Html4SimpleTages'
-            }
+            },
+            {
+                id:2,
+                name:'Html4SimpleTages',
+                title:'4 Basic And Important Tags for Beginner in web development',
+                link:'../../Blogs/Html/Html4SimpleTages/Html4SimpleTages.md',
+                img:'https://images.unsplash.com/photo-1585076641399-5c06d1b3365f?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8aHRtbHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+                url:'/Blog/Html4SimpleTages'
+            },
+            {
+                id:3,
+                name:'Html4SimpleTages',
+                title:'4 Basic And Important Tags for Beginner in web development',
+                link:'../../Blogs/Html/Html4SimpleTages/Html4SimpleTages.md',
+                img:'https://images.unsplash.com/photo-1585076641399-5c06d1b3365f?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8aHRtbHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+                url:'/Blog/Html4SimpleTages'
+            },
+            {
+                id:4,
+                name:'Html4SimpleTages',
+                title:'4 Basic And Important Tags for Beginner in web development',
+                link:'../../Blogs/Html/Html4SimpleTages/Html4SimpleTages.md',
+                img:'https://images.unsplash.com/photo-1585076641399-5c06d1b3365f?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8aHRtbHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+                url:'/Blog/Html4SimpleTages'
+            },
+            {
+                id:5,
+                name:'Html4SimpleTages',
+                title:'4 Basic And Important Tags for Beginner in web development',
+                link:'../../Blogs/Html/Html4SimpleTages/Html4SimpleTages.md',
+                img:'https://images.unsplash.com/photo-1585076641399-5c06d1b3365f?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8aHRtbHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+                url:'/Blog/Html4SimpleTages'
+            },
         ]
     },{
 
