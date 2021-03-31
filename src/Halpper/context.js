@@ -1,5 +1,7 @@
 // import React, { useState, useContext } from 'react';
 
+
+
 // import {Route,Switch,BrowserRouter as Router} from 'react-router-dom'
 import Navbar from './Home_Page/navabar';
 import Introduction from './Home_Page/introduction';
@@ -59,6 +61,9 @@ const AppProvider = ({
     AppContext.Provider value = {
       {
 
+
+        // mongoose,
+        
         //this is react componts
         Navbar,
         Introduction,

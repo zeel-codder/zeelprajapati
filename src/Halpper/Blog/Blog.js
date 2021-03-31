@@ -12,14 +12,31 @@ const Blog=()=>{
 
     
     const {BlogInfo,BlogMainImg,BlogShort}=useGlobalContext();
-    const [data,setdata]=useState("");
+    const [data,setdata]=useState([]);
 
     // console.log(BlogData)
     // let dic=BlogData.find((data)=>data.id===1) 
 
     useEffect(() => {
-       setdata(BlogInfo);
-      }, [data])
+       const data1=[];
+       const index=[];
+       BlogInfo.forEach(element => {
+         let topic=element.topic;
+         console.log(topic)
+        if(! (topic in index)){
+          const add={
+          };
+          add['topic']=topic;
+          add['data']=[];
+          index[topic]=data1.length;
+          data1.push(add);
+          console.log(data1);
+        }
+        data1[index[topic]]['data'].push(element);
+       });
+       console.log(data1);
+       setdata(data1);
+      }, [])
 
     return (
         <article className="blog-container">
@@ -32,9 +49,10 @@ const Blog=()=>{
           </p>
 
           <div className="ListOfBlogs">
-            {
-
-              BlogInfo.map((page)=>{
+            {  
+              
+              
+              data.map((page)=>{
 
                 return (<BlogShort {...page} />)
                  
