@@ -32,9 +32,11 @@ const BlogShort = (props) => {
                     <h2>{title}</h2>
                     <a href={url} className="blog-a">
                     <img src={img}  alt='BlogShort Img'/> 
-                        <h2 style={{textAlign:'center'}}><FcLike /> {like}</h2>
+                    
+                    <h2 style={{textAlign:'center'}}><FcLike /> {like}</h2>
                     <button className="btn" style={{color:'black'}}>Read more
                     </button>
+                   
                     </a>
                 </div>
 
