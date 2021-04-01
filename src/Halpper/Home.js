@@ -3,8 +3,9 @@
 // Home.js for Main page or wecan say for zeel prajapati profile
 // ***************************************
 
-
-import { Route, BrowserRouter as Router ,useParams } from 'react-router-dom'
+import axios from 'axios';
+import {useState,useEffect} from 'react';
+import { Route, BrowserRouter as Router} from 'react-router-dom'
 import { useGlobalContext } from './context';
 
 
@@ -12,6 +13,19 @@ function App() {
 
   const { Navbar,Main, Contect, Footer,  Blog , BlogPage } = useGlobalContext();
 
+  // useEffect(() => {
+   
+  //     axios.get("http://localhost:5001/demo").then((data)=>{
+  //       return data['data'];
+  //     }).then((data)=>{
+
+  //       console.log(data);
+  //     }).catch((err)=>{
+  //       console.log('oops ',err);
+  //     })
+    
+
+  // }, [])
 
  
   // console.log(useGlobalContext())
