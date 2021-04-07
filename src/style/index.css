@@ -2,6 +2,8 @@
 /* ================================
 this main root variables
 ================================ */
+
+
 :root{
   --transition:.5s all;
   --transition1:.5s all;
@@ -13,7 +15,10 @@ this main root variables
   --hoverc:rgb(55, 197, 216);
   --text-size:14px;
   --font-size-400pxafter:13px;
+  /* transition: all 1s; */
 }
+
+
 
 *{
   margin: 0;
@@ -93,18 +98,41 @@ List:
   cursor:grab;
 }
 
-.Goto_top {
+.MainPageButton {
   position: fixed;
-  background: red;
-  bottom: 13px;
-  right: 16px;
-  transform: rotate(
-45deg
-) scale(2.5);
+  width: 1rem;
+  height: 1rem;
+  bottom: 2rem;
+  right: 2rem;
   cursor: pointer;
-  border-radius: 62px;
 }
 
+.Goto_top,.DarkMode,.Icon{
+  border-radius: 62px;
+  background: rgb(23, 202, 193);
+  position: absolute;
+  top:0;
+  left: 0;
+  transition: var(--transition);
+  transform: rotate(
+  45deg
+  ) scale(2.5);
+}
+.Icon{
+  transform:rotate(
+    0deg
+    ) scale(2.5);
+
+}
+.Goto_top-show{
+  transform:rotate(
+    45deg
+    ) scale(2.5) translate(-80%,-80%);;
+}
+.DarkMode-show{
+  transform:rotate(45deg) scale(2.5) translate(-80%,80%);
+
+}
 /* =============================
 
 2.navbar
@@ -311,8 +339,9 @@ List:
   color: black;
 }
 
-
+/* .container  */
 .container h1:hover{
+
   color: var(--hadderbg);
   cursor: pointer;
 }
@@ -322,23 +351,35 @@ List:
   display: flex;
   opacity: 0;
   align-items: center;
+  transform: translateX(-50%);
   margin: 20px 0px;
   flex-direction: column;
   justify-content: flex-start;
   /* border:  2px solid; */
   height: 100%;
-  box-shadow: 0 0 10px black;
-  transition: all .5s;
+  box-shadow: 0 0 1px black;
+  transition: all .7s;
+  border-radius: 2px;
+  /* border: .1px solid black; */
   /* justify-content: space-around; */
   
 }
-.box-show{
-  opacity: 1;
+.box:nth-child(even){
+  /* background-color: red; */
+  transform: translateX(50%);
 }
+.box-show > h1,.box >h1{
+  font-size: large;
+}
+.box-show,.box-show:nth-child(even){
+  opacity: 1;
+  transform: translateX(0%);
+}
+/* .box-show:nth-child(even) */
 .box:hover{
-  cursor:move;
-  transform: scale(1.02);
-  box-shadow: 0 0 20px black;
+  /* cursor:move; */
+  /* transform: scale(1.02); */
+  box-shadow: 0 0 4px black;
 }
 .box > h1 ,.revese-box >h1{
   line-height: 2rem;
@@ -536,31 +577,60 @@ cursor: pointer;
 
 /* loadding */
 .loadding{
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
   display: flex;
   background-color: transparent;
   /* z-index: 1; */
   justify-content: center;
-  background-color:#345cca;
+  /* background-color:#f8f8f8; */
 
 }
-.loadding svg{
-  /* transform: scale(2); */
-  width: 100px;
-  height: 100px;
-  transition: var(--transition);
-  animation: roted 1s cubic-bezier(1, -0.03, 1, 1) 0s infinite;
+.loadding *{
+  margin: 0 .2rem;
+  width: .4rem;
+  height: 3rem;
+  opacity: 1;
+  z-index: 2;
+  background-color: red;
+  transform-origin: center;
+  /* transition: all .5s; */
+  /* object-position: center; */
+}
+.line1,.line6{
+  animation: LineAnimation 1.2s linear 0s infinite;
+
+}
+.line2,.line5{
+  animation: LineAnimation 1.2s linear .3s infinite;
+
+}
+.line3,.line4{
+  animation: LineAnimation 1.2s linear .6s infinite;
+
 }
 
-@keyframes roted{
-  0%{
-    transform:rotate(0deg)
-  }100%{
-    transform: rotate(360deg);
+@keyframes LineAnimation{
+  0%,100%{
+   transform:scaleY(0);
+  }25%{
+    transform:scaleY(.5);
+    /* transform: translateY(100%); */
+  }50%{
+    transform:scaleY(1);
+    /* transform: translateY(100%); */
+  }75%{
+    transform:scaleY(.5);
+    /* transform: translateY(100%); */
   }
 }
 .blur{
-  /* opacity: .5;
-  z-index: -1; */
+  /* opacity: .5; */
+  /* background-color: black; */
+  /* z-index: -1; */
+
   pointer-events: none;
 }
 
@@ -623,7 +693,8 @@ For Mobile
     font-size: 1rem;
   }
   .Goto_top{
-    transform: rotate(45deg) scale(1.5);
+    transform: rotate(45deg) scale(2);
+    z-index: 2;
   }
   .thor_logo{
     animation: none;

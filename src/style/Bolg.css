@@ -115,12 +115,44 @@ svg{
 }
 
 
+
+/* ====================================
+Like
+==================================== */
+
+.Like-Page,.Like{
+    display: inline-flex;
+    background-color: black;
+    color: white;
+    font-size: var(--font_size);
+    padding: 3px .2rem;
+    align-items: center;
+
+}
+
+.Like-Page{
+    /* display: inline-flex; */
+    margin-left: .4rem;
+   
+}
+
+.Like-Page:hover{
+
+   cursor: pointer;
+}
+.blog-container button{
+    color: black;
+}
+
 @media only screen and (max-width: 1200px) {
     h1,h2{
         font-size: 1rem;
     }
     .blog-container{
         width: 90%;
+    }
+    .blog-container button{
+        color: black;
     }
     .ListOfBlogs{
         grid-template-columns: 100%;
@@ -141,3 +173,27 @@ svg{
         /* width: 100%;
     } */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========================================
+Dark Mode Make Sure to the last
+======================================== */
+.dark{
+    background-color: black;
+    color: white;
+  }
+  .dark *,.dark p,.dark button,.dark a,.dark div{
+    color: white;
+  }

@@ -27,8 +27,6 @@ function App() {
       const Box = box.offsetTop + box.offsetHeight / 7;
       if (Box < WindowsBottom) {
         box.classList.add("box-show")
-      } else {
-        box.classList.remove("box-show")
       }
     })
   }

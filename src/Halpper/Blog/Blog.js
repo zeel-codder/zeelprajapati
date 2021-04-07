@@ -1,7 +1,8 @@
 /* eslint-disable jsx-a11y/no-distracting-elements */
 import {useGlobalContext} from '../context'
 import {useEffect,useState} from "react"
-import Prism from "prismjs"
+// import Prism from "prismjs"
+import axios from 'axios';
 // import Code from '../prisumh'
 // import marked from 'marked';
 // import file from '../../Blogs/Html/Html4SimpleTages/Html4SimpleTages.md';
@@ -14,28 +15,41 @@ const Blog=()=>{
     const {BlogInfo,BlogMainImg,BlogShort}=useGlobalContext();
     const [data,setdata]=useState([]);
 
-    // console.log(BlogData)
-    // let dic=BlogData.find((data)=>data.id===1) 
+
 
     useEffect(() => {
-       const data1=[];
-       const index=[];
-       BlogInfo.forEach(element => {
-         let topic=element.topic;
-         console.log(topic)
-        if(! (topic in index)){
-          const add={
-          };
-          add['topic']=topic;
-          add['data']=[];
-          index[topic]=data1.length;
-          data1.push(add);
-          console.log(data1);
-        }
-        data1[index[topic]]['data'].push(element);
-       });
-       console.log(data1);
-       setdata(data1);
+
+
+      //  console.log(findBlogInfo(),2)
+
+       axios.get('/Blog')
+                .then((res)=>{
+                  const data1=[];
+                  const index=[];
+                  console.log(res.data);
+                  const BlogInfo=res.data;
+                  BlogInfo.forEach(element => {
+                    let topic=element.topic;
+                   //  console.log(topic)
+                   if(! (topic in index)){
+                     const add={
+                     };
+                     add['topic']=topic;
+                     add['data']=[];
+                     index[topic]=data1.length;
+                     data1.push(add);
+                     // console.log(data1);
+                   }
+                   data1[index[topic]]['data'].push(element);
+                  });
+                 //  console.log(data1);
+                  setdata(data1);
+
+
+                })
+                .catch((err)=>{console.log(err);})
+       
+      
       }, [])
 
     return (

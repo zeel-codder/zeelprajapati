@@ -3,8 +3,10 @@ import {useEffect,useState} from "react"
 import {useParams} from 'react-router-dom';
 import Prism from "prismjs";
 import Reactmarkdown from 'react-markdown';
-
-import Tem from '../../Blogs/Html/Html4SimpleTages/index'
+import axios from 'axios';
+// import Tem from '../../Blogs/Html/Html4SimpleTages/index'
+// import { GetBlogInfo } from '../../../../Database/BlogSchema';
+// import { response } from 'express';
 // import marked from 'marked';
 // import  from '';
 // import from 
@@ -18,17 +20,31 @@ const Blog=()=>{
     
   const {blogname}  = useParams();
   const file=useGlobalContext()[blogname];
+  const {Like} =useGlobalContext();
 
     const [data,setdata]=useState("");
+    const [blogInfo,setBlogInfo]=useState(0);
     
     // console.log(BlogData)
     // let dic=BlogData.find((data)=>data.id===1) 
 
+
+    const GetBlogInfo=()=>{
+
+      axios.get(`/Blog/${blogname}`)
+            .then((response)=>response.data)
+            .then((data)=>{setBlogInfo(data);})
+            .catch((err)=>console.log(err));
+    }
+
     useEffect(() => {
         Prism.highlightAll()
-    
-        // console.log(file)
-        // const file=require(__dirname+"/"+link);
+
+
+        GetBlogInfo();
+        
+
+        
          
         if(!file){
           setdata('<h1 class="alert">404 Not Found</h1>')
@@ -49,21 +65,20 @@ const Blog=()=>{
         // setdata([])
         // console.log(slug)
       }, [data, file])
-
+    
+      // console.log(blogInfo,'main');
     return (
       <>
         {/* <article className="blog-container" dangerouslySetInnerHTML={{__html: data}}>
 
         </article> */}
         {/* <Tem></Tem> */}
-        <Reactmarkdown className="blog-container"
-   source={data}
-   
-/>
-      
-  
-       
-      
+        <div className=" blog-container">
+        <Reactmarkdown source={data}/>
+        {
+        blogInfo!==0 && <Like className="Share" blogInfo={blogInfo} like={blogInfo.like}></Like>
+        }
+        </div>
       </>
       
     )
