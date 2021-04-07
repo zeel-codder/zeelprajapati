@@ -1,4 +1,4 @@
-import react,{useEffect,useState} from 'react';
+import {useEffect,useState} from 'react';
 import { BiLeftTopArrowCircle } from 'react-icons/bi';
 import {CgDarkMode} from 'react-icons/cg';
 import {DiOpensource} from 'react-icons/di';
