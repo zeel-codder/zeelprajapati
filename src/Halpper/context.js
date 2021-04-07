@@ -92,7 +92,7 @@ const AppProvider = ({
         logo_edu,
         logo_intro,
         Navadata,
-        projectdata,
+        // projectdata,
         thor_logo,
         BlogInfo,
         BlogMainImg,

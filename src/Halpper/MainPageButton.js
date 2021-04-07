@@ -13,14 +13,16 @@ function App() {
 
 
     useEffect(() => {
-
-            const GOTO=document.querySelector('.Goto_top');
-            const Dark=document.querySelector('.DarkMode');
-               
-            if(GOTO && Dark){
+            
+            
+              const GOTO=document.querySelector('.Goto_top');
+              const Dark=document.querySelector('.DarkMode');
+              
+              if(GOTO && Dark){
                 GOTO.classList.toggle('Goto_top-show');
                 Dark.classList.toggle('DarkMode-show');
-            }
+              }
+            
 
        
     }, [isOpen])
