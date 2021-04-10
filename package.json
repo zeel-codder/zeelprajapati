@@ -60,6 +60,5 @@
     "netlify-lambda": "^2.0.3",
     "raw-loader": "^4.0.2"
   }
-  // ,
-  // "proxy": "http://localhost:9000/.netlify/functions"
+ 
 }
