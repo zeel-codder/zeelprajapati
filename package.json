@@ -1,0 +1,62 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "@testing-library/user-event": "^12.6.3",
+    "axios": "^0.21.1",
+    "emailjs-com": "^2.6.4",
+    "express": "^4.17.1",
+    "install": "^0.13.0",
+    "marked": "^2.0.1",
+    "mongodb": "^3.6.6",
+    "mongodb-client-encryption": "^1.2.3",
+    "mongoose": "^5.12.3",
+    "mypackage": "^0.1.0",
+    "prismjs": "^1.23.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-icons": "^4.2.0",
+    "react-markdown": "^5.0.3",
+    "react-marked": "^0.3.1",
+    "react-marked-markdown": "^1.4.6",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.2",
+    "saslprep": "^1.0.3",
+    "sls": "^0.1.0",
+    "web-vitals": "^1.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lambda": "netlify-lambda serve LambdaFunctions"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.13",
+    "babel-plugin-prismjs": "^2.0.1",
+    "netlify-lambda": "^2.0.3",
+    "raw-loader": "^4.0.2"
+  }
+}
