@@ -8,7 +8,8 @@ import HOME from './Halpper/Home'
 
 
 function App() {
-
+    // ,
+  // "proxy": "http://localhost:9000/.netlify/functions"
 
   // useEffect(() => {
 
