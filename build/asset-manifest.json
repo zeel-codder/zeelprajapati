@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/static/css/main.f57cd20c.chunk.css",
+    "main.js": "/static/js/main.34473e74.chunk.js",
+    "main.js.map": "/static/js/main.34473e74.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.03887cff.js",
+    "runtime-main.js.map": "/static/js/runtime-main.03887cff.js.map",
+    "static/js/2.dc45ef57.chunk.js": "/static/js/2.dc45ef57.chunk.js",
+    "static/js/2.dc45ef57.chunk.js.map": "/static/js/2.dc45ef57.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.f57cd20c.chunk.css.map": "/static/css/main.f57cd20c.chunk.css.map",
+    "static/js/2.dc45ef57.chunk.js.LICENSE.txt": "/static/js/2.dc45ef57.chunk.js.LICENSE.txt",
+    "static/media/1.a26088f9.jpg": "/static/media/1.a26088f9.jpg",
+    "static/media/2.7040f3df.jpg": "/static/media/2.7040f3df.jpg",
+    "static/media/3.69a71d91.jpg": "/static/media/3.69a71d91.jpg",
+    "static/media/4.07ef1da1.jpg": "/static/media/4.07ef1da1.jpg",
+    "static/media/Html4SimpleTages.9edc364b.md": "/static/media/Html4SimpleTages.9edc364b.md",
+    "static/media/demo.32e4a4b5.md": "/static/media/demo.32e4a4b5.md",
+    "static/media/education.3f0e2718.svg": "/static/media/education.3f0e2718.svg",
+    "static/media/introimg.e9045810.svg": "/static/media/introimg.e9045810.svg",
+    "static/media/logo.6d10fc6c.jpg": "/static/media/logo.6d10fc6c.jpg",
+    "static/media/project.6e61126c.svg": "/static/media/project.6e61126c.svg",
+    "static/media/start_logo.f9d56cf8.png": "/static/media/start_logo.f9d56cf8.png",
+    "static/media/tchnology.778b5668.svg": "/static/media/tchnology.778b5668.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.03887cff.js",
+    "static/js/2.dc45ef57.chunk.js",
+    "static/css/main.f57cd20c.chunk.css",
+    "static/js/main.34473e74.chunk.js"
+  ]
+}
