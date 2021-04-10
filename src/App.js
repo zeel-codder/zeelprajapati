@@ -9,6 +9,13 @@ import HOME from './Halpper/Home'
 
 function App() {
 
+
+  // useEffect(() => {
+
+  //   process.env.['My']='https://zeelcodder.tech/.netlify/functions';
+  
+  // }, [])
+
   
 
 

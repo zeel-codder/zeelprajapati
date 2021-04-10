@@ -59,6 +59,7 @@
     "babel-plugin-prismjs": "^2.0.1",
     "netlify-lambda": "^2.0.3",
     "raw-loader": "^4.0.2"
-  },
-  "proxy": "https://zeelcodder.tech/.netlify/functions"
+  }
+  // ,
+  // "proxy": "http://localhost:9000/.netlify/functions"
 }

@@ -27,7 +27,8 @@ const Like=(props)=>{
         //   })
 
 
-          axios.post('/BlogInfoUpdate',{ filter:{...old},
+          axios.post('https://zeelcodder.tech/.netlify/functions/BlogInfoUpdate',{ filter:{...old},
+        //   axios.post('/BlogInfoUpdate',{ filter:{...old},
           update:{...old,...newData},}).then((response)=>console.log(response));
 
     }

@@ -30,7 +30,9 @@ const Blog=()=>{
 
     const GetBlogInfo=()=>{
 
-      axios.post(`/BlogInfoOne`,{name:blogname})
+
+      axios.post(`https://zeelcodder.tech/.netlify/functions/BlogInfoOne`,{name:blogname})
+      // axios.post(`/BlogInfoOne`,{name:blogname})
             .then((response)=>{
               console.log(response.data);
               return JSON.parse(response.data.message)}

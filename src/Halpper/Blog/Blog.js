@@ -20,9 +20,10 @@ const Blog=()=>{
     useEffect(() => {
 
 
-      //  console.log(findBlogInfo(),2)
-
-       axios.get('https://zeelcodder.tech/.netlify/functions/Blog')
+      //  console.log(process);
+     
+       axios.get('https:zeelcodder.tech/.netlify/functions/Blog')
+      //  axios.get('/Blog')
                 .then((res)=>{
                   const data1=[];
                   const index=[];
