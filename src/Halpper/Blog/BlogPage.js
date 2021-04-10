@@ -25,17 +25,26 @@ const Blog=()=>{
     const [data,setdata]=useState("");
     const [blogInfo,setBlogInfo]=useState(0);
     
+<<<<<<< HEAD
     console.log(blogname)
+=======
+    // console.log(BlogData)
+>>>>>>> 27df4244542756bfb7e5c0ed54c2084f96e6f0c9
     // let dic=BlogData.find((data)=>data.id===1) 
 
 
     const GetBlogInfo=()=>{
 
+<<<<<<< HEAD
       axios.post(`/BlogInfoOne`,{name:blogname})
             .then((response)=>{
               console.log(response.data);
               return JSON.parse(response.data.message)}
               )
+=======
+      axios.get(`/Blog/${blogname}`)
+            .then((response)=>response.data)
+>>>>>>> 27df4244542756bfb7e5c0ed54c2084f96e6f0c9
             .then((data)=>{setBlogInfo(data);})
             .catch((err)=>console.log(err));
     }

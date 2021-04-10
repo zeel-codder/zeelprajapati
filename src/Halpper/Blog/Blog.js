@@ -26,8 +26,13 @@ const Blog=()=>{
                 .then((res)=>{
                   const data1=[];
                   const index=[];
+<<<<<<< HEAD
                   const BlogInfo=JSON.parse(res.data.message);
                   console.log(BlogInfo);
+=======
+                  console.log(res.data);
+                  const BlogInfo=res.data;
+>>>>>>> 27df4244542756bfb7e5c0ed54c2084f96e6f0c9
                   BlogInfo.forEach(element => {
                     let topic=element.topic;
                    //  console.log(topic)

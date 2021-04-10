@@ -26,7 +26,11 @@ const Like=(props)=>{
         //     update:{...old,...newData},
         //   })
 
+<<<<<<< HEAD
           axios.post('/BlogInfoUpdate',{ filter:{...old},
+=======
+          axios.post('/Blog/Update',{ filter:{...old},
+>>>>>>> 27df4244542756bfb7e5c0ed54c2084f96e6f0c9
           update:{...old,...newData},}).then((response)=>console.log(response));
 
     }

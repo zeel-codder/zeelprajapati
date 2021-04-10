@@ -5,7 +5,11 @@ const BlogData = [
         title: '4 Basic And Important Tags for Beginner in web development',
         img: 'https://images.unsplash.com/photo-1585076641399-5c06d1b3365f?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8aHRtbHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
         url: '/Blog/Html4SimpleTages',
+<<<<<<< HEAD
         like:1100,
+=======
+        like:10,
+>>>>>>> 27df4244542756bfb7e5c0ed54c2084f96e6f0c9
         topic:'html'
 
     },
