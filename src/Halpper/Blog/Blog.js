@@ -12,7 +12,7 @@ import axios from 'axios';
 const Blog=()=>{
 
     
-    const {BlogInfo,BlogMainImg,BlogShort}=useGlobalContext();
+    const {BlogMainImg,BlogShort}=useGlobalContext();
     const [data,setdata]=useState([]);
 
 
@@ -22,7 +22,7 @@ const Blog=()=>{
 
       //  console.log(findBlogInfo(),2)
 
-       axios.get('/Blog')
+       axios.get('https://zeelcodder.tech/.netlify/functions/Blog')
                 .then((res)=>{
                   const data1=[];
                   const index=[];
