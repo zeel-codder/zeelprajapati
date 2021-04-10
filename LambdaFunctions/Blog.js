@@ -1,4 +1,4 @@
-const DataBase=require('/.netlify/functions/DataBaseOperationsBlogInfo');
+const DataBase=require('./DataBaseOperationsBlogInfo');
 
 exports.handler = async function(event, context) {
     // your server-side functionality
