@@ -22,7 +22,7 @@ const Blog=()=>{
 
       //  console.log(process);
      
-       axios.get('/api/Blog')
+       axios.get('/.netlify/functions//Blog')
       //  axios.get('/Blog')
                 .then((res)=>{
                   const data1=[];

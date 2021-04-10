@@ -31,7 +31,7 @@ const Blog=()=>{
     const GetBlogInfo=()=>{
 
 
-      axios.post(`/api/BlogInfoOne`,{name:blogname})
+      axios.post(`/.netlify/functions/BlogInfoOne`,{name:blogname})
       // axios.post(`/BlogInfoOne`,{name:blogname})
             .then((response)=>{
               console.log(response.data);
