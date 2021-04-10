@@ -70,7 +70,7 @@ const GetBlogInfoOne = async ( name) => {
     try{
 
         const data = await BlogInfo.findOne({ name });
-        return data.data;
+        return data;
     }catch{
         return 'Error';
     }

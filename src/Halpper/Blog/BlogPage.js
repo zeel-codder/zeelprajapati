@@ -25,14 +25,17 @@ const Blog=()=>{
     const [data,setdata]=useState("");
     const [blogInfo,setBlogInfo]=useState(0);
     
-    // console.log(BlogData)
+    console.log(blogname)
     // let dic=BlogData.find((data)=>data.id===1) 
 
 
     const GetBlogInfo=()=>{
 
-      axios.get(`/Blog/${blogname}`)
-            .then((response)=>response.data)
+      axios.post(`/BlogInfoOne`,{name:blogname})
+            .then((response)=>{
+              console.log(response.data);
+              return JSON.parse(response.data.message)}
+              )
             .then((data)=>{setBlogInfo(data);})
             .catch((err)=>console.log(err));
     }
