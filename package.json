@@ -7,7 +7,6 @@
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.6.3",
     "axios": "^0.21.1",
-<<<<<<< HEAD
     "concurrently": "^6.0.1",
     "emailjs-com": "^2.6.4",
     "express": "^4.17.1",
@@ -17,12 +16,6 @@
     "mongodb-client-encryption": "^1.2.3",
     "mongoose": "^5.12.3",
     "mypackage": "^0.1.0",
-=======
-    "emailjs-com": "^2.6.4",
-    "marked": "^2.0.1",
-    "mongodb": "^3.6.5",
-    "mongoose": "^5.12.2",
->>>>>>> 27df4244542756bfb7e5c0ed54c2084f96e6f0c9
     "prismjs": "^1.23.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -32,24 +25,17 @@
     "react-marked-markdown": "^1.4.6",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.2",
-<<<<<<< HEAD
     "saslprep": "^1.0.3",
-    "sls": "^0.1.0",
-=======
->>>>>>> 27df4244542756bfb7e5c0ed54c2084f96e6f0c9
-    "web-vitals": "^1.1.0"
+    "sls": "^0.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-<<<<<<< HEAD
     "eject": "react-scripts eject",
     "lambda": "netlify-lambda serve LambdaFunctions",
     "dev": "concurrently --kill-others-on-fail \"npm start\" \" npm run lambda\""
-=======
-    "eject": "react-scripts eject"
->>>>>>> 27df4244542756bfb7e5c0ed54c2084f96e6f0c9
+
   },
   "eslintConfig": {
     "extends": [
@@ -72,14 +58,9 @@
   "devDependencies": {
     "@babel/core": "^7.13.13",
     "babel-plugin-prismjs": "^2.0.1",
-<<<<<<< HEAD
+
     "netlify-lambda": "^2.0.3",
     "raw-loader": "^4.0.2"
   },
   "proxy":"http://localhost:9000/.netlify/functions"
-=======
-    "raw-loader": "^4.0.2"
-  },
-  "proxy": "http://localhost:5001"
->>>>>>> 27df4244542756bfb7e5c0ed54c2084f96e6f0c9
 }
