@@ -24,13 +24,18 @@ import imgdic from '../Data/Home/Imgedata';
 import thor_logo from '../img/home/start_logo.png';
 import Blog from './Blog/Blog';
 import Like from './Blog/Like';
-
+import {Login} from './UserLoging/Login'
 // import BlogData from '../Data/Home/Blog_data'
 import Main from './Home_Page/Main';
 import BlogInfo from '../Data/BlogData/BlogInfo';
 import BlogMainImg from '../img/home/1.jpg';
 import BlogShort from './Blog/BlogShort';
 import BlogPage from './Blog/BlogPage';
+
+
+//Main Functions info
+
+import {Add_User,Get_User} from './UserLoging/Login.Functions';
 
 // import projectdata from '../../Data/projects'
 
@@ -49,7 +54,9 @@ import demo from '../Blogs/Html/demo/demo.md'
 // ===================================
 
 import React, {
-  useContext
+  useContext,
+  useState,
+  useEffect
 } from 'react';
 
 const AppContext = React.createContext();
@@ -57,6 +64,21 @@ const AppContext = React.createContext();
 const AppProvider = ({
   children
 }) => {
+
+
+const [isLoging, setisLoging] = useState(false);
+
+const NewUser=()=>{
+
+  Add_User();
+
+  setisLoging(true);
+}
+
+const GetUser=()=>{
+   Get_User();
+}
+
 
 
   return ( <
@@ -81,6 +103,7 @@ const AppProvider = ({
         BlogShort,
         BlogPage,
         Like,
+        Login,
 
         //defult img and video..
         imgdic,
@@ -101,6 +124,10 @@ const AppProvider = ({
 
         Html4SimpleTages,
         demo,
+
+        //states
+
+        isLoging
 
 
       }

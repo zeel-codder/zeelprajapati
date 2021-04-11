@@ -20,7 +20,7 @@ Main Page
       /* text-align: center; */
   }
 
-.blog-container{
+.blog-container,.login-choice{
 
     width:65%;
     display: flex;
@@ -29,6 +29,59 @@ Main Page
     margin: 2rem auto;
     font-family: var(--font);
 }
+.blog-container button{
+    color: black;
+}
+
+/* ================================================================ */
+/* Login Form */
+/* ================================================================ */
+.Log{
+    min-height: 50vh;
+    width: 70%;
+    /* align-items: center; */
+}
+.login-choice{
+    flex-direction: row;
+    margin: 0;
+}
+.login-choice span{
+    padding: .4rem;
+    /* margin: 0 .2rem; */
+    cursor: pointer;
+}
+.form div label::after{
+    content: ":";
+}
+
+.form-login,.form-singin{
+    padding: 0;
+    margin: 0;
+    /* align-items: ; */
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.form-login button,.form-singin button{
+    color: white;
+
+}
+
+.open{
+    /* border: 2px solid black; */
+    border-bottom: none;
+    background-color: var(--hoverc);
+    /* color: white; */
+}
+.form-login,.form-singin{
+    /* height: 90%; */
+    width: 100%;
+    /* border: 2px solid black; */
+    border-top: none;
+}
+
+/* ===================================================================== */
+
 
 .blog-container  h1{
     text-transform: capitalize;
@@ -140,9 +193,6 @@ Like
 
    cursor: pointer;
 }
-.blog-container button{
-    color: black;
-}
 
 @media only screen and (max-width: 1200px) {
     h1,h2{
@@ -153,6 +203,9 @@ Like
     }
     .blog-container button{
         color: black;
+    }
+    .Log button{
+        color: white;
     }
     .ListOfBlogs{
         grid-template-columns: 100%;
@@ -168,6 +221,9 @@ Like
     .blog-container  p{
         font-size: 1.0rem;
     }
+    .form div input{
+        padding: 10px 0;
+    }
 
     /* .BlogInformation *{ */
         /* width: 100%;
@@ -182,7 +238,7 @@ Like
 
 
 
-
+ 
 
 
 
@@ -191,9 +247,9 @@ Like
 Dark Mode Make Sure to the last
 ======================================== */
 .dark{
-    background-color: black;
+    background-color:  #181a1b;;
     color: white;
   }
-  .dark *,.dark p,.dark button,.dark a,.dark div{
+  .dark *,.dark p,.dark button,.dark a,.dark div,.dark input, .dark input::placeholder,.dark textarea, .dark textarea::placeholder{
     color: white;
   }

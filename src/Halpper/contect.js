@@ -38,6 +38,7 @@ const Contect=()=>{
          {
              
              loadding ? <Loadding /> :null
+
             }
    
                 <form className="form" onSubmit={(e)=>{mailme(e)}}>                
@@ -55,12 +56,12 @@ const Contect=()=>{
             </div>
             <div>
             <label for="message"><AiTwotoneFileText />Body</label>
-            <textarea className="form-input" type="text" cols="1" name="message" placeholder="Enter Message" required></textarea>
+            <input className="form-input" type="text" name="message" placeholder="Enter Message" required></input>
             </div>
-            <div>
-                <button className="btn" type="reset">Reset</button>
+            {/* <div>/ */}
+                {/* <button className="btn" type="reset">Reset</button> */}
                 <button className="btn" type="submit">Send</button>
-            </div>
+            {/* </div> */}
         </form>
             
         </>

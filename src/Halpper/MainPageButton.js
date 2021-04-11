@@ -18,7 +18,7 @@ function App() {
               const GOTO=document.querySelector('.Goto_top');
               const Dark=document.querySelector('.DarkMode');
               
-              if(GOTO && Dark){
+              if(isOpen && GOTO && Dark){
                 GOTO.classList.toggle('Goto_top-show');
                 Dark.classList.toggle('DarkMode-show');
               }

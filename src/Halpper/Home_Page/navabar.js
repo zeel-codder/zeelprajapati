@@ -6,7 +6,7 @@ import { AiOutlineFacebook , AiFillGithub ,AiFillLinkedin ,AiFillTwitterCircle }
 import { FaBeer } from 'react-icons/fa';
 import { VscListFlat } from 'react-icons/vsc'
 import React, { useState, useRef, useEffect } from 'react';
-
+import {useGlobalContext} from '../context';
 
 function Navabar(){
     const [showLinks,setLinkopen]=useState(false)
@@ -14,6 +14,11 @@ function Navabar(){
     const linksRef = useRef(null);
     const linksRefs = useRef(null);
     const first = useRef(true);
+    const {isLoging}=useGlobalContext();
+
+
+
+
     const NavabarDisplay=()=>{
         document.querySelector(".icon").classList.toggle("rotetor")
         setLinkopen(!showLinks)    
@@ -56,11 +61,9 @@ function Navabar(){
                 })
             }
         </div>
-    <li className="icons"  ref={linksRefs}>
-        <li><a href="https://www.facebook.com/zeel.prajapati.397/"><AiOutlineFacebook /></a></li>
-        <li><a href="https://github.com/zeel-codder"><AiFillGithub /></a></li>
-        <li><a href="https://www.linkedin.com/in/zeel-prajapati-4832971a3/"><AiFillLinkedin /></a></li>
-        <li><a href="https://twitter.com/ZeelPrajapati15"><AiFillTwitterCircle /></a></li>
+    <li className="Login-Page"  ref={linksRefs}>
+        <li className="login"><Link to="/login">Sing In</Link></li>
+        <li className="login"><Link to="/login">Log In</Link></li>
     </li>
     </ul>
             </div>

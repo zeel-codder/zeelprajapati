@@ -11,7 +11,7 @@ import { useGlobalContext } from './context';
 
 function App() {
 
-  const { Navbar,Main, Contect, Footer,  Blog , BlogPage } = useGlobalContext();
+  const { Navbar,Main, Contect, Footer,  Blog , BlogPage, Login } = useGlobalContext();
 
   // useEffect(() => {
    
@@ -37,6 +37,7 @@ function App() {
     <Router>
       <Navbar />
       <Route exact path="/">
+     
         <Main /> 
       </Route>
       <Route exact path="/contect">
@@ -47,6 +48,10 @@ function App() {
       </Route>
       <Route exact path="/blog/:blogname">
         <BlogPage></BlogPage>
+        {/* <BlogPost></BlogPost> */}
+      </Route>
+      <Route exact path="/login">
+      <Login></Login>
         {/* <BlogPost></BlogPost> */}
       </Route>
       <Footer></Footer>
