@@ -6,17 +6,11 @@ const Profile=()=>{
 
     return (
 
-        <>
-
+        <div className="container">
         <h1>
         name:{name}
-
-    </h1>
-        <h1>
-        passWord:{password}
-
-    </h1>
-        </>
+        </h1>
+        </div>
         )
 }
 

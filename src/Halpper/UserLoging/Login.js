@@ -1,10 +1,11 @@
 
-import {AiTwotoneMail,AiTwotoneFileText} from 'react-icons/ai';
-import {BsFillPersonFill} from 'react-icons/bs';
+import {AiTwotoneMail} from 'react-icons/ai';
+// import {BsFillPersonFill} from 'react-icons/bs';
 import {RiLockPasswordFill} from 'react-icons/ri';
-import {MdSubject} from 'react-icons/md';
+// import {MdSubject} from 'react-icons/md';
 import {useState} from 'react';
 import {useEffect} from 'react';
+import axios from 'axios';
 // import { set } from 'mongoose';
 
 import { useGlobalContext } from '../context';
@@ -14,14 +15,33 @@ export  const Login=(props)=>{
 
     const [isLoginOpen, setIsLoginOpen] = useState(props.choice!=="Sing In");
     const [issame,setInsane]=useState(false);
-
     const [passWord,setpassWord]=useState('');
     const [email,setemail]=useState('');
     const [compassWord,setCompassWord]=useState('');
-    const {Userstate, dispatchUser}=useGlobalContext();
+    const {dispatchUser}=useGlobalContext();
 
 
     const FindUser=async(e)=>{
+        e.preventDefault();
+        const newUser={
+            name:email,
+            password:passWord
+        }
+        await axios.post(`.netlify/functions/FindUser`,{...newUser})
+        .then((res)=>{
+            // console.log(res.);
+            // console.log(res.data)
+            res=JSON.parse(res.data.message);
+            if(res.password===passWord){
+                props.closeLogin();
+                dispatchUser({type:'UserLogIn',data:res});
+            }else{
+                alert('Wrong PassWord')
+            }
+        })
+        .catch((error)=>{
+            alert('UserName is not valid')
+        });
 
     }
 
@@ -36,12 +56,19 @@ export  const Login=(props)=>{
                 password:passWord
             }
 
-            props.closeLogin();
-            dispatchUser({type:'UserLogIn',data:newUser});
-            
-
-        
-
+        await axios.post('.netlify/functions/AddUser',newUser)
+        .then((res)=>{
+            if(res.status===200){
+                // console.log(res);
+                props.closeLogin();
+                dispatchUser({type:'UserLogIn',data:newUser});
+            }
+        })
+        .catch((error)=>{
+            console.log(error);
+            alert('User Exits');
+            // alert('error');
+        });
         }else{
             alert('Pass Word Done mathch')
         }
@@ -82,12 +109,17 @@ export  const Login=(props)=>{
             <form className="form form-login open" onSubmit={(e)=>FindUser(e)}>                
             <div>
             <label for="email"><AiTwotoneMail></AiTwotoneMail>Email</label>
-            <input className="form-input" type="email" name="email" placeholder="Enter Email" required></input>
+            <input className="form-input" 
+            onChange={(e)=>setemail(e.target.value)}  value={email}  
+            type="email" name="email" placeholder="Enter Email" required></input>
             </div>
             <div>
             <label for="subject"><RiLockPasswordFill />PassWord</label>
-            <input className="form-input" type="text" name="subject" placeholder="Enter PassWord" required></input>
+            <input className={`form-input`} 
+            
+            type="passWord" name="subject"  onChange={(e)=>setpassWord(e.target.value)}  value={passWord} placeholder="Enter PassWord" required></input>
             </div>
+            {/* <div> */}
             <button className="btn" type="submit">Log In</button>
             </form>
             :

@@ -522,6 +522,7 @@ List:
     flex-direction: column;
     align-items: center;
     width: 100%;
+    height: 80vh;
     align-self: flex-start;
     padding: 4rem 0;
     font-size: vat(--font_size);
@@ -536,7 +537,7 @@ List:
     /* width: 70%; */
     width: fit-content;
     /* background-color: var(--hoverc); */
-    margin: 2rem auto;
+    margin: 0rem auto;
     /* border: 1px solid; */
     /* box-shadow: 0px 0px 2px var(--bgcolor); */
 }

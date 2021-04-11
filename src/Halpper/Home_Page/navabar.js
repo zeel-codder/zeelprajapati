@@ -98,7 +98,7 @@ function Navabar(){
         }}>Log In</a></li>
         </>
         :
-        <li className="icons"><Link to="/user"><FaUserSecret></FaUserSecret></Link></li>
+        <li className="icons"><Link to={`/user/${Userstate.UserInfo._id}`}><FaUserSecret></FaUserSecret></Link></li>
         }
     </li>
     </ul>

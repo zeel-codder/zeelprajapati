@@ -6,6 +6,7 @@
 import axios from 'axios';
 import {useState,useEffect} from 'react';
 import { Route, BrowserRouter as Router} from 'react-router-dom'
+// import { User } from '../../LambdaFunctions/DataBaseConnection';
 import { useGlobalContext } from './context';
 
 
@@ -48,15 +49,15 @@ function App() {
       </Route>
       <Route exact path="/blog/:blogname">
         <BlogPage></BlogPage>
-        {/* <BlogPost></BlogPost> */}
       </Route>
       <Route exact path="/login">
       <Login></Login>
-        {/* <BlogPost></BlogPost> */}
       </Route>
-      <Route exact path="/user">
-
+      <Route exact path="/user/:username">
         <Profile></Profile>
+      </Route>
+      <Route exact path="/user/:username">
+        {/* <User></User> */}
       </Route>
       <Footer></Footer>
       {/* </Switch> */}
