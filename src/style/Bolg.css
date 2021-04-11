@@ -222,6 +222,15 @@ Like
    
 }
 
+.alert{
+    background-color: transparent;
+    width: 100%;
+    color: red;
+    text-align: center;
+    font-size: 1rem;
+    
+}
+
 .Like-Page:hover{
     
     cursor: pointer;
@@ -229,6 +238,7 @@ Like
 .blog-container button{
     color: white;
 }
+
 
 @media only screen and (max-width: 1200px) {
     h1,h2{

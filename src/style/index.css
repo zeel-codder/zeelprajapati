@@ -552,18 +552,22 @@ List:
 }
 .form div input,.form div textarea{
   border-bottom:2px solid black;
-
+  
 }
 .form div textarea{
   margin: 10px;
     width: 261px;
     height: 50px;
-}
-.form-input:focus,.form div :hover{
-  border-bottom-color: var(--bgcolor);
-  /* color: var(--hoverc); */
-  cursor: pointer;
-}
+  }
+  .form-input:focus,.form div :hover{
+    border-bottom-color: var(--bgcolor);
+    /* color: var(--hoverc); */
+    cursor: pointer;
+  }
+  .Wrong{
+    border-bottom:2px solid red;
+    
+  }
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: black;
   opacity: 1; /* Firefox */
@@ -940,3 +944,6 @@ For Mobile
 
 
   
+
+
+

@@ -24,6 +24,7 @@ import imgdic from '../Data/Home/Imgedata';
 import thor_logo from '../img/home/start_logo.png';
 import Blog from './Blog/Blog';
 import Like from './Blog/Like';
+import Profile from './User/UserProfile';
 import {Login} from './UserLoging/Login'
 // import BlogData from '../Data/Home/Blog_data'
 import Main from './Home_Page/Main';
@@ -65,6 +66,7 @@ const AppContext = React.createContext();
 
 const initialStateForLogin={
   isUserIn:false,
+  UserInfo:{},
 }
 
 
@@ -108,6 +110,7 @@ const GetUser=()=>{
         BlogPage,
         Like,
         Login,
+        Profile,
 
         //defult img and video..
         imgdic,
@@ -128,10 +131,12 @@ const GetUser=()=>{
 
         Html4SimpleTages,
         demo,
+        dispatchUser,
 
         //states
 
         Userstate,
+        
 
 
       }

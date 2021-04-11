@@ -46,6 +46,7 @@ function Navabar(){
     
     
     useEffect(() => {
+        console.log(isLoginOpen,1);
         if(!first.current){
 
             const linksHeight = linksRef.current.getBoundingClientRect().height;
