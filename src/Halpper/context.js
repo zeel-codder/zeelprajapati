@@ -34,6 +34,7 @@ import BlogPage from './Blog/BlogPage';
 
 
 //Main Functions info
+import reducerForUser from './reducer';
 
 import {Add_User,Get_User} from './UserLoging/Login.Functions';
 
@@ -54,6 +55,7 @@ import demo from '../Blogs/Html/demo/demo.md'
 // ===================================
 
 import React, {
+  useReducer,
   useContext,
   useState,
   useEffect
@@ -61,18 +63,20 @@ import React, {
 
 const AppContext = React.createContext();
 
+const initialStateForLogin={
+  isUserIn:false,
+}
+
+
 const AppProvider = ({
   children
 }) => {
+  const [Userstate, dispatchUser] = useReducer(reducerForUser, initialStateForLogin);
 
-
-const [isLoging, setisLoging] = useState(false);
 
 const NewUser=()=>{
 
   Add_User();
-
-  setisLoging(true);
 }
 
 const GetUser=()=>{
@@ -127,7 +131,7 @@ const GetUser=()=>{
 
         //states
 
-        isLoging
+        Userstate,
 
 
       }

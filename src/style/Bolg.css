@@ -37,9 +37,32 @@ Main Page
 /* Login Form */
 /* ================================================================ */
 .Log{
-    min-height: 50vh;
+    /* min-height: 50vh; */
+    position: absolute;
     width: 70%;
+    left: 50%;
+    /* height: auto; */
+    top:50%;
+    transform: translate(-50%,-50%);
+    flex:2;
+    z-index: 3;
+    background-color: white;
+    border: 1px solid;
+    animation: ShowLogin 1s;
+    animation-iteration-count: 1;
     /* align-items: center; */
+    transition: all var(--transition);
+}
+
+@keyframes ShowLogin {
+    0%{
+
+        transform: translate(-50%,-50%) scale(0);
+
+    }100%{
+        transform: translate(-50%,-50%) scale(1);
+    }
+    
 }
 .login-choice{
     flex-direction: row;
@@ -53,17 +76,27 @@ Main Page
 .form div label::after{
     content: ":";
 }
-
+.form-login div,.form-singin div{
+    /* margin: 1rem 0; */
+}
+.close{
+    position: absolute;
+    right: 0;
+}
 .form-login,.form-singin{
     padding: 0;
     margin: 0;
-    /* align-items: ; */
+    flex: 2;
+    position: relative;
     align-items: flex-start;
-    justify-content: flex-start;
 }
 
 .form-login button,.form-singin button{
     color: white;
+    /* justify-self: flex-end; */
+    /* position: absolute; */
+    /* bottom: 0; */
+    /* margin-top:12px ; */
 
 }
 
@@ -74,7 +107,7 @@ Main Page
     /* color: white; */
 }
 .form-login,.form-singin{
-    /* height: 90%; */
+    height: 90%;
     width: 100%;
     /* border: 2px solid black; */
     border-top: none;
@@ -190,8 +223,11 @@ Like
 }
 
 .Like-Page:hover{
-
-   cursor: pointer;
+    
+    cursor: pointer;
+}
+.blog-container button{
+    color: white;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -201,8 +237,12 @@ Like
     .blog-container{
         width: 90%;
     }
-    .blog-container button{
-        color: black;
+    .Login-Page{
+        width: 100%;
+        margin-top: 10px;
+    }
+    .login a{
+        font-size: .7rem;
     }
     .Log button{
         color: white;
@@ -248,8 +288,17 @@ Dark Mode Make Sure to the last
 ======================================== */
 .dark{
     background-color:  #181a1b;;
+    color: rgb(34, 20, 20);
+  }
+  .dark *,.dark p,.dark button,.dark a,.dark div,.dark footer{
     color: white;
   }
-  .dark *,.dark p,.dark button,.dark a,.dark div,.dark input, .dark input::placeholder,.dark textarea, .dark textarea::placeholder{
-    color: white;
+  .dark .login-choice span,.dark .form div label{
+      color: black;
+  }
+  .dark footer{
+      color: white;
+  }
+  .light-dark a,.light-dark div,.light-dark input, .light-dark input::placeholder,.light-dark textarea, .light-dark textarea::placeholder{
+    color:black;
   }

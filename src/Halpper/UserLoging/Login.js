@@ -1,28 +1,31 @@
 
-import {AiTwotoneMail,AiTwotoneFileText} from 'react-icons/ai'
+import {AiTwotoneMail,AiTwotoneFileText} from 'react-icons/ai';
 import {BsFillPersonFill} from 'react-icons/bs';
-import {RiLockPasswordFill} from 'react-icons/ri'
-import {MdSubject} from 'react-icons/md'
-import {useState} from 'react'
+import {RiLockPasswordFill} from 'react-icons/ri';
+import {MdSubject} from 'react-icons/md';
+import {useState} from 'react';
 
-export  const Login=()=>{
+export  const Login=(props)=>{
 
 
-    const [IsLoginOpen, setIsLoginOpen] = useState(false);
+    const [isLoginOpen, setIsLoginOpen] = useState(props.choice!=="Sing In");
+
+    // console.log(prpos);
 
     return (
 
         <div className="blog-container Log">
 
             <div className="login-choice">
-                <span onClick={()=>setIsLoginOpen(true)} className={IsLoginOpen && `open`}>Log in</span>
-                <span onClick={()=>setIsLoginOpen(false)} className={IsLoginOpen || `open`}>Sing in</span>
+                <span onClick={()=>setIsLoginOpen(true)} className={isLoginOpen && `open`}>Log in</span>
+                <span onClick={()=>setIsLoginOpen(false)} className={isLoginOpen || `open`}>Sing in</span>
+                <span onClick={()=>props.closeLogin()} className="close">[X]</span>
             </div>
 
 
             {
 
-            IsLoginOpen
+            isLoginOpen
             ?
             <form className="form form-login open">                
             <div>

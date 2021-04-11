@@ -2,12 +2,14 @@ import {FcLike,FcLikePlaceholder} from 'react-icons/fc';
 import {useState} from 'react';
 import {useEffect} from 'react';
 import axios from 'axios';
+import {useGlobalContext} from '../context';
 // import { response } from 'express';
 
 
 const Like=(props)=>{
     
     const {blogInfo,isBlogShort}=props;
+    const {Userstate}=useGlobalContext();
     // console.log(props);
     const [isLike,setIsLike]=useState(false);
     const [Like,setLike]=useState(props.like);
@@ -25,34 +27,39 @@ const Like=(props)=>{
         //     filter:{...old},
         //     update:{...old,...newData},
         //   })
+            await axios.post('/.netlify/functions/BlogInfoUpdate',{ filter:{...old},
+            update:{...old,...newData},}).then((response)=>console.log(response));
 
 
-         await axios.post('/.netlify/functions/BlogInfoUpdate',{ filter:{...old},
-        //   axios.post('/BlogInfoUpdate',{ filter:{...old},
-          update:{...old,...newData},}).then((response)=>console.log(response));
+
 
     }
 
     const PostLike=()=>{
-        let like=0;
-        if(!isLike){
-            like=Like+1;
-        }else{
-            if(Like!==0)
-            {
-                like=Like-1;
-               
+        if(Userstate.isUserIn){
+            let like=0;
+            if(!isLike){
+                like=Like+1;
             }else{
-                like=Like;
+                if(Like!==0)
+                {
+                    like=Like-1;
+                   
+                }else{
+                    like=Like;
+                }
             }
+            setIsLike(!isLike);
+            setLike(like);
+    
+            const odd={...blogInfo}
+            const new_data={like}
+    
+            UpdateLike(odd,new_data);
+        }else{
+            alert('LogIn First');
         }
-        setIsLike(!isLike);
-        setLike(like);
 
-        const odd={...blogInfo}
-        const new_data={like}
-
-        UpdateLike(odd,new_data);
     }
 
 

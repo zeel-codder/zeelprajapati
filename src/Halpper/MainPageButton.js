@@ -41,6 +41,9 @@ function App() {
     <CgDarkMode className="DarkMode"  onClick={()=>{
 
         document.querySelector("#root").classList.toggle("dark");
+        const form=document.querySelector(".form");
+        form !==null && form.classList.toggle("light-dark");
+        
 
     }}></CgDarkMode>
 

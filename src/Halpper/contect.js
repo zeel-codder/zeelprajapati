@@ -40,8 +40,11 @@ const Contect=()=>{
              loadding ? <Loadding /> :null
 
             }
-   
-                <form className="form" onSubmit={(e)=>{mailme(e)}}>                
+
+            <div style={{background:'rgb(55, 197, 216)'}}>
+
+            
+            <form className="form" onSubmit={(e)=>{mailme(e)}}>                
             <div>
             <label for="name"><BsFillPersonFill />Name</label>
             <input className="form-input" type="text" name="name" placeholder="Enter Name" required></input>
@@ -64,6 +67,7 @@ const Contect=()=>{
             {/* </div> */}
         </form>
             
+            </div>
         </>
         )
     }

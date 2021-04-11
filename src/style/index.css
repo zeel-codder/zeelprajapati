@@ -464,8 +464,10 @@ List:
   margin-top: 10px;
 }
 .Login-Page{
+  margin: 0;
+  cursor: pointer;
   width: 40%;
-  align-items: flex-end;
+  align-items: center;
   justify-content: flex-end;
 }
 .login{
@@ -516,6 +518,7 @@ List:
 /* form */
 .form{
   display: flex;
+
     flex-direction: column;
     align-items: center;
     width: 100%;
@@ -523,7 +526,7 @@ List:
     padding: 4rem 0;
     font-size: vat(--font_size);
     /* border: 2px solid black; */
-    /* background-color: var(--bgcolor); */
+    background-color: var(--hoverc);
     /* border-bottom: 2px solid white; */
     /* border-top: 2px solid white; */
     /* height: 100vh; */
@@ -597,12 +600,16 @@ width: 100%;
 font-weight: bold;
 background-color: transparent;
 padding: 15px 0;
+align-self: flex-end;
+justify-self: flex-end;
 /* margin: 10px; */
 outline: 0;
 cursor: pointer;
 background-color: var(--bgcolor);
 color: var(--color);
 margin: 0;
+/* background-color: transparent; */
+/* border-bottom:2px solid white ; */
 }
 
 .btn >a{
@@ -710,6 +717,11 @@ animation: thor_move 2s ease-out 0s 1;
 For Mobile
 ========================================= */
 @media only screen and (max-width: 1200px) {
+  .Login-Page{
+    width: 40%;
+    align-items: center;
+    justify-content: flex-start;
+  }
   .main1{
     background-color: blue;
     height: 50vh;

@@ -7,22 +7,44 @@ import { FaBeer } from 'react-icons/fa';
 import { VscListFlat } from 'react-icons/vsc'
 import React, { useState, useRef, useEffect } from 'react';
 import {useGlobalContext} from '../context';
+import {FaUserSecret} from 'react-icons/fa';
+
+
 
 function Navabar(){
-    const [showLinks,setLinkopen]=useState(false)
+    const [showLinks,setLinkopen]=useState(false);
+    const [isLoginOpen,setIsLoginOpen]=useState(false);
+    let value=useRef(true);
     const linksContainerRef = useRef(null);
     const linksRef = useRef(null);
     const linksRefs = useRef(null);
     const first = useRef(true);
-    const {isLoging}=useGlobalContext();
+    const {Userstate,Login}=useGlobalContext();
 
-
+    // console.log(Userstate);
 
 
     const NavabarDisplay=()=>{
         document.querySelector(".icon").classList.toggle("rotetor")
         setLinkopen(!showLinks)    
     }
+
+    const ShowLogin=(data)=>{
+        // console.log(data.textContent);
+        value.current=data.textContent;
+
+        setIsLoginOpen(true);
+
+    }
+
+    const closeLogin=()=>{
+
+        setIsLoginOpen(false);
+    }
+
+
+    
+    
     useEffect(() => {
         if(!first.current){
 
@@ -38,8 +60,7 @@ function Navabar(){
         }
         // console.log('cc')
     }, [showLinks])
-    // console.log("zz")
-    
+
     return (
         <div className="navbar">
                 <div className={`icon`} onClick={NavabarDisplay}> <VscListFlat></VscListFlat></div>
@@ -62,10 +83,28 @@ function Navabar(){
             }
         </div>
     <li className="Login-Page"  ref={linksRefs}>
-        <li className="login"><Link to="/login">Sing In</Link></li>
-        <li className="login"><Link to="/login">Log In</Link></li>
+
+        {
+        !Userstate.isUserIn 
+        ?
+        <>
+        <li className="login"><a onClick={(e)=>{
+            ShowLogin(e.target);
+        }}>Sing In</a></li>
+        <li className="login"><a onClick={(e)=>{
+            ShowLogin(e.target);
+
+        }}>Log In</a></li>
+        </>
+        :
+        <li className="icons"><Link to="/user"><FaUserSecret></FaUserSecret></Link></li>
+        }
     </li>
     </ul>
+    {
+       isLoginOpen && <Login choice={value.current} closeLogin={closeLogin}></Login>
+
+    }
             </div>
     </div>
 
