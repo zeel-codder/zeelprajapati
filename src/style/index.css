@@ -7,7 +7,7 @@ this main root variables
 :root{
   --transition:.5s all;
   --transition1:.5s all;
-  --bgcolor:#021750;;
+  --bgcolor:#2F2FA2;;
   --hadderbg:#021750;
   --color:white;
   --font: Arial, Helvetica, sans-serif;
@@ -91,7 +91,7 @@ List:
   /* border-left: 1px solid white; */
 }
 .main1  .line{
-  background: blue;
+  background: var(--bgcolor);
   transition: all .5s;
 }
 
@@ -159,8 +159,8 @@ List:
 }
 .icons li a,.login a{
   display: inline-block;
-  border-radius: 12px;
-  border: 2px solid whitesmoke;
+  /* border-radius: 12px; */
+  /* border: 2px solid whitesmoke; */
   padding: 2px 0;
 }
 .icons li a{
@@ -177,7 +177,7 @@ List:
   display: flex;
     list-style: none;
     top: 0px;
-    padding: 15px;
+    /* padding: 15px; */
     justify-content: space-between;
     /* transition: var(--transition); */
     align-items: center;
@@ -190,13 +190,14 @@ List:
 .navabar-ul li a{
   text-decoration: none;
   color: var(--color);
-  padding: 5px 10px;
+  padding: 13px 11px;
   font-family:var(--font);
   font-size: var(--font_size);
 }
 
 .navabar-ul li a:hover{
   color: var(--hoverc);
+  background-color: white;
 }
 
 
@@ -461,7 +462,7 @@ List:
 }
 .icons,.Login-Page{
   display: flex;
-  margin-top: 10px;
+  /* margin-top: 10px; */
 }
 .Login-Page{
   margin: 0;
@@ -527,7 +528,7 @@ List:
     padding: 4rem 0;
     font-size: vat(--font_size);
     /* border: 2px solid black; */
-    background-color: var(--hoverc);
+    background-color:  rgb(246, 76, 114);
     /* border-bottom: 2px solid white; */
     /* border-top: 2px solid white; */
     /* height: 100vh; */
@@ -550,8 +551,11 @@ List:
   outline: 0; background: blue;;
   font-size: var(--font);
   background-color: transparent;
+  color: white;
 }
 .form div input,.form div textarea{
+  color: white;
+  /* font-weight: bold; */
   border-bottom:2px solid black;
   
 }
@@ -562,15 +566,16 @@ List:
   }
   .form-input:focus,.form div :hover{
     border-bottom-color: var(--bgcolor);
-    /* color: var(--hoverc); */
+    color: white;
     cursor: pointer;
+
   }
   .Wrong{
     border-bottom:2px solid red;
     
   }
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: black;
+  color: white;
   opacity: 1; /* Firefox */
 }
 .form div{
@@ -585,6 +590,8 @@ List:
 
 .form div label{
   display: flex;
+  /* font-weight: bold; */
+  color: white;
   justify-content: flex-start;
   align-items: center;
   width: 300px;
@@ -728,7 +735,7 @@ For Mobile
     justify-content: flex-start;
   }
   .main1{
-    background-color: blue;
+    background-color: #F64C72;
     height: 50vh;
   }
   .navabar{

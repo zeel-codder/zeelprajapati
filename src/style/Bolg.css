@@ -2,7 +2,7 @@
 :root{
     --transition:.5s all;
     --transition1:.5s all;
-    --bgcolor:#021750;;
+    --bgcolor:#2F2FA2;
     --hadderbg:#021750;
     --color:white;
     --font:'Lato','sans-serif';
@@ -49,6 +49,7 @@ Main Page
     background-color: white;
     border: 1px solid;
     animation: ShowLogin 1s;
+    box-shadow: 0 0 20px var(--bgcolor);
     animation-iteration-count: 1;
     /* align-items: center; */
     transition: all var(--transition);
@@ -103,7 +104,7 @@ Main Page
 .open{
     /* border: 2px solid black; */
     border-bottom: none;
-    background-color: var(--hoverc);
+    background-color:  rgb(246, 76, 114);
     /* color: white; */
 }
 .form-login,.form-singin{
@@ -147,7 +148,8 @@ Main Page
 
 .alert{
     font-size: var(--font);
-    background-color: red;
+    /* background-color: red; */
+    background-color: white;
     /* text-align: center; */
     padding: 10px 0;
 }
@@ -223,7 +225,7 @@ Like
 }
 
 .alert{
-    background-color: transparent;
+    /* background-color: transparent; */
     width: 100%;
     color: red;
     text-align: center;
@@ -304,11 +306,15 @@ Dark Mode Make Sure to the last
     color: white;
   }
   .dark .login-choice span,.dark .form div label{
+      color: white;
+  }
+  .dark .alert{
+      /* color: inherit; */
+      background-color: black;
+  }
+  .dark .login-choice span{
       color: black;
   }
   .dark footer{
       color: white;
-  }
-  .light-dark a,.light-dark div,.light-dark input, .light-dark input::placeholder,.light-dark textarea, .light-dark textarea::placeholder{
-    color:black;
   }

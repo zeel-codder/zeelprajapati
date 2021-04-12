@@ -41,7 +41,7 @@ const Contect=()=>{
 
             }
 
-            <div style={{background:'rgb(55, 197, 216)'}}>
+            <div style={{background:'#F64C72'}}>
 
             
             <form className="form" onSubmit={(e)=>{mailme(e)}}>                
