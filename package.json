@@ -25,6 +25,7 @@
     "react-marked-markdown": "^1.4.6",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.2",
+    "remark-gfm": "^1.0.0",
     "saslprep": "^1.0.3",
     "sls": "^0.1.0"
   },
@@ -60,6 +61,5 @@
     "netlify-lambda": "^2.0.3",
     "raw-loader": "^4.0.2"
   },
-  "proxy":"http://localhost:9000"
- 
+  "proxy": "http://localhost:9000"
 }

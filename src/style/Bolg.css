@@ -70,7 +70,8 @@ Main Page
     margin: 0;
 }
 .login-choice span{
-    padding: .4rem;
+    /* padding: .4rem; */
+    color: black;
     /* margin: 0 .2rem; */
     cursor: pointer;
 }
@@ -101,12 +102,6 @@ Main Page
 
 }
 
-.open{
-    /* border: 2px solid black; */
-    border-bottom: none;
-    background-color:  rgb(246, 76, 114);
-    /* color: white; */
-}
 .form-login,.form-singin{
     height: 90%;
     width: 100%;
@@ -128,16 +123,27 @@ Main Page
     /* text-align: justify; */
     line-height: 1.8rem;
     margin: 1.5rem 0;
-
+    
 }
 
-.blog-container  .img ,p > img,.img{
+em{
+    text-decoration: none;
+    background-color: var(--bgcolor);
+    font-family: inherit;
+    padding: 0 5px;
+    color: white;
+}
+
+.blog-container  .img ,.img{
     align-self: center;
     width: 70%;
     height: 70%;
     object-fit: cover;
     display: block;
     margin: 10px auto;
+}
+p > img{
+    width: 100%;
 }
 .blog-container > .para::first-letter{
     
@@ -155,7 +161,7 @@ Main Page
 }
 
 .ListOfBlogs{
-
+    
     /* display: grid; */
     
 }
@@ -203,6 +209,14 @@ svg{
 }
 
 
+.open{
+    /* border: 2px solid black; */
+    border-bottom: none;
+    color: white;
+    /* padding: 10px; */
+    background-color:  var(--form-bg);
+    /* color: white; */
+}
 
 /* ====================================
 Like
@@ -298,6 +312,10 @@ Like
 /* ========================================
 Dark Mode Make Sure to the last
 ======================================== */
+
+.buler{
+    backdrop-filter: blur(62px);
+}
 .dark{
     background-color:  #181a1b;;
     color: rgb(34, 20, 20);

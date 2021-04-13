@@ -4,6 +4,8 @@ import {useParams} from 'react-router-dom';
 import Prism from "prismjs";
 import Reactmarkdown from 'react-markdown';
 import axios from 'axios';
+import gfm from 'remark-gfm';
+// const {useGlobalContext}=require('../context');
 // import Tem from '../../Blogs/Html/Html4SimpleTages/index'
 // import { GetBlogInfo } from '../../../../Database/BlogSchema';
 // import { response } from 'express';
@@ -20,11 +22,11 @@ const Blog=()=>{
     
   const {blogname}  = useParams();
   const file=useGlobalContext()[blogname];
-  const {Like} =useGlobalContext();
+  const {Like,UserInfo} =useGlobalContext();
 
     const [data,setdata]=useState("");
     const [blogInfo,setBlogInfo]=useState(0);
-
+    console.log(UserInfo);
     // console.log(blogname)
 
 
@@ -67,6 +69,7 @@ const Blog=()=>{
         // setdata(Blog);
         // console.log()
         // setdata([])
+        console.log(process.env);
         // console.log(slug)
       }, [data, file])
     
@@ -78,7 +81,11 @@ const Blog=()=>{
         </article> */}
         {/* <Tem></Tem> */}
         <div className=" blog-container">
-        <Reactmarkdown source={data}/>
+        <Reactmarkdown source={data}
+        allowDangerousHtml='true'
+        plugins={[gfm]}
+        
+        />
         {
         blogInfo!==0 && <Like className="Share" blogInfo={blogInfo} like={blogInfo.like}></Like>
         }

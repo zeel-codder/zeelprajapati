@@ -1,6 +1,9 @@
-import {AiOutlineLoading3Quarters} from 'react-icons/ai'
+import {AiOutlineLoading3Quarters} from 'react-icons/ai';
+import {useEffect} from 'react';
 
 const Loadding= ()=>{
+  
+    
     return(
         <>
         <div class="loadding">

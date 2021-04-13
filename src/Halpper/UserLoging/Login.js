@@ -12,13 +12,14 @@ import { useGlobalContext } from '../context';
 
 export  const Login=(props)=>{
 
-
+   
     const [isLoginOpen, setIsLoginOpen] = useState(props.choice!=="Sing In");
     const [issame,setInsane]=useState(false);
+    const [isLoadding,setIsLoadding]=useState(false);
     const [passWord,setpassWord]=useState('');
     const [email,setemail]=useState('');
     const [compassWord,setCompassWord]=useState('');
-    const {dispatchUser}=useGlobalContext();
+    const {dispatchUser,Loadding}=useGlobalContext();
 
 
     const FindUser=async(e)=>{
@@ -27,7 +28,7 @@ export  const Login=(props)=>{
             name:email,
             password:passWord
         }
-        await axios.post(`.netlify/functions/FindUser`,{...newUser})
+        axios.post(`.netlify/functions/FindUser`,{...newUser})
         .then((res)=>{
             // console.log(res.);
             // console.log(res.data)
@@ -35,12 +36,15 @@ export  const Login=(props)=>{
             if(res.password===passWord){
                 props.closeLogin();
                 dispatchUser({type:'UserLogIn',data:res});
+
             }else{
                 alert('Wrong PassWord')
             }
+            setIsLoadding(false);
         })
         .catch((error)=>{
             alert('UserName is not valid')
+            setIsLoadding(false);
         });
 
     }
@@ -56,23 +60,26 @@ export  const Login=(props)=>{
                 password:passWord
             }
 
-        await axios.post('.netlify/functions/AddUser',newUser)
+         axios.post('.netlify/functions/AddUser',newUser)
         .then((res)=>{
             if(res.status===200){
                 // console.log(res);
                 props.closeLogin();
                 dispatchUser({type:'UserLogIn',data:newUser});
             }
+            setIsLoadding(false);
         })
         .catch((error)=>{
             console.log(error);
             alert('User Exits');
+            setIsLoadding(false);
             // alert('error');
         });
         }else{
             alert('Pass Word Done mathch')
+            setIsLoadding(false);
         }
-
+        
 
     }
 
@@ -98,15 +105,25 @@ export  const Login=(props)=>{
             <div className="login-choice">
                 <span onClick={()=>setIsLoginOpen(true)} className={isLoginOpen && `open`}>Log in</span>
                 <span onClick={()=>setIsLoginOpen(false)} className={isLoginOpen || `open`}>Sing in</span>
-                <span onClick={()=>props.closeLogin()} className="close">[X]</span>
+                <span onClick={()=>props.closeLogin()} className="close Mybutton">[X]</span>
             </div>
+
+            {
+             
+             isLoadding ? <Loadding /> :null
+
+            }
 
 
             {
 
             isLoginOpen
             ?
-            <form className="form form-login open" onSubmit={(e)=>FindUser(e)}>                
+            <form className="form form-login open" onSubmit={(e)=>{
+                setIsLoadding(true);    
+                FindUser(e)
+                
+            }}>                
             <div>
             <label for="email"><AiTwotoneMail></AiTwotoneMail>Email</label>
             <input className="form-input" 
@@ -123,7 +140,12 @@ export  const Login=(props)=>{
             <button className="btn" type="submit">Log In</button>
             </form>
             :
-            <form className="form form-singin open" onSubmit={(e)=>{AddUser(e)}}>                
+            <form className="form form-singin open" onSubmit={(e)=>{
+                setIsLoadding(true);    
+                AddUser(e)
+                // FindUser(e)
+                // setIsLoadding(false);
+                }}>                
             <div>
             <label for="email"><AiTwotoneMail></AiTwotoneMail>Email</label>
             <input className="form-input" 

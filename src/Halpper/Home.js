@@ -38,7 +38,6 @@ function App() {
     <Router>
       <Navbar />
       <Route exact path="/">
-     
         <Main /> 
       </Route>
       <Route exact path="/contect">
@@ -50,14 +49,8 @@ function App() {
       <Route exact path="/blog/:blogname">
         <BlogPage></BlogPage>
       </Route>
-      <Route exact path="/login">
-      <Login></Login>
-      </Route>
       <Route exact path="/user/:username">
         <Profile></Profile>
-      </Route>
-      <Route exact path="/user/:username">
-        {/* <User></User> */}
       </Route>
       <Footer></Footer>
       {/* </Switch> */}

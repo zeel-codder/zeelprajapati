@@ -51,7 +51,7 @@ import {Add_User,Get_User} from './UserLoging/Login.Functions';
 
 
 import Html4SimpleTages from '../Blogs/Html/Html4SimpleTages/Html4SimpleTages.md'
-import demo from '../Blogs/Html/demo/demo.md'
+// import demo from '../Blogs/Html/demo/demo.md'
 
 // ===================================
 
@@ -130,7 +130,7 @@ const GetUser=()=>{
         //this is blog fils imports
 
         Html4SimpleTages,
-        demo,
+        // demo,
         dispatchUser,
 
         //states

@@ -7,7 +7,7 @@ this main root variables
 :root{
   --transition:.5s all;
   --transition1:.5s all;
-  --bgcolor:#2F2FA2;;
+  --bgcolor:#2F2FA2;
   --hadderbg:#021750;
   --color:white;
   --font: Arial, Helvetica, sans-serif;
@@ -15,6 +15,7 @@ this main root variables
   --hoverc:rgb(55, 197, 216);
   --text-size:14px;
   --font-size-400pxafter:13px;
+  --form-bg:#55D;
   /* transition: all 1s; */
   overflow-x: hidden;
 }
@@ -87,7 +88,7 @@ List:
 .line_div{
   flex: 1;
   height: 100%;
-  background-color: #bbbbbb;
+  background-color: #55D;
   /* border-left: 1px solid white; */
 }
 .main1  .line{
@@ -186,8 +187,9 @@ List:
 }
 .navabar-ul div{
   display: flex;
+  flex-wrap: wrap;
 }
-.navabar-ul li a{
+.navabar-ul li a,.open,a,.login-choice span,.Mybutton{
   text-decoration: none;
   color: var(--color);
   padding: 13px 11px;
@@ -195,7 +197,7 @@ List:
   font-size: var(--font_size);
 }
 
-.navabar-ul li a:hover{
+.navabar-ul li a:hover,a:hover,.Mybutton:hover{
   color: var(--hoverc);
   background-color: white;
 }
@@ -206,7 +208,11 @@ List:
 3.ImgShow
 
 ============================= */
-
+p{
+  padding: .7rem 0;
+  /* text-align: center; */
+  line-height: 1.9rem;
+}
 
 .main-img{
   width: 100%;
@@ -528,7 +534,7 @@ List:
     padding: 4rem 0;
     font-size: vat(--font_size);
     /* border: 2px solid black; */
-    background-color:  rgb(246, 76, 114);
+    background-color:var(--form-bg);
     /* border-bottom: 2px solid white; */
     /* border-top: 2px solid white; */
     /* height: 100vh; */
@@ -729,6 +735,13 @@ animation: thor_move 2s ease-out 0s 1;
 For Mobile
 ========================================= */
 @media only screen and (max-width: 1200px) {
+  .navabar-ul li a,.open,a,.login-choice span,.Mybutton{
+    padding: 0;
+    margin: 10px;
+  }
+  .login {
+    margin: 0;
+  }
   .Login-Page{
     width: 40%;
     align-items: center;
@@ -746,6 +759,10 @@ For Mobile
   }
   .form{
     /* padding: 1rem 0; */
+  }
+  .navabar-ul li a:hover,a:hover,.Mybutton:hove{
+    background-color: none;
+    color: bisque;
   }
 
   .text1{
@@ -849,7 +866,7 @@ For Mobile
   }
   .form{
     /* flex-wrap: wrap; */
-    width: 100%;
+    width: 95%;
     border: none;
     /* border: 2px solid black; */
     height: fit-content;
@@ -885,6 +902,9 @@ For Mobile
 }
 
 @media only screen and (max-width: 420px) {
+  .navabar-ul div{
+    flex-direction: column;
+  }
   .footer-ul{
     display: none;
   }

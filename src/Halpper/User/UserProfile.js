@@ -7,7 +7,7 @@ const Profile=()=>{
     return (
 
         <div className="container">
-        <h1>
+        <h1 className="Mybutton">
         name:{name}
         </h1>
         </div>
