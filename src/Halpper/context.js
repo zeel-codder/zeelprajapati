@@ -1,5 +1,17 @@
-// import React, { useState, useContext } from 'react';
+/**
+ @name:Context
+ @type:React Component
+ @param:none
+ @returns: Store app the components and Blog info in object.
+ @functionality : This Component is use to Store Add data of Web App.
+**/
 
+
+
+import React, {
+  useReducer,
+  useContext,
+} from 'react';
 
 
 // import {Route,Switch,BrowserRouter as Router} from 'react-router-dom'
@@ -9,27 +21,17 @@ import Education from './Home_Page/education';
 import Technology from './Home_Page/tecnologes';
 import Projects from './Home_Page/projects';
 import Footer from './Home_Page/Footer';
-import Contect from './contect';
-import logo from '../img/home/logo.jpg'
-import ImgeShow from './Home_Page/imgshow';
-import mainimg from '../img/home/4.jpg';
-import timg from '../img/home/tchnology.svg';
-import pimg from '../img/home/project.svg';
-import projectdata from '../Data/Home/projects';
-import logo_edu from "../img/home/education.svg";
-import logo_intro from "../img/home/introimg.svg";
-import Loadding from './Home_Page/Loadding';
-import Navadata from '../Data/Home/data';
-import imgdic from '../Data/Home/Imgedata';
-import thor_logo from '../img/home/start_logo.png';
+import Contact from './contect';
+import ImageShow from './Home_Page/imgshow';
+import ProjectData from '../Data/Home/projects';
+import Loading from './Home_Page/Loadding';
+import Navdata from '../Data/Home/data';
 import Blog from './Blog/Blog';
 import Like from './Blog/Like';
 import Profile from './User/UserProfile';
-import {Login} from './UserLoging/Login'
-// import BlogData from '../Data/Home/Blog_data'
+import Login from './UserLoging/Login'
 import Main from './Home_Page/Main';
-import BlogInfo from '../Data/BlogData/BlogInfo';
-import BlogMainImg from '../img/home/1.jpg';
+// import BlogInfo from '../Data/BlogData/BlogInfo';
 import BlogShort from './Blog/BlogShort';
 import BlogPage from './Blog/BlogPage';
 
@@ -37,30 +39,15 @@ import BlogPage from './Blog/BlogPage';
 //Main Functions info
 import reducerForUser from './reducer';
 
-import {Add_User,Get_User} from './UserLoging/Login.Functions';
 
-// import projectdata from '../../Data/projects'
-
-
-
-// ===============================
-
-// All Blog Page Md files Imports
-
-// ===============================
-
-
+// ==================================
+// All Blogs
 import html4simpletages from '../Blogs/Html/Html4SimpleTages/Html4SimpleTages.md'
 // import demo from '../Blogs/Html/demo/demo.md'
 
+
 // ===================================
 
-import React, {
-  useReducer,
-  useContext,
-  useState,
-  useEffect
-} from 'react';
 
 const AppContext = React.createContext();
 
@@ -73,17 +60,9 @@ const initialStateForLogin={
 const AppProvider = ({
   children
 }) => {
-  const [Userstate, dispatchUser] = useReducer(reducerForUser, initialStateForLogin);
+  const [UserState, dispatchUser] = useReducer(reducerForUser, initialStateForLogin);
 
 
-const NewUser=()=>{
-
-  Add_User();
-}
-
-const GetUser=()=>{
-   Get_User();
-}
 
 
 
@@ -101,9 +80,9 @@ const GetUser=()=>{
         Technology,
         Projects,
         Footer,
-        Contect,
-        ImgeShow,
-        Loadding,
+        Contact,
+        ImgeShow: ImageShow,
+        Loading,
         Blog,
         Main,
         BlogShort,
@@ -111,22 +90,6 @@ const GetUser=()=>{
         Like,
         Login,
         Profile,
-
-        //defult img and video..
-        imgdic,
-        logo,
-        mainimg,
-        timg,
-        pimg,
-        projectdata,
-        logo_edu,
-        logo_intro,
-        Navadata,
-        // projectdata,
-        thor_logo,
-        BlogInfo,
-        BlogMainImg,
-
         //this is blog fils imports
 
         html4simpletages,
@@ -134,11 +97,10 @@ const GetUser=()=>{
         dispatchUser,
 
         //states
-
-        Userstate,
+        UserState,
+        ProjectData,
+        Navdata,
         
-
-
       }
     } >
     {

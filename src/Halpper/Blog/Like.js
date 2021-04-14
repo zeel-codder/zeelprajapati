@@ -1,20 +1,32 @@
+/**
+ @name:Like
+ @type:React Component
+ @param:none
+ @returns: JSX of Like of Blog.
+ @functionality : This Component is display like od Blog.
+**/
+
+
+// Imports
+// ====================================
 import {FcLike,FcLikePlaceholder} from 'react-icons/fc';
 import {useState} from 'react';
-import {useEffect} from 'react';
+// import {useEffect} from 'react';
 import axios from 'axios';
 import {useGlobalContext} from '../context';
 // import { response } from 'express';
+// ====================================
+
+
 
 
 const Like=(props)=>{
     
     const {blogInfo,isBlogShort}=props;
-    const {Userstate}=useGlobalContext();
-    // console.log(props);
+    const {UserState}=useGlobalContext();
     const [isLike,setIsLike]=useState(false);
     const [Like,setLike]=useState(props.like);
-
-  
+    // const {Loading}=useGlobalContext();
 
 
     const UpdateLike=async (old,newData)=>{
@@ -28,7 +40,7 @@ const Like=(props)=>{
         //     update:{...old,...newData},
         //   })
             await axios.post('/.netlify/functions/BlogInfoUpdate',{ filter:{...old},
-            update:{...old,...newData},}).then((response)=>console.log(response));
+            update:{...old,...newData},})
 
 
 
@@ -36,7 +48,7 @@ const Like=(props)=>{
     }
 
     const PostLike=()=>{
-        if(Userstate.isUserIn){
+        if(UserState.isUserIn){
             let like=0;
             if(!isLike){
                 like=Like+1;

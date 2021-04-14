@@ -1,41 +1,66 @@
 /* eslint-disable jsx-a11y/alt-text */
-// *************************************
-// Main.js for Main page or wecan say for zeel prajapati profile
-// ***************************************
+/**
+ * This is Footer page of zeel-codder web site.
+ * Functions:
+ * @name:Main
+ * @type:React Component
+ * @param:none
+ * @returns:JSX of Main component
+ * @functionality : This Component is Main page of zeel-codder web site. which Combine the      Introduction,Education,Project and Technology Info
+ */
 
 
+// Imports
+// ====================================
 import { useGlobalContext } from '../context';
 import { useEffect } from 'react';
 import { useState } from 'react';
+// ====================================
 
 
-function App() {
+function Main() {
 
-  const { logo, Navbar, Introduction, Education, Technology, Projects} = useGlobalContext();
+  const { Introduction, Education, Technology, Projects} = useGlobalContext();
 
   const [HeightArr, setHeighArr] = useState([]);
   // console.log(useGlobalContext())
 
 
-  // ================================
-  // Page Css Animation
-  // ================================
+  //=============================
+  //Line Animation AddLine Function:
+  // @name:AddLine
+  // @type:Javascript Function
+  // @param:scroll event as e
+  // @return:none
+  // @functionality: Function is used to Set the Scroll animation on .box div
+  //=============================
+
   function ScrollAnimtion(e) {
-    const arr = document.querySelectorAll(".box")
+    const arr = document.querySelectorAll(".box");
     const WindowsBottom = window.scrollY + window.innerHeight;
     arr.forEach((box) => {
       const Box = box.offsetTop + box.offsetHeight / 7;
       if (Box < WindowsBottom) {
-        box.classList.add("box-show")
+        box.classList.add("box-show");
       }
     })
   }
+
+
+  //=============================
+  //Line Animation AddLine Function:
+  // @name:AddLine
+  // @type:Javascript Function
+  // @param:none
+  // @return:none
+  // @functionality: Function is used to add horizontal line div in .main1 container in html
+  //=============================
 
   
   function AddLine() {
 
     let height = document.querySelector(".main1").offsetHeight/2;
-    let HeightArr = []
+    let HeightArr = [];
     for (let i = 0; i < 20; i++) {
       HeightArr.push(Math.random() * (height)+height);
     }
@@ -44,12 +69,23 @@ function App() {
 
   }
 
+
+   //=============================
+  //Line Animation AddLine Function:
+  // @name:useEffect
+  // @type:React Hook UseEffect
+  // @param:none
+  // @return:none
+  // @functionality: UseEffect is used to add Scroll Event in Windows, Call AddLine Functions,
+  // Than set the height of all .Line in .main1 container  
+  //=============================
+
   useEffect(() => {
-    window.addEventListener("scroll", ScrollAnimtion)
+    window.addEventListener("scroll", ScrollAnimtion);
     AddLine();
     setInterval(()=>{
 
-      let height = document.querySelector(".main1")
+      let height = document.querySelector(".main1");
       if(height!=null){
         height=height.offsetHeight;
       }
@@ -61,22 +97,27 @@ function App() {
     },5000)
   }, [])
 
+
+
   // console.log(HeightArr);
 
   return (
       <>
         <div className="main1">
           <div className="text1">
-            <img src={logo} className="logo"></img>
+            <img src='/images/home/logo.jpg' className="logo" alt="Zeel"></img>
             <span className="logo-text" id="head">
-              Zeel Prajapati's Personal Web Site
+              Zeel Codder Personal Web Site
             </span>
           </div>
           {
             HeightArr.map((data, index) => {
               // console.log(data);
               return (
-              <div className="line_div" onMouseEnter={(e) => {
+              <div className="line_div" 
+              
+              
+              onMouseEnter={(e) => {
                 let target = e.target.childNodes;
                 if(target.length!==0){
                   target=target[0];
@@ -85,7 +126,10 @@ function App() {
                 }
                 let height = document.querySelector(".main1").offsetHeight;
                 target.style.height = `${height}px`;
-              }} onTransitionEnd={(e) => {
+              }} 
+
+
+              onTransitionEnd={(e) => {
 
                 let target = e.target.childNodes;
                 if(target.length!==0){
@@ -93,8 +137,8 @@ function App() {
                 }else{
                   target=e.target;
                 }
-                const divs = document.querySelectorAll(".line");
-                let data=Array.from(divs).indexOf(target);
+                const div = document.querySelectorAll(".line");
+                let data=Array.from(div).indexOf(target);
                 target.style.height = `${HeightArr[data]}px`;
                 // console.log(HeightArr[data]);
                 // console.log(e);
@@ -107,6 +151,8 @@ function App() {
             })
           }
         </div>
+
+        {/*  Main component's */}
         <section className="container">
           <Introduction />
           <Education />
@@ -117,4 +163,4 @@ function App() {
   );
 }
 
-export default App;
+export default Main;

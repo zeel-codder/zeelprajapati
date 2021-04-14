@@ -1,25 +1,24 @@
-import react,{useEffect} from 'react'
-import './style/App.css';
-import './style/Bolg.css';
+/**
+ @name:App
+ @type:React Component
+ @param:none
+ @returns: JSX of App of User details
+ @functionality : This Component where With site start.
+**/
+
+
+
+// Imports
+// ====================================
+import './style/Blog.css';
 import './style/prism.css'
 import Button from './Halpper/MainPageButton'
 import HOME from './Halpper/Home'
+// ====================================
 
 
 
 function App() {
-    // ,
-  // "proxy": "http://localhost:9000/.netlify/functions"
-
-  // useEffect(() => {
-
-  //   process.env.['My']='https://zeelcodder.tech/.netlify/functions';
-  
-  // }, [])
-
-  
-
-
   return (
     <>
     <Button></Button>

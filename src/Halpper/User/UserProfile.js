@@ -1,8 +1,23 @@
+/**
+ @name:Profile
+ @type:React Component
+ @param:none
+ @returns: JSX of Profile of User details
+ @functionality : This Component is use to show The profile of current user in Web.
+**/
+
+
+
+// Imports
+// ====================================
 import { useGlobalContext } from '../context';
+// ====================================
+
+
 
 const Profile=()=>{
 
-    const {name,password}=useGlobalContext().Userstate.UserInfo;
+    const {name}=useGlobalContext().UserState.UserInfo;
 
     return (
 

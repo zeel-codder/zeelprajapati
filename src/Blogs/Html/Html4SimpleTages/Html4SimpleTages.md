@@ -1,7 +1,7 @@
 # 4 Basic And Important Tags For Beginner In Web Development
 
 
-![MyFase](/imges/blog/html/Html4SimpleTages/1.jpg)
+![MyFase](/images/blog/html/Html4SimpleTages/1.jpg)
 
 # 1 Div
 
@@ -14,7 +14,7 @@ Div is very basic and useful tag in html. By default div is <em>block level</em>
 
 <em>Output:</em>
 
-![Output1](/imges/blog/html/Html4SimpleTages/Output1.jpg)
+<div style="background-color:red;">Hi,I am Div</div>
 
 
 
@@ -48,9 +48,9 @@ Basic Layout with div:
 </style>
 ```
 
-Output
+*Output*
 
-![Output2](/imges/blog/html/Html4SimpleTages/Output2.jpg)
+![Output2](/images/blog/html/Html4SimpleTages/Output2.jpg)
 
 
 
@@ -86,7 +86,7 @@ Example of input tag :
 *OutPut*
 
 
-![Output3](/imges/blog/html/Html4SimpleTages/Output3.jpg)
+![Output3](/images/blog/html/Html4SimpleTages/Output3.jpg)
 
 
 
@@ -94,7 +94,7 @@ Example of input tag :
 
 # 3 Form
 
-Know input tag is known to you than next very basic tag is Form. For making web site more user interactive the most useful tag is Form. form is used for taking data form the user. *Some offthe main tags we can use in form tag are input,label,textarea,button*..etc
+Know input tag is known to you than next very basic tag is Form. For making web site more user interactive the most useful tag is Form. form is used for taking data form the user. *Some off the main tags we can use in form tag are input,label,textarea,button*..etc
 
 Form tag main attribute:
 
@@ -135,7 +135,7 @@ Example of Form tag :
 ```
 *Output:*
 
-![Output4](/imges/blog/html/Html4SimpleTages/Output4.jpg)
+![Output4](/images/blog/html/Html4SimpleTages/Output4.jpg)
 
 
 # 4 Img
@@ -158,7 +158,7 @@ Example of Img tag :
 ```
 *OutPut*
 
-![Output5](/imges/blog/html/Html4SimpleTages/Output5.jpg)
+![Output5](/images/blog/html/Html4SimpleTages/Output5.jpg)
 
 
 *Thanks for reading. Give the like to Blog. Have grate life ahead.*

@@ -1,15 +1,29 @@
-import {FcLike} from 'react-icons/fc';
+/**
+ @name:BlogShort
+ @type:React Component
+ @param:props
+ @returns: JSX of BlogShort.
+ @functionality : This Component is used in Blog Component. This is used to display blog basic details on the screen.
+**/
+
+
+// Imports
+// ====================================
+
+// import {FcLike} from 'react-icons/fc';
 import {useGlobalContext} from '../context';
 import { Link } from 'react-router-dom';
 
-const BlogShort = (props) => {
+// ====================================
 
+
+const BlogShort = (props) => {
+    
     const { topic, data } = props;
     const {Like}=useGlobalContext();
-
-
+    
     if (data.length === 0) {
-
+        
         return (
             <div className="Bloshort-not-found">
                 <h1>{topic}</h1>

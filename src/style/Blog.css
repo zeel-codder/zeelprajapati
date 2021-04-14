@@ -132,6 +132,7 @@ em{
     font-family: inherit;
     padding: 0 5px;
     color: white;
+    font-style: normal;
 }
 
 .blog-container  .img ,.img{
@@ -254,7 +255,13 @@ Like
 .blog-container button{
     color: white;
 }
-
+.Footer-icons a:hover,.Footer-icons svg:hover{
+    color: var(--hoverc);
+    background-color: transparent;
+}
+.Footer-icons:hover{
+    background-color: transparent;
+}
 
 @media only screen and (max-width: 1200px) {
     h1,h2{
