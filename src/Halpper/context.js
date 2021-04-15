@@ -37,7 +37,7 @@ import BlogPage from './Blog/BlogPage';
 
 
 //Main Functions info
-import reducerForUser from './reducer';
+import reducerForUser from './reducer/reducer';
 
 
 // ==================================

@@ -12,7 +12,7 @@
 // import axios from 'axios';
 // import {useState,useEffect} from 'react';
 // import { User } from '../../LambdaFunctions/DataBaseConnection';
-import { Route, BrowserRouter as Router} from 'react-router-dom'
+import { Route, BrowserRouter as Router,Switch} from 'react-router-dom'
 import { useGlobalContext } from './context';
 // ====================================
 
@@ -40,15 +40,19 @@ function Home() {
 
   return (
     <Router>
+      
 
       <Navbar />
       {/* <Loadding /> */}
+
+      <Switch>
+
       <Route exact path="/">
 
         <Main /> 
       
       </Route>
-      <Route exact path="/contect">
+      <Route exact path="/contact">
       
         <Contact />
       
@@ -68,6 +72,13 @@ function Home() {
         <Profile />
       
       </Route>
+      <Route path="/*">
+      
+        <h1>404 Page Not Found</h1>
+      
+      </Route>
+      </Switch>
+
       
       <Footer />
       {/* </Switch> */}

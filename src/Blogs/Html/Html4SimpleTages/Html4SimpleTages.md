@@ -88,10 +88,6 @@ Example of input tag :
 
 ![Output3](/images/blog/html/Html4SimpleTages/Output3.jpg)
 
-
-
-
-
 # 3 Form
 
 Know input tag is known to you than next very basic tag is Form. For making web site more user interactive the most useful tag is Form. form is used for taking data form the user. *Some off the main tags we can use in form tag are input,label,textarea,button*..etc

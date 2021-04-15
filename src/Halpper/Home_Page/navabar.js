@@ -131,7 +131,7 @@ function Navbar() {
                             })
                         }
                     </div>
-                    <li className="Login-Page" ref={linksRefs}>
+                    {/* <li className="Login-Page" ref={linksRefs}>
 
                         {
                             !UserState.isUserIn
@@ -147,12 +147,12 @@ function Navbar() {
                                 :
                                 <li className="icons"><Link to={`/user/${UserState.UserInfo._id}`} title="User"><FaUserSecret></FaUserSecret></Link></li>
                         }
-                    </li>
+                    </li> */}
                 </ul>
-                {
+                {/* {
                     isLoginOpen && <Login choice={value.current} closeLogin={closeLogin}></Login>
 
-                }
+                } */}
             </div>
         </div>
 

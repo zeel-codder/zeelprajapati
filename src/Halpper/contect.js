@@ -67,25 +67,22 @@ const Context = () => {
 
             }
 
-            <div style={{ background: '#55D' }}>
+            <div>
 
 
                 <form className="form" onSubmit={(e) => { MailMe(e) }}>
+                    <span className="alert">Contact Form</span>
                     <div>
-                        <label for="name"><BsFillPersonFill />Name</label>
-                        <input className="form-input" type="text" name="name" placeholder="Enter Name" required></input>
+                        <input className="form-input" type="text" title="Your name" name="name" placeholder="Enter Name" required></input>
                     </div>
                     <div>
-                        <label for="email"><AiTwotoneMail></AiTwotoneMail>Email</label>
-                        <input className="form-input" type="email" name="email" placeholder="Enter Email" required></input>
+                        <input className="form-input" type="email" title="Your Email" name="email" placeholder="Enter Email" required></input>
                     </div>
                     <div>
-                        <label for="subject"><MdSubject></MdSubject>Subject</label>
-                        <input className="form-input" type="text" name="subject" placeholder="Enter Subject" required></input>
+                        <input className="form-input" type="text" title="Email Subject" name="subject" placeholder="Enter Subject" required></input>
                     </div>
                     <div>
-                        <label for="message"><AiTwotoneFileText />Body</label>
-                        <input className="form-input" type="text" name="message" placeholder="Enter Message" required></input>
+                        <input className="form-input" type="text" title="Email Body" name="message" placeholder="Enter Message" required></input>
                     </div>
                     {/* <div>/ */}
                     {/* <button className="btn" type="reset">Reset</button> */}

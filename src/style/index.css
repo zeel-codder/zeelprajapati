@@ -178,7 +178,7 @@ List:
   display: flex;
     list-style: none;
     top: 0px;
-    /* padding: 15px; */
+    padding: 13px;
     justify-content: space-between;
     /* transition: var(--transition); */
     align-items: center;
@@ -467,7 +467,11 @@ p{
   /* opacity: 1; */
 }
 .icons,.Login-Page{
+  /* display: flex; */
   display: flex;
+    /* margin-top: 10px; */
+    align-items: center;
+    justify-content: center;
   /* margin-top: 10px; */
 }
 .Login-Page{
@@ -529,12 +533,14 @@ p{
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 80vh;
+    /* height: 80vh; */
+    border: 1px solid white;
     align-self: flex-start;
-    padding: 4rem 0;
+    padding: 4rem 1rem;
     font-size: vat(--font_size);
     /* border: 2px solid black; */
     background-color:var(--form-bg);
+    border-radius: 10px;
     /* border-bottom: 2px solid white; */
     /* border-top: 2px solid white; */
     /* height: 100vh; */
@@ -542,27 +548,35 @@ p{
     /* color: white; */
     justify-content: center;
     /* width: 70%; */
-    width: fit-content;
+    /* width: fit-content; */
+    width: 30%;
     /* background-color: var(--hoverc); */
-    margin: 0rem auto;
+    margin: 1rem auto;
     /* border: 1px solid; */
     /* box-shadow: 0px 0px 2px var(--bgcolor); */
 }
 .form-input{
-  display: inline;
-  border-style: none;
-  border-color: none;
+  display: inline-block;
+  /* border-style: none; */
+  /* border-color: none; */
   font:none;
-  margin: 10px;
-  outline: 0; background: blue;;
+  /* width: 50%; */
+  margin: 10px auto;
+  padding: .5rem;
+  border: 2px solid white;
+  /* outline: 0; */
+   background: blue;;
   font-size: var(--font);
   background-color: transparent;
   color: white;
+  outline: none;
+  text-align: center;
+  border-radius: 10px;
 }
 .form div input,.form div textarea{
   color: white;
   /* font-weight: bold; */
-  border-bottom:2px solid black;
+  /* border-bottom:2px solid black; */
   
 }
 .form div textarea{
@@ -571,15 +585,14 @@ p{
     height: 50px;
   }
   .form-input:focus,.form div :hover{
-    border-bottom-color: var(--bgcolor);
+    /* border-bottom-color: var(--bgcolor); */
     color: white;
     cursor: pointer;
 
   }
-  .Wrong{
-    border-bottom:2px solid red;
-    
-  }
+  /* .Wrong{
+    border-radius: 2px solid red;
+  } */
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: white;
   opacity: 1; /* Firefox */

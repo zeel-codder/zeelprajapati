@@ -7,8 +7,8 @@ const Navdata=[
     },
     {
         id:2,
-        title:"Contect Me",
-        link:"/contect",
+        title:"Contact Me",
+        link:"/contact",
     },
     {
         id:3,

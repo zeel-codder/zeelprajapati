@@ -39,7 +39,7 @@ Main Page
 .Log{
     /* min-height: 50vh; */
     position: absolute;
-    width: 70%;
+    width: 40%;
     left: 50%;
     /* height: auto; */
     top:50%;
@@ -214,6 +214,9 @@ svg{
     /* border: 2px solid black; */
     border-bottom: none;
     color: white;
+    align-items: center;
+    border:none;
+    border-radius: 0px;
     /* padding: 10px; */
     background-color:  var(--form-bg);
     /* color: white; */
