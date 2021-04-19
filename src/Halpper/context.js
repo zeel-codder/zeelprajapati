@@ -43,6 +43,7 @@ import reducerForUser from './reducer/reducer';
 // ==================================
 // All Blogs
 import html4simpletages from '../Blogs/Html/Html4SimpleTages/Html4SimpleTages.md'
+import top6vscodeextesions from '../Blogs/Tools/Top6VsCodeExtesions/top6vscodeextesions.md';
 // import demo from '../Blogs/Html/demo/demo.md'
 
 
@@ -93,6 +94,7 @@ const AppProvider = ({
         //this is blog fils imports
 
         html4simpletages,
+        top6vscodeextesions,
         // demo,
         dispatchUser,
 

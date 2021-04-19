@@ -72,12 +72,12 @@ const Blog = () => {
 
   return (
     <article className="blog-container">
-      <marquee className="alert" behavior="scroll" direction="right">This page is still in production</marquee>
-      <h1>Zeel Prajapati's Blog</h1>
+      {/* <marquee className="alert" behavior="scroll" direction="right">This page is still in production</marquee> */}
+      <h1>Zeel Codder Blog</h1>
 
-      <img className="img" src='/images/home/2.jpg' style={{ height: 400 }} alt="blog img"></img>
+      <img className="img" src='/images/home/DarkBlueClubLogo.png' style={{ height: 400 }} alt="blog img"></img>
       <p className="para">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde vitae enim dolor aut reprehenderit rerum. Inventore eaque iste ab ut in placeat quasi et voluptates. Exercitationem voluptate repellat similique? Libero.lo Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, est quae repellendus vel placeat odio voluptatum itaque quia sequi ipsa eius quod? Perferendis veniam deserunt fugit earum at consequuntur voluptatum!
+        
       </p>
 
       <div className="ListOfBlogs">

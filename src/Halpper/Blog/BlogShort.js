@@ -36,7 +36,7 @@ const BlogShort = (props) => {
 
     return(
         <>
-    <h1>{topic}</h1>
+    <span className="title">{topic}</span>
     <div className="BlogShort">
 
     {
@@ -46,7 +46,7 @@ const BlogShort = (props) => {
                 
                 
                 <div className="BlogInformation" key={id}>
-                    <h2>{title}</h2>
+                    <span className="Blogtitle">{title}</span>
                     <Link to={url} className="blog-a">
                     <img src={img}  alt='BlogShort Img'/> 
                     <Like like={like} isBlogShort={true}></Like>

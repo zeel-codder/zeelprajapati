@@ -17,7 +17,16 @@ this main root variables
   --font-size-400pxafter:13px;
   --form-bg:#55D;
   /* transition: all 1s; */
-  overflow-x: hidden;
+    overflow-x: hidden;
+  --transition:.5s all;
+    --transition1:.5s all;
+    --bgcolor:#2F2FA2;
+    --hadderbg:#021750;
+    --color:white;
+    --font_size:1.3rem;
+    --hoverc:rgb(55, 197, 216);
+    --text-size:14px;
+    --font-size-400pxafter:13px;
 }
 
 

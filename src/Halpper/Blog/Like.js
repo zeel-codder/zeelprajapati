@@ -39,8 +39,8 @@ const Like=(props)=>{
         //     filter:{...old},
         //     update:{...old,...newData},
         //   })
-            // await axios.post('/.netlify/functions/BlogInfoUpdate',{ filter:{...old},
-            // update:{...old,...newData},})
+            await axios.post('/.netlify/functions/BlogInfoUpdate',{ filter:{...old},
+            update:{...old,...newData},})
 
 
 
@@ -80,29 +80,27 @@ const Like=(props)=>{
         // const {like}=props;
 
         return(
-            // <h2 className="Like">Like:
-            // <span className="Link-Page" onClick={PostLike}>
-            // <FcLike className="like-icon"/>
-            // {Like}
-            // </span>
-            // </h2>
-            <>
-            </>
+            <h2 className="Like">Like:
+            <span className="Link-Page" onClick={PostLike}>
+            <FcLike className="like-icon"/>
+            {Like}
+            </span>
+            </h2>
+
         )
     }
 
     return (
-        // <h2 className="Like">Like:
-        // <span className="Like-Page" onClick={PostLike}>
-        // {
+        <h2 className="Like">Like:
+        <span className="Like-Page" onClick={PostLike}>
+        {
             
-        //     !isLike? <FcLikePlaceholder className="like-icon"/>: <FcLike className="like-icon"/>
-        // }
-        // {Like}
-        // </span>
-        // </h2>
-        <>
-        </>
+            !isLike? <FcLikePlaceholder className="like-icon"/>: <FcLike className="like-icon"/>
+        }
+        {Like}
+        </span>
+        </h2>
+
     )
 }
 
