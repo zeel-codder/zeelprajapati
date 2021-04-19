@@ -12,8 +12,8 @@
 // ====================================
 import './style/Blog.css';
 import './style/prism.css'
-import Button from './Halpper/MainPageButton'
-import HOME from './Halpper/Home'
+import Button from './Components/MainPageButton'
+import HOME from './Components/Home'
 // ====================================
 
 

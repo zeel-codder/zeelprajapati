@@ -23,53 +23,53 @@ const Education = () => {
                     <table>
 
                         <thead>
-                            <th>Collage/school  name</th>
-                            <th>Percentile rank/SPI</th>
-                            <th>Compilation data</th>
-                            <th>Location</th>
+                            <td>Collage/school  name</td>
+                            <td>Percentile rank/SPI</td>
+                            <td>Compilation data</td>
+                            <td>Location</td>
                         </thead>
                         <tbody>
                             <tr>
-                                <th>
+                                <td>
                                     Ankit vidyalaya
-                                </th>
-                                <th>
+                                </td>
+                                <td>
                                     99.12 PR
-                                </th>
-                                <th>
+                                </td>
+                                <td>
                                     2017
-                                </th>
-                                <th>
+                                </td>
+                                <td>
                                     kalol, Gujarat
-                                </th>
+                                </td>
                             </tr>
                             <tr>
-                                <th>
+                                <td>
                                     KTKM High School
-                                </th>
-                                <th>
+                                </td>
+                                <td>
                                     99.27 PR
-                                </th>
-                                <th>
+                                </td>
+                                <td>
                                     2019
-                                </th>
-                                <th>
+                                </td>
+                                <td>
                                     kalol, Gujarat
-                                </th>
+                                </td>
                             </tr>
                             <tr>
-                                <th>
+                                <td>
                                     Nirma University
-                                </th>
-                                <th>
+                                </td>
+                                <td>
                                     -
-                                </th>
-                                <th>
+                                </td>
+                                <td>
                                     2023
-                                </th>
-                                <th>
+                                </td>
+                                <td>
                                     Ahmadabad, Gujarat
-                                </th>
+                                </td>
                             </tr>
                         </tbody>
                     </table>

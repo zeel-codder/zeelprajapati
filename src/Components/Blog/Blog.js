@@ -46,7 +46,7 @@ const Blog = () => {
         const data1 = [];
         const index = [];
         console.log(typeof (res.data));
-        console.log(res.data);
+        // console.log(res.data);
         const BlogInfo = JSON.parse(res.data.message);
         BlogInfo.forEach(element => {
           let topic = element.topic;
@@ -85,7 +85,7 @@ const Blog = () => {
 
           data.map((page) => {
 
-            return (<BlogShort {...page} />)
+            return (<BlogShort {...page} key={new Date().getMilliseconds()} />)
 
           })
 

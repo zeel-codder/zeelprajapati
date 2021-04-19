@@ -52,7 +52,7 @@ const BlogPage = () => {
   //=============================
 
   const GetBlogInfo = () => {
-    console.log(blogname, 12);
+    // console.log(blogname, 12);
     axios.post(`/.netlify/functions/BlogInfoOne`, { name: blogname })
       // axios.post(`/BlogInfoOne`,{name:blogname})
       .then((response) => {
@@ -93,7 +93,7 @@ const BlogPage = () => {
     // setdata(Blog);
     // console.log()
     // setdata([])
-    console.log(process.env);
+    // console.log(process.env);
     // console.log(slug)
   }, [data, file])
 

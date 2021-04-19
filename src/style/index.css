@@ -88,21 +88,36 @@ List:
 .main1{
    height: 70vh;
    display: flex;
+   align-items: flex-end;
    /* background: red; */
    overflow-x:hidden; 
    overflow: hidden;
    
 }
-
+/* .block{
+  position: relative;
+  top: 50%;
+  width: 90%;
+  height: 10%;
+  z-index: 10;
+  background-color: white;
+} */
 .line_div{
   flex: 1;
+  display: flex;
   height: 100%;
+  align-items: flex-end;
   background-color: #55D;
   /* border-left: 1px solid white; */
 }
 .main1  .line{
   background: var(--bgcolor);
+  width: 100%;
+  flex-direction: column;
+  display: flex;
   transition: all .5s;
+  border-left: 1px solid rgb(60 175 149);
+  /* height: 100%; */
 }
 
 .line:hover{
@@ -163,6 +178,7 @@ List:
   width: 100%;
   /* flex-direction: column; */
   transition:height 0.3s;
+  border-bottom: 1px solid white;
 }
 .icon{
   display: none;
@@ -355,7 +371,7 @@ p{
   margin: 10px auto;
   border-collapse: collapse;
 }
-.container table th, .container table tr{
+.container table td, .container table tr{
   padding: 10px;
   text-align: center;
   font-size: 12px;
@@ -363,7 +379,7 @@ p{
   background-color:var(--bgcolor);
 }
 
-.container table thead th{
+.container table thead td{
   background-color: var(--hoverc);
   border-bottom:3px solid;
   color: black;
@@ -521,7 +537,7 @@ p{
 .footer-ul li svg{
   color: white;
 }
-.footer-ul li svg:hover, .footer p:hover,.container table th:hover,.container table tr:hov{
+.footer-ul li svg:hover, .footer p:hover,.container table td:hover,.container table tr:hov{
   color: var(--hoverc);
   cursor: pointer;
 }
@@ -597,6 +613,7 @@ p{
     /* border-bottom-color: var(--bgcolor); */
     color: white;
     cursor: pointer;
+    border-color:gree ;
 
   }
   /* .Wrong{
@@ -614,6 +631,7 @@ p{
 }
 .form-input{
   align-self: flex-start;
+  /* width: 90%; */
 }
 
 .form div label{
@@ -885,30 +903,35 @@ For Mobile
     width: 100%;
     display: inline;
   }
-  .container table th, .container table tr{
+  .container table td, .container table tr{
     font-size: 8px;
     padding: 6px;
     font-weight: bold;
   }
   .form{
     /* flex-wrap: wrap; */
-    width: 95%;
+    /*flex-wrap: wrap; */
+    width: 90%;
     border: none;
     /* border: 2px solid black; */
+    height: -moz-fit-content;
     height: fit-content;
+    margin: 0 auto;
+    border-radius: 0;
   }
   .form div{
     align-items: center;
     justify-content: center;
     width: fit-content;
     font-size: var(--font_size);
+    width: 100%;
     /* width: 10px; */
   }
   .form div label{
     font-size: var(--text-size);
   }
   .form-input{
-    width:200px;
+    width:100%;
     font-size: var(--text-size);
   }
   .form div label svg{

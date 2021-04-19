@@ -64,6 +64,16 @@ function Main() {
     for (let i = 0; i < 20; i++) {
       HeightArr.push(Math.random() * (height)+height);
     }
+    let list=document.querySelectorAll('.line');
+    list.forEach((data)=>{
+      data.style.height = `${height}px`;
+      const cout=Math.floor(Math.random()*3+1);
+      // console.log(data);
+      const block='<div class="block1">';
+      for(let i=0;i<cout;i++){
+        data.innerHTML=data.innerHTML+block;
+      }
+    });
     setHeighArr(HeightArr);
     // console.log(HeightArr);
 
@@ -93,6 +103,7 @@ function Main() {
       let list=document.querySelectorAll('.line');
       list.forEach((data)=>{
         data.style.height = `${height}px`;
+
       })
     },5000)
   }, [])
@@ -114,7 +125,7 @@ function Main() {
             HeightArr.map((data, index) => {
               // console.log(data);
               return (
-              <div className="line_div" 
+              <div className="line_div" key={index}
               
               
               onMouseEnter={(e) => {
@@ -145,6 +156,7 @@ function Main() {
                 // console.log("out");
               }}>
                <div  className="line" data={index} style={{ height: `${data}px` }}>
+                  {/* <div className="block"></div> */}
                </div>
               </div>
               )

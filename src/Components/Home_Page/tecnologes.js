@@ -29,9 +29,9 @@ const Technology = () => {
                     <ul className="technology-ul">
 
                         {
-                            Info.map((data) => {
+                            Info.map((data,index) => {
                                 return (
-                                    <li>
+                                    <li key={index}>
                                         <IoMdListBox></IoMdListBox> {data}
                                     </li>
 
