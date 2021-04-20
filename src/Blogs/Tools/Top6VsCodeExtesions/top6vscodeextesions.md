@@ -18,6 +18,10 @@ Search: *Code Runner* in Extension search box in vs code.
 
 ![CodeRunnerAfter](/images/blog/tools/top6vscodeextesions/CodeRunnerAfter.png)
 
+*Demo*
+
+<!-- <video src="images/blog/tools/top6vscodeextesions/CodeRunner.mp4" > -->
+
 
 *Note:*
 Some time when you click on run button the programme is not run in terminal. You have to change some setting in Extension.
