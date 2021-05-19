@@ -15,7 +15,7 @@
 // ====================================
 // import react from 'react'
 // import {Link} from 'react-dom
-import { Link } from 'react-router-dom';
+import { Link, animateScroll as scroll } from "react-scroll";
 import Navdata from '../../Data/Home/data'
 // import { AiOutlineFacebook , AiFillGithub ,AiFillLinkedin ,AiFillTwitterCircle } from 'react-icons/ai';
 // import { FaBeer } from 'react-icons/fa';
@@ -123,7 +123,12 @@ function Navbar() {
                                 const { id, title, link } = data
                                 return (
                                     <li key={id}>
-                                        <Link to={link} title={title}>
+                                        <Link to={link} title={title}
+                                        spy={true}
+                                        smooth={true}
+                                        offset={-70}
+                                        duration={500}
+                                    >
                                             {title}
                                         </Link>
                                     </li>

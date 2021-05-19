@@ -12,6 +12,7 @@
 // Imports
 // ====================================
 import { IoMdListBox } from 'react-icons/io'
+import Imgshow from './imgshow'
 // import { useGlobalContext } from '../conte/xt';
 // ====================================
 
@@ -20,26 +21,46 @@ import { IoMdListBox } from 'react-icons/io'
 const Technology = () => {
 
     const Info = ['HTML,CSS,JS', 'React js', 'Node js', 'Java', 'Python', 'C']
+    const data=[
+        {
+        title:'HTML,CSS,JS',
+        link:"#",
+        imgurl:"https://cdn.pixabay.com/photo/2015/04/23/17/41/javascript-736400_960_720.png"
+        },
+        {
+        title:'React js',
+        link:"#",
+        imgurl:"https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png"
+        },
+        {
+        title:'Node js',
+        link:"#",
+        imgurl:"https://cdn3.iconfinder.com/data/icons/popular-services-brands/512/node-128.png"
+        },
+        {
+        title:'Java',
+        link:"#",
+        imgurl:"https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/181_Java-256.png"
+        },
+        {
+        title:'Python',
+        link:"#",
+        imgurl:"https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/267_Python_logo-256.png"
+        },
+        {
+        title:'C',
+        link:"#",
+        imgurl:"https://cdn3.iconfinder.com/data/icons/greek-latin-symbols-solid-1/24/capital-c-128.png"
+        },
+        
+        
+    ]
     return (
         <>
-            <div className="box">
-                <h1>Technology</h1>
+                <h1 style={{textAlign: 'center'}}>Technology</h1>
+            <div className="box row" id="theology">
                 <img className="container-img" src='/images/home/tchnology.svg' alt='TheologyPhoto'></img>
-                <div className="list-container">
-                    <ul className="technology-ul">
-
-                        {
-                            Info.map((data,index) => {
-                                return (
-                                    <li key={index}>
-                                        <IoMdListBox></IoMdListBox> {data}
-                                    </li>
-
-                                )
-                            })
-                        }
-                    </ul>
-                </div>
+                <Imgshow data={data}></Imgshow>  
             </div>
         </>)
 }

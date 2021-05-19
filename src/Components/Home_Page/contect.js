@@ -17,7 +17,7 @@ import { BsFillPersonFill } from 'react-icons/bs';
 import { MdSubject } from 'react-icons/md';
 import { useState } from 'react';
 // import Loadding from './Loadding'
-import { useGlobalContext } from './context';
+import { useGlobalContext } from '../context';
 // ====================================
 
 const Context = () => {

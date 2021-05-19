@@ -15,6 +15,7 @@
 import { useGlobalContext } from '../context';
 import { useEffect } from 'react';
 import { useState } from 'react';
+
 // ====================================
 
 
@@ -90,23 +91,23 @@ function Main() {
   // Than set the height of all .Line in .main1 container  
   //=============================
 
-  useEffect(() => {
-    window.addEventListener("scroll", ScrollAnimtion);
-    AddLine();
-    setInterval(()=>{
+  // useEffect(() => {
+  //   // window.addEventListener("scroll", ScrollAnimtion);
+  //   // AddLine();
+  //   setInterval(()=>{
 
-      let height = document.querySelector(".main1");
-      if(height!=null){
-        height=height.offsetHeight;
-      }
-      // offsetHeight;
-      let list=document.querySelectorAll('.line');
-      list.forEach((data)=>{
-        data.style.height = `${height}px`;
+  //     // let height = document.querySelector(".main1");
+  //     // if(height!=null){
+  //     //   height=height.offsetHeight;
+  //     // }
+  //     // // offsetHeight;
+  //     // let list=document.querySelectorAll('.line');
+  //     // list.forEach((data)=>{
+  //     //   data.style.height = `${height}px`;
 
-      })
-    },5000)
-  }, [])
+  //     // })
+  //   },5000)
+  // }, [])
 
 
 
@@ -114,59 +115,20 @@ function Main() {
 
   return (
       <>
-        <div className="main1">
-          <div className="text1">
+        <div className="main1" id="home">
+         
             <img src='/images/home/logo.jpg' className="logo" alt="Zeel"></img>
             <span className="logo-text" id="head">
               Zeel Codder Personal Web Site
             </span>
-          </div>
-          {
-            HeightArr.map((data, index) => {
-              // console.log(data);
-              return (
-              <div className="line_div" key={index}
-              
-              
-              onMouseEnter={(e) => {
-                let target = e.target.childNodes;
-                if(target.length!==0){
-                  target=target[0];
-                }else{
-                  target=e.target;
-                }
-                let height = document.querySelector(".main1").offsetHeight;
-                target.style.height = `${height}px`;
-              }} 
-
-
-              onTransitionEnd={(e) => {
-
-                let target = e.target.childNodes;
-                if(target.length!==0){
-                  target=target[0];
-                }else{
-                  target=e.target;
-                }
-                const div = document.querySelectorAll(".line");
-                let data=Array.from(div).indexOf(target);
-                target.style.height = `${HeightArr[data]}px`;
-                // console.log(HeightArr[data]);
-                // console.log(e);
-                // console.log("out");
-              }}>
-               <div  className="line" data={index} style={{ height: `${data}px` }}>
-                  {/* <div className="block"></div> */}
-               </div>
-              </div>
-              )
-            })
-          }
+            
+         
         </div>
 
         {/*  Main component's */}
         <section className="container">
-          <Introduction />
+          
+          <Introduction id="introduction"/>
           <Education />
           <Technology />
           <Projects />

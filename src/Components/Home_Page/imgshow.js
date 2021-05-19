@@ -18,7 +18,7 @@ import { useEffect } from 'react'
 // ====================================
 
 
-const ImageShow = () => {
+const ImageShow = ({data}) => {
 
     const ImageDic = [
         {
@@ -32,11 +32,12 @@ const ImageShow = () => {
         }
 
     ]
+    console.log(data)
 
     const [index, setIndex] = useState(0)
 
     useEffect(() => {
-        let new_index = (index + 1) % ImageDic.length;
+        let new_index = (index + 1) % data.length;
         let y = setInterval(() => {
             setIndex(new_index);
         }, 5000)
@@ -44,22 +45,22 @@ const ImageShow = () => {
             clearInterval(y)
         })
 
-    }, [ImageDic.length, index])
+    }, [data.length, index])
 
 
     return (
         <div className="imgshow_div">
             {
-                ImageDic.map((Img, ImageIndex) => {
+                data.map((Img, ImageIndex) => {
 
-                    const { id, link } = Img;
+                    const { title,imgurl, link } = Img;
 
                     //default all ImageDiv are next
 
                     let position = 'nextclass';
 
                     //let say index=1 than index=0 is prevues and index>=2 is next (index=0 than last index=n-1)
-                    if (index - 1 === ImageIndex || (index === 0 && ImageDic.length - 1 === ImageIndex)) {
+                    if (index - 1 === ImageIndex || (index === 0 && data.length - 1 === ImageIndex)) {
                         position = "preclass";
                     } else if (index === ImageIndex) {
 
@@ -69,15 +70,19 @@ const ImageShow = () => {
                     const ans = 'imgshow ' + position
 
                     return (
-                        <img src={link} key={id} className={ans} alt="ImageShowImage" />
-
+                        <div className={`${ans} column`}>
+                        <h1>{title}</h1>
+                        {/* <img src={imgurl} key={ImageIndex} className="logo" alt="ImageShowImage" /> */}
+                        <img src={imgurl} key={ImageIndex} className="logo" alt="ImageShowImage" />
+                        </div>
+                      
                     )
 
                 })
             }
             <div className="left" onClick={() => {
                 if (index === 0) {
-                    setIndex(ImageDic.length - 1);
+                    setIndex(data.length - 1);
                 } else {
                     setIndex(index - 1);
                 }
@@ -90,7 +95,7 @@ const ImageShow = () => {
 
             <div className="right" onClick={() => {
 
-                setIndex((index + 1) % ImageDic.length)
+                setIndex((index + 1) % data.length)
             }}>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clipRule="evenodd" />
@@ -99,17 +104,17 @@ const ImageShow = () => {
 
 
             {/* Bottom Point show */}
-            <div className="pointdiv">
+            {/* <div className="pointdiv">
                 {
-                    ImageDic.map((img, imgindex) => {
+                    data.map((img, imgindex) => {
                         let ans = "point "
                         if (imgindex === index) {
-                            ans = ans + "active";
+                            ans = ans + "pointh";
                         }
                         return <span className={ans}></span>
                     })
                 }
-            </div>
+            </div> */}
         </div>
     )
 }

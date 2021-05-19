@@ -11,6 +11,7 @@
 // Imports
 // ====================================
 import './style/Blog.css';
+import 'prismjs';
 import './style/prism.css'
 import Button from './Components/MainPageButton'
 import HOME from './Components/Home'

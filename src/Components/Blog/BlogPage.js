@@ -15,7 +15,9 @@ import { useParams } from 'react-router-dom';
 import Prism from "prismjs";
 import Reactmarkdown from 'react-markdown';
 import axios from 'axios';
-import gfm from 'remark-gfm';
+// import "prismjs/themes/prism-tomorrow.css";
+// import copy from 'prismjs/plugins/copy-to-clipboard'
+// import gfm from 'remark-gfm';
 // const {useGlobalContext}=require('../context');
 // import Tem from '../../Blogs/Html/Html4SimpleTages/index'
 // import { GetBlogInfo } from '../../../../Database/BlogSchema';
@@ -75,6 +77,7 @@ const BlogPage = () => {
 
   useEffect(() => {
     Prism.highlightAll()
+    // Prism.plugins=""
     GetBlogInfo();
     if (!file) {
       setdata('<h1 class="alert">404 Not Found</h1>')
@@ -98,6 +101,7 @@ const BlogPage = () => {
   }, [data, file])
 
   // console.log(blogInfo,'main');
+  // Prism.usePrismHighlightAll();
   return (
     <>
       {/* <article className="blog-container" dangerouslySetInnerHTML={{__html: data}}>
@@ -107,7 +111,7 @@ const BlogPage = () => {
       <div className=" blog-container">
         <Reactmarkdown source={data}
           allowDangerousHtml='true'
-          plugins={[gfm]}
+          // plugins={[gfm]}
 
         />
         {

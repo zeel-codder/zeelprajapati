@@ -21,7 +21,7 @@ import Education from './Home_Page/education';
 import Technology from './Home_Page/tecnologes';
 import Projects from './Home_Page/projects';
 import Footer from './Home_Page/Footer';
-import Contact from './contect';
+import Contact from './Home_Page/contect';
 import ImageShow from './Home_Page/imgshow';
 import ProjectData from '../Data/Home/projects';
 import Loading from './Home_Page/Loadding';

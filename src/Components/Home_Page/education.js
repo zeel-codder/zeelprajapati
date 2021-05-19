@@ -12,11 +12,13 @@
 const Education = () => {
     return (
         <>
-            <div className="box">
+            <div className="box" id="education">
                 <h1>Education</h1>
-                <img className="container-img" src='/images/home/education.svg' alt="Education Svg"></img>
 
-                <div className="text-container">
+                <div className="text-container row">
+                <img className="container-img" src='/images/home/education.svg' alt="Education Svg"></img>
+                    <div className="column">
+
                     <p className="para">
                         I did my 10th in Ankit vidyalaya, kalol, Gujarat in Gujarat Board. Then I finished my 12th in KTKM High School in Science branch. And presently , I am pursuing Computer science B-Tech in Nirma university.
                     </p>
@@ -75,6 +77,7 @@ const Education = () => {
                     </table>
 
                 </div>
+                    </div>
             </div>
         </>
     )
