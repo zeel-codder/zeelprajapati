@@ -14,13 +14,14 @@
 // import { User } from '../../LambdaFunctions/DataBaseConnection';
 import { Route, BrowserRouter as Router,Switch} from 'react-router-dom'
 import { useGlobalContext } from './context';
+// import/ {locai}
 // ====================================
 
 
 
 function Home() {
 
-  const { Navbar,Main, Contact, Footer,  Blog , BlogPage,  Profile} = useGlobalContext();
+  const { Navbar,Main, Contact, Footer,  Blog , BlogPage,  Profile,MyResume} = useGlobalContext();
 
   // useEffect(() => {
    
@@ -42,9 +43,9 @@ function Home() {
     <Router>
       
 
-      <Navbar />
       {/* <Loadding /> */}
 
+      <Navbar />
       <Switch>
 
       <Route exact path="/">
@@ -72,6 +73,11 @@ function Home() {
         <Profile />
       
       </Route>
+      <Route exact path="/resume">
+      
+      
+      
+      </Route>
       <Route path="/*">
       
         <h1>404 Page Not Found</h1>
@@ -80,8 +86,8 @@ function Home() {
       </Switch>
 
       
-      <Footer />
       {/* </Switch> */}
+      <Footer />
     </Router>
   );
 }

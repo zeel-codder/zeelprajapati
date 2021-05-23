@@ -112,6 +112,13 @@ List:
   background-color:black;
     font-size: 1.8rem;
     padding: 10px;
+    text-align: center;
+}
+.logo-text button{
+  margin-top: 1rem;
+}
+.logo-text a{
+  font-size:1.4rem;
 }
 
 .main1{
@@ -217,7 +224,7 @@ background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);/* W3C, IE 10
 
 .navbar,.navbar-item{
   display: flex;
-  /* position: sticky; */
+  position: sticky;
   align-items: center;
   justify-content:space-between;
   background-color: #2d3436;
@@ -568,7 +575,7 @@ h1{
 .technology-ul li,.project-ul li{
   padding: 8px;
   transition: var(--transition);
-  background-color: var(--bgcolor);
+  background-image: var(--bgi);
   border-bottom:2px solid;
   color: white;
   font-size: var(--text-size);
@@ -628,6 +635,8 @@ h1{
   display: flex;
   background-color: var(--bgcolor);
   color: white;
+  /* position: absolute; */
+  /* bottom:0; */
   justify-content: center;
   padding: 10px;
   align-items: center;
@@ -1068,6 +1077,10 @@ For Mobile
   .row *, .column * {
     flex: none;
 }
+.error{
+  flex-direction: column;
+}
+
 }
 
 @media only screen and (max-width: 420px) {

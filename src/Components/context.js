@@ -34,6 +34,7 @@ import Main from './Home_Page/Main';
 // import BlogInfo from '../Data/BlogData/BlogInfo';
 import BlogShort from './Blog/BlogShort';
 import BlogPage from './Blog/BlogPage';
+import MyResume from './MyResume';
 
 
 //Main Functions info
@@ -91,6 +92,7 @@ const AppProvider = ({
         Like,
         Login,
         Profile,
+        MyResume,
         //this is blog fils imports
 
         html4simpletages,

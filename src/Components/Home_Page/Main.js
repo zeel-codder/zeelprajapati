@@ -15,6 +15,9 @@
 import { useGlobalContext } from '../context';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import {Link} from 'react-router-dom';
+import { useHistory } from "react-router-dom";
+
 
 // ====================================
 
@@ -24,6 +27,7 @@ function Main() {
   const { Introduction, Education, Technology, Projects, Contact} = useGlobalContext();
 
   const [HeightArr, setHeighArr] = useState([]);
+  let history = useHistory();
   // console.log(useGlobalContext())
 
 
@@ -120,6 +124,12 @@ function Main() {
             <img src='/images/home/logo.jpg' className="logo" alt="Zeel"></img>
             <span className="logo-text" id="head">
               Zeel Codder Personal Web Site
+              <button className="btn" > 
+              <a href="/Resume.pdf">
+                
+                Resume
+                </a>
+                </button>
             </span>
             
          

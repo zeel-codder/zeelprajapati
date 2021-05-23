@@ -15,7 +15,7 @@ const Education = () => {
             <div className="box" id="education">
                 <h1>Education</h1>
 
-                <div className="text-container row">
+                <div className="text-container row error">
                 <img className="container-img" src='/images/home/education.svg' alt="Education Svg"></img>
                     <div className="column">
 
