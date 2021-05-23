@@ -54,12 +54,13 @@ const Technology = () => {
         },
         
         
+        
     ]
     return (
         <>
                 <h1 style={{textAlign: 'center'}}>Technology</h1>
             <div className="box row" id="theology">
-                <img className="container-img" src='/images/home/tchnology.svg' alt='TheologyPhoto'></img>
+                {/* <img className="container-img" src='/images/home/tchnology.svg' alt='TheologyPhoto'></img> */}
                 <Imgshow data={data}></Imgshow>  
             </div>
         </>)

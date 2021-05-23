@@ -2,9 +2,42 @@
 /* ================================
 this main root variables
 ================================ */
+.row,.column{
+  display:flex !important;
+  align-items: center;
+  flex-direction:row;flex-wrap: wrap;
+  justify-content: center;
+}
+.column{
+  flex-direction:column;
+}
+.row *,.column *{
+  flex: 1;
+}
 
+body::-webkit-scrollbar {
+  width: .7em;
+}
 
-:root{
+body{
+  background-image: var(--bgi);
+  color: white;
+}
+ 
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+body::-webkit-scrollbar-thumb:hover{
+  /* background-color: rgb(83, 70, 70); */
+  /* opacity: 2%; */
+}
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  /* outline: 1px solid slategrey; */
+  border-radius: 12px;
+}
+
+body{
   --transition:.5s all;
   --transition1:.5s all;
   --bgcolor:#2F2FA2;
@@ -27,6 +60,7 @@ this main root variables
     --hoverc:rgb(55, 197, 216);
     --text-size:14px;
     --font-size-400pxafter:13px;
+    --bgi:linear-gradient(315deg, #2d3436 0%, #000000 74%);
 }
 
 
@@ -67,6 +101,10 @@ List:
   margin: 1rem;
 }
 
+.imgshow_div > *{
+ 
+/* width:30%; */
+}
 
 .logo-text{
 
@@ -88,7 +126,7 @@ background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);/* W3C, IE 10
   /* background: red; */
   overflow-x: hidden;
   overflow: hidden;
-  background-repeat-x: no-repeat;
+  /* background-repeat-x: no-repeat; */
   background-size: cover;
   background-position: center;
   justify-content: center;
@@ -239,13 +277,13 @@ background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);/* W3C, IE 10
   /* transform-origin: center; */
   /* border-bottom: 4px solid !important; */
   /* background-color: rgb(0, 255, 242); */
-  text-decoration: underline !important;
+  /* text-decoration: underline !important; */
   /* background-color: white; */
   /* color: black !important; */
  
 }
 
-.navabar-ul li a:hover,a:hover,.Mybutton:hover{
+.navabar-ul li a:hover,.Mybutton:hover{
   color: var(--hoverc);
   background-color: white;
 }
@@ -272,11 +310,14 @@ p{
 
 .imgshow_div{
   position: relative;
-  height: 20rem;
+  height: auto;
   width: 100%;
   display: flex;
-  overflow: hidden;
+  /* flex-wrap: none !important; */
+  /* overflow: hidden; */
+
   margin: 0 auto;
+  /* overflow-x: scroll; */
   align-items: center;
 }
 .pointh{
@@ -293,6 +334,24 @@ p{
   object-fit: cover;
   
   /* height: 100%; */
+}
+
+.imgeAnimationDiv{
+  width:8rem;
+  margin:1rem 0rem;
+  /* height:auto; */
+  overflow:hidden;
+  cursor:alias;
+}
+.imgeAnimationDiv img{
+  width:100%;
+  transition:all 1s;
+  object-fit: cover;
+
+}
+.imgeAnimationDiv img:hover{
+  /* object-fit: container; */
+  transform:scale(1.2)
 }
 
 .imgshow *{
@@ -376,9 +435,9 @@ p{
 
 .container h1{
   padding: 10px 0px;
-  display: inline;
+  /* display: inline; */
   /* margin: 0 auto; */
-  align-self: flex-start;
+  /* align-self: flex-start; */
 }
 
 .container p,.para{
@@ -448,18 +507,7 @@ h1{
   
 }
 
-.row,.column{
-  display:flex !important;
-  align-items: center;
-  flex-direction:row;flex-wrap: wrap;
-  justify-content: center;
-}
-.column{
-  flex-direction:column;
-}
-.row *,.column *{
-  flex: 1;
-}
+
 /* @keyframes load{
   0%{
     transform: translateY(5%);
@@ -507,7 +555,7 @@ h1{
 .list-container{
   display: block;
   /* width: fit-content; */
-  width: 80%;
+  width:100%;
   margin:0 auto;
 }
 .technology-ul,.project-ul{
@@ -611,6 +659,13 @@ h1{
 
 
 /* form */
+.con{
+
+  background-image: var(--bgi);
+}
+.con h1{
+  color: white  !important;
+}
 .form{
   display: flex;
 
@@ -618,13 +673,13 @@ h1{
     align-items: center;
     width: 100%;
     /* height: 80vh; */
-    border: 1px solid white;
+    /* border: 1px solid white; */
     align-self: flex-start;
-    padding: 4rem 1rem;
+    /* padding: 4rem 1rem; */
     font-size: vat(--font_size);
-    /* border: 2px solid black; */
-    background-color:var(--form-bg);
-    border-radius: 10px;
+    border-left: 2px solid white;
+    /* background-color:var(--form-bg); */
+    /* border-radius: 10px; */
     /* border-bottom: 2px solid white; */
     /* border-top: 2px solid white; */
     /* height: 100vh; */
@@ -633,9 +688,9 @@ h1{
     justify-content: center;
     /* width: 70%; */
     /* width: fit-content; */
-    width: 30%;
+    /* width: 30%; */
     /* background-color: var(--hoverc); */
-    margin: 1rem auto;
+    /* margin: 1rem auto; */
     /* border: 1px solid; */
     /* box-shadow: 0px 0px 2px var(--bgcolor); */
 }
@@ -711,6 +766,7 @@ h1{
 .btn{
 /* color: white; */
 border: 0;
+
 /* display: block; */
 width: 100%;
 /* border-bottom: 1px solid wheat; */
@@ -728,7 +784,9 @@ margin: 0;
 /* background-color: transparent; */
 /* border-bottom:2px solid white ; */
 }
-
+.btn:hover{
+  background-color:var(--form-bg);
+}
 .btn >a{
   text-decoration: none;
   color: inherit;
@@ -746,15 +804,17 @@ margin: 0;
   transform: translate(-50%,-50%); */
   display: flex;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   top: 0;
   background-color: transparent;
   /* z-index: 1; */
   align-items: center;
   justify-content: center;
   /* background-color:#f8f8f8; */
-  z-index: 21;
+  z-index: 110001;
+  left:0;
   backdrop-filter: blur(1px);
+  pointer-events:none;
   /* scroll-behavior: none; */
   
 
@@ -852,7 +912,7 @@ For Mobile
   }
   .main1{
     background-color: #F64C72;
-    height: 50vh;
+    height: 130vh;
   }
   .navabar{
     z-index: 2;
@@ -864,8 +924,8 @@ For Mobile
   .form{
     /* padding: 1rem 0; */
   }
-  .navabar-ul li a:hover,a:hover,.Mybutton:hove{
-    background-color: none;
+  .navabar-ul li a:hover,.Mybutton:hove{
+    /* background-color: none; */
     color: bisque;
   }
 
@@ -1005,11 +1065,25 @@ For Mobile
   .navabar-ul li a{
     font-size: 1rem;
   }
+  .row *, .column * {
+    flex: none;
+}
 }
 
 @media only screen and (max-width: 420px) {
   .navabar-ul div{
     flex-direction: column;
+  }
+  .row, .imgeAnimationDiv{
+    flex-wrap: wrap;
+    align-items:flex-start;
+  }
+  .imgeAnimationDiv{
+    width:4rem;
+    /* margin:1rem 1rem; */
+  }
+  .imgshow_div > div{
+    margin:1rem 1rem;
   }
   .footer-ul{
     display: none;

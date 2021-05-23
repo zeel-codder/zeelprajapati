@@ -30,12 +30,6 @@ const Navdata=[
         title:"Contact Me",
         link:"contact",
     },
-    {
-        id:6,
-        title:"Blog",
-        link:"/blog",
-    },
-
 ]
 
 

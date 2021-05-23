@@ -67,11 +67,23 @@ const Context = () => {
 
             }
 
-            <div>
+            <div id="contact">
+
+            
+
+            <h1>Contact Form</h1>
+            <div className="row con">
+                <div>
+
+                    <h1> 
+
+                        Let's Meet
 
 
+                    </h1>
+                </div>
                 <form className="form" onSubmit={(e) => { MailMe(e) }}>
-                    <span className="alert">Contact Form</span>
+                    
                     <div>
                         <input className="form-input" type="text" title="Your name" name="name" placeholder="Enter Name" required></input>
                     </div>
@@ -90,6 +102,7 @@ const Context = () => {
                     {/* </div> */}
                 </form>
 
+            </div>
             </div>
         </>
     )

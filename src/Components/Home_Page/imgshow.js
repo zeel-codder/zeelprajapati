@@ -36,86 +36,34 @@ const ImageShow = ({data}) => {
 
     const [index, setIndex] = useState(0)
 
-    useEffect(() => {
-        let new_index = (index + 1) % data.length;
-        let y = setInterval(() => {
-            setIndex(new_index);
-        }, 5000)
-        return (() => {
-            clearInterval(y)
-        })
-
-    }, [data.length, index])
+ 
 
 
     return (
-        <div className="imgshow_div">
+         <div  className="imgshow_div row" behavior="scroll" direction="right">
             {
                 data.map((Img, ImageIndex) => {
-
+                    
                     const { title,imgurl, link } = Img;
 
                     //default all ImageDiv are next
-
-                    let position = 'nextclass';
-
-                    //let say index=1 than index=0 is prevues and index>=2 is next (index=0 than last index=n-1)
-                    if (index - 1 === ImageIndex || (index === 0 && data.length - 1 === ImageIndex)) {
-                        position = "preclass";
-                    } else if (index === ImageIndex) {
-
-                        position = "activeclass";
-                    }
-
-                    const ans = 'imgshow ' + position
-
+                    
+                    
                     return (
-                        <div className={`${ans} column`}>
+                        <div className={`column`}>
                         <h1>{title}</h1>
                         {/* <img src={imgurl} key={ImageIndex} className="logo" alt="ImageShowImage" /> */}
-                        <img src={imgurl} key={ImageIndex} className="logo" alt="ImageShowImage" />
+                        <div className="imgeAnimationDiv">
+                        <img src={imgurl} key={ImageIndex}  alt="ImageShowImage" />
+                        </div>
                         </div>
                       
-                    )
-
-                })
-            }
-            <div className="left" onClick={() => {
-                if (index === 0) {
-                    setIndex(data.length - 1);
-                } else {
-                    setIndex(index - 1);
-                }
-            }}>
-
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.707-10.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L9.414 11H13a1 1 0 100-2H9.414l1.293-1.293z" clipRule="evenodd" />
-                </svg>
-            </div>
-
-            <div className="right" onClick={() => {
-
-                setIndex((index + 1) % data.length)
-            }}>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clipRule="evenodd" />
-                </svg>
-            </div>
-
-
-            {/* Bottom Point show */}
-            {/* <div className="pointdiv">
-                {
-                    data.map((img, imgindex) => {
-                        let ans = "point "
-                        if (imgindex === index) {
-                            ans = ans + "pointh";
-                        }
-                        return <span className={ans}></span>
+                      )
+                      
                     })
                 }
-            </div> */}
-        </div>
+           </div> 
+          
     )
 }
 

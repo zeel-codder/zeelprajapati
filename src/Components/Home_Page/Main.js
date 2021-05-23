@@ -21,7 +21,7 @@ import { useState } from 'react';
 
 function Main() {
 
-  const { Introduction, Education, Technology, Projects} = useGlobalContext();
+  const { Introduction, Education, Technology, Projects, Contact} = useGlobalContext();
 
   const [HeightArr, setHeighArr] = useState([]);
   // console.log(useGlobalContext())
@@ -132,6 +132,7 @@ function Main() {
           <Education />
           <Technology />
           <Projects />
+          <Contact></Contact>
         </section>
         </>
   );
