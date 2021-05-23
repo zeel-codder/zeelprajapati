@@ -53,7 +53,7 @@ const Projects=()=>{
 
     // console.log('rendee')
     return(
-        <>
+        <div id="projects">
         <h1>Projects</h1>
         <div className="box row" id="projects">
         {/* <div className="row"> */}
@@ -90,7 +90,7 @@ const Projects=()=>{
         </div>
         </div>
             {/* </div> */}
-        </>
+        </div>
     )
 }
 export default Projects;

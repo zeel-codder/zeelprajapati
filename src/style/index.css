@@ -489,7 +489,7 @@ h1{
 /* .container  */
 .container h1:hover{
 
-  color: var(--hadderbg);
+  color: yellow;
   cursor: pointer;
 }
 
@@ -921,7 +921,7 @@ For Mobile
   }
   .main1{
     background-color: #F64C72;
-    height: 130vh;
+    /* height: 130vh; */
   }
   .navabar{
     z-index: 2;
@@ -1009,6 +1009,7 @@ For Mobile
   }
   .navabar-ul li{
     font-size: 15px;
+    margin: .6rem 0;
   }
   .navabar-ul{
     align-items: flex-start;

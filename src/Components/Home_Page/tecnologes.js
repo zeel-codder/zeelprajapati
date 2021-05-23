@@ -50,20 +50,20 @@ const Technology = () => {
         {
         title:'C',
         link:"#",
-        imgurl:"https://cdn3.iconfinder.com/data/icons/greek-latin-symbols-solid-1/24/capital-c-128.png"
+        imgurl:"https://media.istockphoto.com/photos/text-picture-id1149101430?b=1&k=6&m=1149101430&s=170667a&w=0&h=ujvWyCbwP1pFRAioL_RpioXd0oxFHL1Bobup9I9-iPs="
         },
         
         
         
     ]
     return (
-        <>
+        <div id="theology">
                 <h1 style={{textAlign: 'center'}}>Technology</h1>
             <div className="box row" id="theology">
                 {/* <img className="container-img" src='/images/home/tchnology.svg' alt='TheologyPhoto'></img> */}
                 <Imgshow data={data}></Imgshow>  
             </div>
-        </>)
+        </div>)
 }
 
 export default Technology;

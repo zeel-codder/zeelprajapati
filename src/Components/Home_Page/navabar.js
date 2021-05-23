@@ -99,7 +99,7 @@ function Navbar() {
             const linksHeight = linksRef.current.getBoundingClientRect().height;
             // const linksHeight1 = linksRefs.current.getBoundingClientRect().height;
             if (showLinks) {
-                linksContainerRef.current.style.height = `${linksHeight}px`;
+                linksContainerRef.current.style.height = `${linksHeight+40}px`;
             } else {
                 linksContainerRef.current.style.height = '0px';
             }
