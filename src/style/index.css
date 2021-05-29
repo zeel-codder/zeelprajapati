@@ -492,6 +492,11 @@ h1{
   color: yellow;
   cursor: pointer;
 }
+.project-ul > li > p{
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content:center; */
+}
 
 .box{
 
@@ -921,7 +926,7 @@ For Mobile
   }
   .main1{
     background-color: #F64C72;
-    /* height: 130vh; */
+    height: 60vh;
   }
   .navabar{
     z-index: 2;
